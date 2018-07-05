@@ -1,0 +1,345 @@
+\hypertarget{classnw_1_1_reaction___evt}{\section{nw\+:\+:Reaction\+\_\+\+Evt Class Reference}
+\label{classnw_1_1_reaction___evt}\index{nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}}
+}
+
+
+Implementation of the reaction of one ore two molecules.  
+
+
+
+
+{\ttfamily \#include $<$Reaction\+\_\+\+Evt.\+h$>$}
+
+Inheritance diagram for nw\+:\+:Reaction\+\_\+\+Evt\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d1/d8c/classnw_1_1_reaction___evt}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1_reaction___evt_a582f3c60366d15e89fdd613abe4bd86d}{Reaction\+\_\+\+Evt} (long \hyperlink{classnw_1_1___event_a8f7ce287f596266dd763ec7db2f74090}{id}, string \hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name}, double \hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k}, vector$<$ long $>$ \hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\+\_\+vec}, \hyperlink{namespacenw_ad7146b8b5a9de9be416847f41135722c}{Voxel\+Vector} vvc, \hyperlink{classnw_1_1_uni___rnd}{Uni\+\_\+\+Rnd} $\ast$\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classnw_1_1_reaction___evt_a8f8ee0dfc946b6a13e2a1af9b45f6411}{$\sim$\+Reaction\+\_\+\+Evt} ()
+\item 
+double \hyperlink{classnw_1_1_reaction___evt_aaa2e896edd2263dbe78f5b5aa37fb091}{update} (double)
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___event_a882115f8652c881bc8ed43f1050ccba3}{\+\_\+\+Event\+::update()} method. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_reaction___evt_aec2fb342726ef17255ebf406a7c74392}{execute} ()
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___event_aa022418fb765582a053ac75cbc3436d6}{\+\_\+\+Event\+::execute()} method. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_reaction___evt_a50daf1db256ed7e0b22a29ffac76a1b6}{init} ()
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___event_ae2c608ee2508058d6f318ca2ca8f4317}{\+\_\+\+Event\+::init()} method. \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1_reaction___evt_a98001b8296e789db3da09791087c4a35}{get\+\_\+a} ()
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___event_a75945699f539cefab36eb6693a389918}{\+\_\+\+Event\+::get\+\_\+a()} method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classnw_1_1_reaction___evt_acc544c7890cdb51e794d26a845c8441f}{build\+\_\+educt\+\_\+vector} ()
+\begin{DoxyCompactList}\small\item\em builds the educt vector. \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1_reaction___evt_ace67f5106799204a2f2cde8c6982589b}{calc\+\_\+tau} (long)
+\begin{DoxyCompactList}\small\item\em calculates a new tau value using a random number. The calc\+\_\+tau function is dependent on the reaction order\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ long $>$ \hyperlink{classnw_1_1_reaction___evt_ae20c8b7d42ef1607200e1e2541db9a70}{educt\+\_\+vec}
+\begin{DoxyCompactList}\small\item\em Educt vector holds pointer to each species that is an educt of this reaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of the reaction of one ore two molecules. 
+
+In contrast to the Diffusion\+\_\+\+Event the Reaction\+\_\+\+Event alters the state vector of only one Voxel per simulation step. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnw_1_1_reaction___evt_a582f3c60366d15e89fdd613abe4bd86d}{\index{nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}!Reaction\+\_\+\+Evt@{Reaction\+\_\+\+Evt}}
+\index{Reaction\+\_\+\+Evt@{Reaction\+\_\+\+Evt}!nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}}
+\subsubsection[{Reaction\+\_\+\+Evt}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+Reaction\+\_\+\+Evt\+::\+Reaction\+\_\+\+Evt (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{string}]{name, }
+\item[{double}]{k, }
+\item[{vector$<$ long $>$}]{sc\+\_\+vec, }
+\item[{{\bf Voxel\+Vector}}]{vvc, }
+\item[{{\bf Uni\+\_\+\+Rnd} $\ast$}]{rg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1_reaction___evt_a582f3c60366d15e89fdd613abe4bd86d}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \hyperlink{classnw_1_1___event}{\+\_\+\+Event} I\+D \\
+\hline
+{\em name} & \hyperlink{classnw_1_1___event}{\+\_\+\+Event} name \\
+\hline
+{\em k} & \hyperlink{classnw_1_1___event}{\+\_\+\+Event} rate constant \\
+\hline
+{\em vvc} & \hyperlink{classnw_1_1___event}{\+\_\+\+Event} voxel vector \\
+\hline
+{\em sc\+\_\+vec} & state change vector of the reaction event \\
+\hline
+{\em rg} & \hyperlink{classnw_1_1___event}{\+\_\+\+Event} pointer to a Random\+\_\+\+Generator. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+23                                                                                                    :
+24         \hyperlink{classnw_1_1___event_a5efb757db20b083de6da605ea4b2bbae}{\_Event}(\textcolor{keywordtype}{id},\hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name},\hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k},vvc,\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg})\{
+25         this->\hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\_vec} = \hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\_vec};
+26     \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_reaction___evt_a8f8ee0dfc946b6a13e2a1af9b45f6411}{\index{nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}!````~Reaction\+\_\+\+Evt@{$\sim$\+Reaction\+\_\+\+Evt}}
+\index{````~Reaction\+\_\+\+Evt@{$\sim$\+Reaction\+\_\+\+Evt}!nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}}
+\subsubsection[{$\sim$\+Reaction\+\_\+\+Evt}]{\setlength{\rightskip}{0pt plus 5cm}virtual nw\+::\+Reaction\+\_\+\+Evt\+::$\sim$\+Reaction\+\_\+\+Evt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1_reaction___evt_a8f8ee0dfc946b6a13e2a1af9b45f6411}
+Destructor 
+\begin{DoxyCode}
+28 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnw_1_1_reaction___evt_acc544c7890cdb51e794d26a845c8441f}{\index{nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}!build\+\_\+educt\+\_\+vector@{build\+\_\+educt\+\_\+vector}}
+\index{build\+\_\+educt\+\_\+vector@{build\+\_\+educt\+\_\+vector}!nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}}
+\subsubsection[{build\+\_\+educt\+\_\+vector}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Reaction\+\_\+\+Evt\+::build\+\_\+educt\+\_\+vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1_reaction___evt_acc544c7890cdb51e794d26a845c8441f}
+
+
+builds the educt vector. 
+
+The educt vector holds pointer to each species that is an educt of this reaction. It facilitates the update procedure 
+\begin{DoxyCode}
+98                                      \{
+99     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\_vec}.size(); ++i)\{
+100         \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\_vec}[i] < 0)
+101             \hyperlink{classnw_1_1_reaction___evt_ae20c8b7d42ef1607200e1e2541db9a70}{educt\_vec}.push\_back(i);
+102     \}
+103 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_reaction___evt_ace67f5106799204a2f2cde8c6982589b}{\index{nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}!calc\+\_\+tau@{calc\+\_\+tau}}
+\index{calc\+\_\+tau@{calc\+\_\+tau}!nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}}
+\subsubsection[{calc\+\_\+tau}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+Reaction\+\_\+\+Evt\+::calc\+\_\+tau (
+\begin{DoxyParamCaption}
+\item[{long}]{vid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1_reaction___evt_ace67f5106799204a2f2cde8c6982589b}
+
+
+calculates a new tau value using a random number. The calc\+\_\+tau function is dependent on the reaction order\+: 
+
+
+\begin{DoxyItemize}
+\item 1. order\+: -\/ln(r)/a(j)(x,t) = -\/ln(r)/(educt $\ast$ c(j))
+\item 2. order\+: -\/ln(r)/a(j)(x,t) = -\/ln(r)/(educt(1) $\ast$ educt (2) $\ast$ c(j)) only first and second order reactions are allowed! 
+\end{DoxyItemize}
+\begin{DoxyCode}
+105                                      \{
+106 
+107 \textcolor{comment}{//  make sure the educt vector is valid -> only first -and second order reactions are allowed}
+108     \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_reaction___evt_ae20c8b7d42ef1607200e1e2541db9a70}{educt\_vec}.size() > 0 && \hyperlink{classnw_1_1_reaction___evt_ae20c8b7d42ef1607200e1e2541db9a70}{educt\_vec}.size() <= 2)\{
+109         \textcolor{keywordtype}{double} a = \hyperlink{classnw_1_1___event_a29c77fb164e745cdb5c5fda4f191cd37}{c};
+110         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1_reaction___evt_ae20c8b7d42ef1607200e1e2541db9a70}{educt\_vec}.size(); ++i)\{
+111             a *= \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[vid].v->get\_state\_vec()->at(\hyperlink{classnw_1_1_reaction___evt_ae20c8b7d42ef1607200e1e2541db9a70}{educt\_vec}[i])->get\_n\_molecules();
+112         \}
+113         \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[vid].t = -log(\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg}->\hyperlink{classnw_1_1_uni___rnd_ad7883ef0ce4c591612bcb41678104773}{get\_Uni\_Rnd}()) / a;
+114 
+115         \textcolor{keywordflow}{return} \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[vid].t;
+116     \} \textcolor{keywordflow}{else} \{
+117         cout <<\textcolor{stringliteral}{"ERROR: Only first and second order reactions are allowed! Check sc\_vec of:"} << this->
+      \hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name} <<endl;
+118         exit(0);
+119     \}
+120 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_reaction___evt_aec2fb342726ef17255ebf406a7c74392}{\index{nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}!execute@{execute}}
+\index{execute@{execute}!nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Reaction\+\_\+\+Evt\+::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classnw_1_1_reaction___evt_aec2fb342726ef17255ebf406a7c74392}
+
+
+Implementation of the \hyperlink{classnw_1_1___event_aa022418fb765582a053ac75cbc3436d6}{\+\_\+\+Event\+::execute()} method. 
+
+
+
+Implements \hyperlink{classnw_1_1___event_aa022418fb765582a053ac75cbc3436d6}{nw\+::\+\_\+\+Event}.
+
+
+
+Reimplemented in \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_ab89891fae9287edc9d9a215788706093}{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}.
+
+
+\begin{DoxyCode}
+28                           \{
+29     \textcolor{keywordflow}{try}\{
+30 \textcolor{comment}{//      execute event by using the state change vector}
+31         \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[\hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel}].v->update\_state(\hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\_vec});
+32 
+33 \textcolor{comment}{//      set dirty flag to indicate that dependent events have to be updated}
+34         this->\hyperlink{classnw_1_1___event_aaa705b35c06c0cb2e0a4f3daa9ee8037}{dirty\_flag} = \textcolor{keyword}{true};
+35         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1___event_a3f87b2dff69d07977f0a5e10936f38f6}{dep\_list}.size(); i++)\{
+36             \hyperlink{classnw_1_1___event_a3f87b2dff69d07977f0a5e10936f38f6}{dep\_list}[i]->set\_flag(\textcolor{keyword}{true});
+37         \}
+38     \}
+39     \textcolor{keywordflow}{catch}(exception& e)\{
+40         cout << \textcolor{stringliteral}{"Reaction\_Evt::execute(): "} << e.what();
+41     \}
+42 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_reaction___evt_a98001b8296e789db3da09791087c4a35}{\index{nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}!get\+\_\+a@{get\+\_\+a}}
+\index{get\+\_\+a@{get\+\_\+a}!nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}}
+\subsubsection[{get\+\_\+a}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+Reaction\+\_\+\+Evt\+::get\+\_\+a (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classnw_1_1_reaction___evt_a98001b8296e789db3da09791087c4a35}
+
+
+Implementation of the \hyperlink{classnw_1_1___event_a75945699f539cefab36eb6693a389918}{\+\_\+\+Event\+::get\+\_\+a()} method. 
+
+\begin{DoxyReturn}{Returns}
+a0 of this \hyperlink{classnw_1_1___event}{\+\_\+\+Event} 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classnw_1_1___event_a75945699f539cefab36eb6693a389918}{nw\+::\+\_\+\+Event}.
+
+
+\begin{DoxyCode}
+86                           \{
+87     \textcolor{keywordtype}{double} a\_ges = 0;
+88     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}.size(); ++i)\{
+89         \textcolor{keywordtype}{double} a = \hyperlink{classnw_1_1___event_a29c77fb164e745cdb5c5fda4f191cd37}{c};
+90         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j = 0; j < \hyperlink{classnw_1_1_reaction___evt_ae20c8b7d42ef1607200e1e2541db9a70}{educt\_vec}.size(); ++j)\{
+91             a *= \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].v->get\_state\_vec()->at(\hyperlink{classnw_1_1_reaction___evt_ae20c8b7d42ef1607200e1e2541db9a70}{educt\_vec}[j])->get\_n\_molecules();
+92         \}
+93         a\_ges += a;
+94     \}
+95     \textcolor{keywordflow}{return} a\_ges;
+96 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_reaction___evt_a50daf1db256ed7e0b22a29ffac76a1b6}{\index{nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}!init@{init}}
+\index{init@{init}!nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Reaction\+\_\+\+Evt\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classnw_1_1_reaction___evt_a50daf1db256ed7e0b22a29ffac76a1b6}
+
+
+Implementation of the \hyperlink{classnw_1_1___event_ae2c608ee2508058d6f318ca2ca8f4317}{\+\_\+\+Event\+::init()} method. 
+
+
+
+Implements \hyperlink{classnw_1_1___event_ae2c608ee2508058d6f318ca2ca8f4317}{nw\+::\+\_\+\+Event}.
+
+
+\begin{DoxyCode}
+12                        \{
+13 
+14 \textcolor{comment}{//  build educt vector}
+15     \hyperlink{classnw_1_1_reaction___evt_acc544c7890cdb51e794d26a845c8441f}{build\_educt\_vector}();
+16 
+17 \textcolor{comment}{//  calculate the correct probability rate constant depending on the reaction order.}
+18     \textcolor{keywordflow}{if} (\hyperlink{classnw_1_1_reaction___evt_ae20c8b7d42ef1607200e1e2541db9a70}{educt\_vec}.size() == 1)\{
+19         this->\hyperlink{classnw_1_1___event_a29c77fb164e745cdb5c5fda4f191cd37}{c} = \hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k};
+20     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_reaction___evt_ae20c8b7d42ef1607200e1e2541db9a70}{educt\_vec}.size() == 2)\{
+21         this->\hyperlink{classnw_1_1___event_a29c77fb164e745cdb5c5fda4f191cd37}{c} = \hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k}/(\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[0].v->get\_volume()*\hyperlink{namespacenw_ad890cfa7dd9eaf8d5b6754723e516c4a}{N\_AVO}*1e-6);
+22     \}
+23 
+24 \textcolor{comment}{//  update the Reaction Event the first time}
+25     \hyperlink{classnw_1_1_reaction___evt_aaa2e896edd2263dbe78f5b5aa37fb091}{update}(0);
+26 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_reaction___evt_aaa2e896edd2263dbe78f5b5aa37fb091}{\index{nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}!update@{update}}
+\index{update@{update}!nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+Reaction\+\_\+\+Evt\+::update (
+\begin{DoxyParamCaption}
+\item[{double}]{last\+\_\+tau}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classnw_1_1_reaction___evt_aaa2e896edd2263dbe78f5b5aa37fb091}
+
+
+Implementation of the \hyperlink{classnw_1_1___event_a882115f8652c881bc8ed43f1050ccba3}{\+\_\+\+Event\+::update()} method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em last\+\_\+tau} & last tau value to update the system time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new tau value, so system can sort it right away.
+\end{DoxyReturn}
+If dirty\+\_\+flag is true, this event depends on the event that fired during the previosu simulation step. For each voxel that has been modified, the \hyperlink{classnw_1_1___event}{\+\_\+\+Event} specific tau value has to be updated. All the other tau values have to be adapted to the global system time 
+
+Implements \hyperlink{classnw_1_1___event_a882115f8652c881bc8ed43f1050ccba3}{nw\+::\+\_\+\+Event}.
+
+
+\begin{DoxyCode}
+44                                           \{
+45 
+46     \textcolor{keywordtype}{double} minTau = INFINITY;
+47 
+48 \textcolor{comment}{//  check if this event depends on the last executed event}
+49     \textcolor{keywordflow}{if}(this->\hyperlink{classnw_1_1___event_aaa705b35c06c0cb2e0a4f3daa9ee8037}{dirty\_flag})\{
+50 \textcolor{comment}{//      run through the tv vector}
+51         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}.size(); ++i)\{
+52 \textcolor{comment}{//          check for voxel that have been affected by last executed event}
+53             \textcolor{keywordflow}{if} (\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].v->get\_dirty\_flag())\{
+54 \textcolor{comment}{//              find smallest tau value (->next voxel) for this event}
+55                 \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_reaction___evt_ace67f5106799204a2f2cde8c6982589b}{calc\_tau}(i) < minTau)\{
+56                     minTau = \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t;
+57                     \hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel} = i;
+58                 \}
+59 \textcolor{comment}{//          voxel has not been affected by last event}
+60             \} \textcolor{keywordflow}{else} \{
+61 \textcolor{comment}{//              adjust tau value to global times scale}
+62                 \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t -= last\_tau;
+63 \textcolor{comment}{//              find smallest tau value (->next voxel) for this event}
+64                 \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t < minTau)\{
+65                     minTau = \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t;
+66                     \hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel} = i;
+67                 \}
+68             \}
+69         \}
+70 \textcolor{comment}{//  event has not been affected by last event}
+71     \} \textcolor{keywordflow}{else}  \{
+72 \textcolor{comment}{//      adjust tau values to global times scale}
+73         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}.size(); ++i) \{
+74             \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t -= last\_tau;
+75             \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t < minTau)\{
+76                 minTau = \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t;
+77                 \hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel} = i;
+78             \}
+79         \}
+80     \}
+81 
+82     this->\hyperlink{classnw_1_1___event_aaa705b35c06c0cb2e0a4f3daa9ee8037}{dirty\_flag} = \textcolor{keyword}{false};
+83     \textcolor{keywordflow}{return} minTau;
+84 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classnw_1_1_reaction___evt_ae20c8b7d42ef1607200e1e2541db9a70}{\index{nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}!educt\+\_\+vec@{educt\+\_\+vec}}
+\index{educt\+\_\+vec@{educt\+\_\+vec}!nw\+::\+Reaction\+\_\+\+Evt@{nw\+::\+Reaction\+\_\+\+Evt}}
+\subsubsection[{educt\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$long$>$ nw\+::\+Reaction\+\_\+\+Evt\+::educt\+\_\+vec\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1_reaction___evt_ae20c8b7d42ef1607200e1e2541db9a70}
+
+
+Educt vector holds pointer to each species that is an educt of this reaction. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Events/\hyperlink{_reaction___evt_8h}{Reaction\+\_\+\+Evt.\+h}\item 
+Events/\hyperlink{_reaction___evt_8cpp}{Reaction\+\_\+\+Evt.\+cpp}\end{DoxyCompactItemize}

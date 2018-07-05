@@ -1,0 +1,293 @@
+\hypertarget{classnw_1_1___species}{\section{nw\+:\+:\+\_\+\+Species Class Reference}
+\label{classnw_1_1___species}\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+}
+
+
+Abstract base class for the molecular species of a system.  
+
+
+
+
+{\ttfamily \#include $<$\+\_\+\+Species.\+h$>$}
+
+Inheritance diagram for nw\+:\+:\+\_\+\+Species\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d3/d03/classnw_1_1___species}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1___species_af74ef3f4a59f3c8fa9ff6b1acc83be86}{\+\_\+\+Species} (long \hyperlink{classnw_1_1___species_ac42dfe1c656c17178a9649093519ebb7}{id}, string \hyperlink{classnw_1_1___species_a7b8ede09e28941beb48cf27f1247e2f9}{name}, double init\+\_\+conc)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classnw_1_1___species_aa3e9d32d88bf558cf6401d4b3dcf8f40}{$\sim$\+\_\+\+Species} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual long \hyperlink{classnw_1_1___species_a6e3e68477663ff511d75fb24cf01cb9f}{get\+\_\+n\+\_\+molecules} ()=0
+\begin{DoxyCompactList}\small\item\em Get current number of molecules. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnw_1_1___species_ac7955c9fe040d8cae8f3cae4684ed96b}{mod\+\_\+n\+\_\+molecules} (long n)=0
+\begin{DoxyCompactList}\small\item\em Modify number of molecules (n\+\_\+molecules). \end{DoxyCompactList}\item 
+virtual \hyperlink{classnw_1_1___species}{\+\_\+\+Species} $\ast$ \hyperlink{classnw_1_1___species_aea43d96b0b1c9e88953f40fbe58e7f29}{copy} ()=0
+\begin{DoxyCompactList}\small\item\em Copy method. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnw_1_1___species_a53d06cca549a83bfff71303174707926}{set\+\_\+n\+\_\+molecules} (double \hyperlink{classnw_1_1___species_a80896a55f086f468396e76ae8f1e8285}{volume})
+\begin{DoxyCompactList}\small\item\em Set initial molecular count (n\+\_\+molecules). \end{DoxyCompactList}\item 
+long \hyperlink{classnw_1_1___species_a03f4b80da067d1bb6e2ab2d74e3f49d9}{get\+\_\+id} ()
+\item 
+string \hyperlink{classnw_1_1___species_ab52e303fd75637ca239b96a1efcd0bf4}{get\+\_\+name} ()
+\item 
+double \hyperlink{classnw_1_1___species_a8246da49ed5c2ce46365e5bd15025a1c}{get\+\_\+initial\+\_\+conc} ()
+\item 
+bool \hyperlink{classnw_1_1___species_a89fb2e72e485dd2f7fed07cfcfa7cdb0}{get\+\_\+dirty\+\_\+flag} ()
+\item 
+void \hyperlink{classnw_1_1___species_a9c52abce36663e6df5b51197282e0de3}{set\+\_\+dirty\+\_\+flag} (bool b)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{classnw_1_1___species_ac42dfe1c656c17178a9649093519ebb7}{id}
+\begin{DoxyCompactList}\small\item\em Species I\+D. \end{DoxyCompactList}\item 
+string \hyperlink{classnw_1_1___species_a7b8ede09e28941beb48cf27f1247e2f9}{name}
+\begin{DoxyCompactList}\small\item\em Species name. \end{DoxyCompactList}\item 
+bool \hyperlink{classnw_1_1___species_a79157bae3920ce7bba35e3f75b2aad6f}{dirty\+\_\+flag}
+\begin{DoxyCompactList}\small\item\em Indicates whether this \hyperlink{classnw_1_1___species}{\+\_\+\+Species} needs to be updated or not. \end{DoxyCompactList}\item 
+long \hyperlink{classnw_1_1___species_af6ae0232b4f994b464a2f69cb022b33f}{n\+\_\+molecules}
+\begin{DoxyCompactList}\small\item\em Current number of molecules. \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1___species_ac66cdd3bdd5be88791e00d063b4e92a2}{initial\+\_\+conc}
+\begin{DoxyCompactList}\small\item\em Initial concentration. \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1___species_a80896a55f086f468396e76ae8f1e8285}{volume}
+\begin{DoxyCompactList}\small\item\em Volume of the \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} containing this \hyperlink{classnw_1_1___species}{\+\_\+\+Species}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract base class for the molecular species of a system. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnw_1_1___species_af74ef3f4a59f3c8fa9ff6b1acc83be86}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!\+\_\+\+Species@{\+\_\+\+Species}}
+\index{\+\_\+\+Species@{\+\_\+\+Species}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{\+\_\+\+Species}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+\_\+\+Species\+::\+\_\+\+Species (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{string}]{name, }
+\item[{double}]{init\+\_\+conc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___species_af74ef3f4a59f3c8fa9ff6b1acc83be86}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Species I\+D \\
+\hline
+{\em name} & Species name \\
+\hline
+{\em init\+\_\+conc} & initial concentration \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+24                                                    :
+25         \hyperlink{classnw_1_1___species_ac42dfe1c656c17178a9649093519ebb7}{id}(\textcolor{keywordtype}{id}),
+26         \hyperlink{classnw_1_1___species_a7b8ede09e28941beb48cf27f1247e2f9}{name}(\hyperlink{classnw_1_1___species_a7b8ede09e28941beb48cf27f1247e2f9}{name}),
+27         \hyperlink{classnw_1_1___species_a79157bae3920ce7bba35e3f75b2aad6f}{dirty\_flag}(\textcolor{keyword}{true}),
+28         \hyperlink{classnw_1_1___species_ac66cdd3bdd5be88791e00d063b4e92a2}{initial\_conc}(init\_conc) \{\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___species_aa3e9d32d88bf558cf6401d4b3dcf8f40}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!````~\+\_\+\+Species@{$\sim$\+\_\+\+Species}}
+\index{````~\+\_\+\+Species@{$\sim$\+\_\+\+Species}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{$\sim$\+\_\+\+Species}]{\setlength{\rightskip}{0pt plus 5cm}virtual nw\+::\+\_\+\+Species\+::$\sim$\+\_\+\+Species (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1___species_aa3e9d32d88bf558cf6401d4b3dcf8f40}
+
+
+Destructor. 
+
+
+\begin{DoxyCode}
+30 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnw_1_1___species_aea43d96b0b1c9e88953f40fbe58e7f29}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!copy@{copy}}
+\index{copy@{copy}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf \+\_\+\+Species}$\ast$ nw\+::\+\_\+\+Species\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classnw_1_1___species_aea43d96b0b1c9e88953f40fbe58e7f29}
+
+
+Copy method. 
+
+\begin{DoxyReturn}{Returns}
+Reference to an object identical to this
+\end{DoxyReturn}
+Copy method that generates a copy of this. It is is a virtual function to ensure that whenever this function is called, the most specific object (derived from this abstract base class) is copied. 
+
+Implemented in \hyperlink{classnw_1_1_channel___spc_ab35f288a4021c302b4e2dc09e54578b1}{nw\+::\+Channel\+\_\+\+Spc}, and \hyperlink{classnw_1_1_standard___spc_abc6e6a61ebdcd1e1b917c3e3a5f9cd24}{nw\+::\+Standard\+\_\+\+Spc}.
+
+\hypertarget{classnw_1_1___species_a89fb2e72e485dd2f7fed07cfcfa7cdb0}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!get\+\_\+dirty\+\_\+flag@{get\+\_\+dirty\+\_\+flag}}
+\index{get\+\_\+dirty\+\_\+flag@{get\+\_\+dirty\+\_\+flag}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{get\+\_\+dirty\+\_\+flag}]{\setlength{\rightskip}{0pt plus 5cm}bool nw\+::\+\_\+\+Species\+::get\+\_\+dirty\+\_\+flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___species_a89fb2e72e485dd2f7fed07cfcfa7cdb0}
+
+\begin{DoxyCode}
+60 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___species_a79157bae3920ce7bba35e3f75b2aad6f}{dirty\_flag};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___species_a03f4b80da067d1bb6e2ab2d74e3f49d9}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!get\+\_\+id@{get\+\_\+id}}
+\index{get\+\_\+id@{get\+\_\+id}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{get\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+\_\+\+Species\+::get\+\_\+id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___species_a03f4b80da067d1bb6e2ab2d74e3f49d9}
+
+\begin{DoxyCode}
+57 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___species_ac42dfe1c656c17178a9649093519ebb7}{id};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___species_a8246da49ed5c2ce46365e5bd15025a1c}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!get\+\_\+initial\+\_\+conc@{get\+\_\+initial\+\_\+conc}}
+\index{get\+\_\+initial\+\_\+conc@{get\+\_\+initial\+\_\+conc}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{get\+\_\+initial\+\_\+conc}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+\_\+\+Species\+::get\+\_\+initial\+\_\+conc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___species_a8246da49ed5c2ce46365e5bd15025a1c}
+
+\begin{DoxyCode}
+59 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___species_ac66cdd3bdd5be88791e00d063b4e92a2}{initial\_conc};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___species_a6e3e68477663ff511d75fb24cf01cb9f}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!get\+\_\+n\+\_\+molecules@{get\+\_\+n\+\_\+molecules}}
+\index{get\+\_\+n\+\_\+molecules@{get\+\_\+n\+\_\+molecules}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{get\+\_\+n\+\_\+molecules}]{\setlength{\rightskip}{0pt plus 5cm}virtual long nw\+::\+\_\+\+Species\+::get\+\_\+n\+\_\+molecules (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classnw_1_1___species_a6e3e68477663ff511d75fb24cf01cb9f}
+
+
+Get current number of molecules. 
+
+\begin{DoxyReturn}{Returns}
+current number of molecules 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnw_1_1_channel___spc_a20a1e6dd089794ad0e1035635a1e3fe0}{nw\+::\+Channel\+\_\+\+Spc}, and \hyperlink{classnw_1_1_standard___spc_aa1b07cee6c86dd83aa9970c0964d16fc}{nw\+::\+Standard\+\_\+\+Spc}.
+
+\hypertarget{classnw_1_1___species_ab52e303fd75637ca239b96a1efcd0bf4}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{get\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}string nw\+::\+\_\+\+Species\+::get\+\_\+name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___species_ab52e303fd75637ca239b96a1efcd0bf4}
+
+\begin{DoxyCode}
+58 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___species_a7b8ede09e28941beb48cf27f1247e2f9}{name};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___species_ac7955c9fe040d8cae8f3cae4684ed96b}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!mod\+\_\+n\+\_\+molecules@{mod\+\_\+n\+\_\+molecules}}
+\index{mod\+\_\+n\+\_\+molecules@{mod\+\_\+n\+\_\+molecules}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{mod\+\_\+n\+\_\+molecules}]{\setlength{\rightskip}{0pt plus 5cm}virtual void nw\+::\+\_\+\+Species\+::mod\+\_\+n\+\_\+molecules (
+\begin{DoxyParamCaption}
+\item[{long}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classnw_1_1___species_ac7955c9fe040d8cae8f3cae4684ed96b}
+
+
+Modify number of molecules (n\+\_\+molecules). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Summand that is added to the current number of molecules.\\
+\hline
+\end{DoxyParams}
+If an event occurs, this function is called to update the number of molecules based on the state change vector of the firing \hyperlink{classnw_1_1___event}{\+\_\+\+Event}. If {\ttfamily n} is positive the number of molecules is increased, if it is negative the number of molecules in decrease. 
+
+Implemented in \hyperlink{classnw_1_1_channel___spc_a03347a88efec50ad3acd0ff4025ed23d}{nw\+::\+Channel\+\_\+\+Spc}, and \hyperlink{classnw_1_1_standard___spc_aed4c0ba53c924011269b59a4a5181fe4}{nw\+::\+Standard\+\_\+\+Spc}.
+
+\hypertarget{classnw_1_1___species_a9c52abce36663e6df5b51197282e0de3}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!set\+\_\+dirty\+\_\+flag@{set\+\_\+dirty\+\_\+flag}}
+\index{set\+\_\+dirty\+\_\+flag@{set\+\_\+dirty\+\_\+flag}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{set\+\_\+dirty\+\_\+flag}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+\_\+\+Species\+::set\+\_\+dirty\+\_\+flag (
+\begin{DoxyParamCaption}
+\item[{bool}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___species_a9c52abce36663e6df5b51197282e0de3}
+
+\begin{DoxyCode}
+61 \{\hyperlink{classnw_1_1___species_a79157bae3920ce7bba35e3f75b2aad6f}{dirty\_flag} = b;\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___species_a53d06cca549a83bfff71303174707926}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!set\+\_\+n\+\_\+molecules@{set\+\_\+n\+\_\+molecules}}
+\index{set\+\_\+n\+\_\+molecules@{set\+\_\+n\+\_\+molecules}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{set\+\_\+n\+\_\+molecules}]{\setlength{\rightskip}{0pt plus 5cm}virtual void nw\+::\+\_\+\+Species\+::set\+\_\+n\+\_\+molecules (
+\begin{DoxyParamCaption}
+\item[{double}]{volume}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1___species_a53d06cca549a83bfff71303174707926}
+
+
+Set initial molecular count (n\+\_\+molecules). 
+
+Called in the constructor of every \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} to set the correct (\hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} volume adapted) number of molecules. This makes it easier to define \hyperlink{classnw_1_1___species}{\+\_\+\+Species} and \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} in the input file. 
+
+Reimplemented in \hyperlink{classnw_1_1_channel___spc_af8d5d7097d343e6646c6c11a1744024d}{nw\+::\+Channel\+\_\+\+Spc}.
+
+
+\begin{DoxyCode}
+53                                                \{
+54         this->\hyperlink{classnw_1_1___species_af6ae0232b4f994b464a2f69cb022b33f}{n\_molecules} = \hyperlink{classnw_1_1___species_a80896a55f086f468396e76ae8f1e8285}{volume}*1e-6*\hyperlink{namespacenw_ad890cfa7dd9eaf8d5b6754723e516c4a}{N\_AVO}*\hyperlink{classnw_1_1___species_ac66cdd3bdd5be88791e00d063b4e92a2}{initial\_conc};\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classnw_1_1___species_a79157bae3920ce7bba35e3f75b2aad6f}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!dirty\+\_\+flag@{dirty\+\_\+flag}}
+\index{dirty\+\_\+flag@{dirty\+\_\+flag}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{dirty\+\_\+flag}]{\setlength{\rightskip}{0pt plus 5cm}bool nw\+::\+\_\+\+Species\+::dirty\+\_\+flag\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___species_a79157bae3920ce7bba35e3f75b2aad6f}
+
+
+Indicates whether this \hyperlink{classnw_1_1___species}{\+\_\+\+Species} needs to be updated or not. 
+
+\hypertarget{classnw_1_1___species_ac42dfe1c656c17178a9649093519ebb7}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!id@{id}}
+\index{id@{id}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+\_\+\+Species\+::id\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___species_ac42dfe1c656c17178a9649093519ebb7}
+
+
+Species I\+D. 
+
+\hypertarget{classnw_1_1___species_ac66cdd3bdd5be88791e00d063b4e92a2}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!initial\+\_\+conc@{initial\+\_\+conc}}
+\index{initial\+\_\+conc@{initial\+\_\+conc}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{initial\+\_\+conc}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+\_\+\+Species\+::initial\+\_\+conc\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___species_ac66cdd3bdd5be88791e00d063b4e92a2}
+
+
+Initial concentration. 
+
+\hypertarget{classnw_1_1___species_af6ae0232b4f994b464a2f69cb022b33f}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!n\+\_\+molecules@{n\+\_\+molecules}}
+\index{n\+\_\+molecules@{n\+\_\+molecules}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{n\+\_\+molecules}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+\_\+\+Species\+::n\+\_\+molecules\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___species_af6ae0232b4f994b464a2f69cb022b33f}
+
+
+Current number of molecules. 
+
+\hypertarget{classnw_1_1___species_a7b8ede09e28941beb48cf27f1247e2f9}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!name@{name}}
+\index{name@{name}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}string nw\+::\+\_\+\+Species\+::name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___species_a7b8ede09e28941beb48cf27f1247e2f9}
+
+
+Species name. 
+
+\hypertarget{classnw_1_1___species_a80896a55f086f468396e76ae8f1e8285}{\index{nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}!volume@{volume}}
+\index{volume@{volume}!nw\+::\+\_\+\+Species@{nw\+::\+\_\+\+Species}}
+\subsubsection[{volume}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+\_\+\+Species\+::volume\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___species_a80896a55f086f468396e76ae8f1e8285}
+
+
+Volume of the \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} containing this \hyperlink{classnw_1_1___species}{\+\_\+\+Species}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Species/\hyperlink{___species_8h}{\+\_\+\+Species.\+h}\end{DoxyCompactItemize}

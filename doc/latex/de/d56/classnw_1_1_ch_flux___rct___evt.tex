@@ -1,0 +1,189 @@
+\hypertarget{classnw_1_1_ch_flux___rct___evt}{\section{nw\+:\+:Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt Class Reference}
+\label{classnw_1_1_ch_flux___rct___evt}\index{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}}
+}
+
+
+Channel flux reaction event.  
+
+
+
+
+{\ttfamily \#include $<$Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt.\+h$>$}
+
+Inheritance diagram for nw\+:\+:Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{de/d56/classnw_1_1_ch_flux___rct___evt}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1_ch_flux___rct___evt_ab54a4c1b86a428cf540967fc0d575b56}{Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt} (long \hyperlink{classnw_1_1___event_a8f7ce287f596266dd763ec7db2f74090}{id}, string \hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name}, double \hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k}, vector$<$ long $>$ \hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\+\_\+vec}, long \hyperlink{classnw_1_1_ch_flux___rct___evt_a29702aefc95f39082b9d8a9278e3b0f8}{ch\+\_\+spc\+\_\+id}, \hyperlink{namespacenw_ad7146b8b5a9de9be416847f41135722c}{Voxel\+Vector} vvc, \hyperlink{classnw_1_1_uni___rnd}{Uni\+\_\+\+Rnd} $\ast$\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg})
+\item 
+virtual \hyperlink{classnw_1_1_ch_flux___rct___evt_ada973af5af7cb1ea6c341fd64dd0f850}{$\sim$\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt} ()
+\item 
+void \hyperlink{classnw_1_1_ch_flux___rct___evt_a59d8b2ededb919b5b2cf4358de9a6137}{init} ()
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___event_ae2c608ee2508058d6f318ca2ca8f4317}{\+\_\+\+Event\+::init()} method. \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1_ch_flux___rct___evt_a4034ee90e8ec27a92665a5591fad165d}{update} (double)
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___event_a882115f8652c881bc8ed43f1050ccba3}{\+\_\+\+Event\+::update} method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classnw_1_1_ch_flux___rct___evt_a929abfad936dfc3501b8b5b523112ab9}{calc\+\_\+tau} (long vid)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{classnw_1_1_ch_flux___rct___evt_a29702aefc95f39082b9d8a9278e3b0f8}{ch\+\_\+spc\+\_\+id}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Channel flux reaction event. 
+
+This event is derived from the reaction event and introduces the flux of a molecular species through a channel. It differs from an ordinary reaction event due to the fact that the educt (the channel) is not modified by the event itself. Thus the educt vector has to be generated manually in the \hyperlink{classnw_1_1_ch_flux___rct___evt_a59d8b2ededb919b5b2cf4358de9a6137}{init()} function. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnw_1_1_ch_flux___rct___evt_ab54a4c1b86a428cf540967fc0d575b56}{\index{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}!Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}}
+\index{Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}!nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}}
+\subsubsection[{Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{string}]{name, }
+\item[{double}]{k, }
+\item[{vector$<$ long $>$}]{sc\+\_\+vec, }
+\item[{long}]{ch\+\_\+spc\+\_\+id, }
+\item[{{\bf Voxel\+Vector}}]{vvc, }
+\item[{{\bf Uni\+\_\+\+Rnd} $\ast$}]{rg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1_ch_flux___rct___evt_ab54a4c1b86a428cf540967fc0d575b56}
+
+\begin{DoxyCode}
+15     :\hyperlink{classnw_1_1_reaction___evt_a582f3c60366d15e89fdd613abe4bd86d}{Reaction\_Evt}(\textcolor{keywordtype}{id},\hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name},\hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k},\hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\_vec},vvc,\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg})\{
+16         this->\hyperlink{classnw_1_1_ch_flux___rct___evt_a29702aefc95f39082b9d8a9278e3b0f8}{ch\_spc\_id} = \hyperlink{classnw_1_1_ch_flux___rct___evt_a29702aefc95f39082b9d8a9278e3b0f8}{ch\_spc\_id};
+17     \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_ch_flux___rct___evt_ada973af5af7cb1ea6c341fd64dd0f850}{\index{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}!````~Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{$\sim$\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}}
+\index{````~Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{$\sim$\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}!nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}}
+\subsubsection[{$\sim$\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}]{\setlength{\rightskip}{0pt plus 5cm}virtual nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt\+::$\sim$\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1_ch_flux___rct___evt_ada973af5af7cb1ea6c341fd64dd0f850}
+
+\begin{DoxyCode}
+18 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnw_1_1_ch_flux___rct___evt_a929abfad936dfc3501b8b5b523112ab9}{\index{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}!calc\+\_\+tau@{calc\+\_\+tau}}
+\index{calc\+\_\+tau@{calc\+\_\+tau}!nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}}
+\subsubsection[{calc\+\_\+tau}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt\+::calc\+\_\+tau (
+\begin{DoxyParamCaption}
+\item[{long}]{vid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_ch_flux___rct___evt_a929abfad936dfc3501b8b5b523112ab9}
+
+\begin{DoxyCode}
+43                                        \{
+44     \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[vid].t = -log(\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg}->\hyperlink{classnw_1_1_uni___rnd_ad7883ef0ce4c591612bcb41678104773}{get\_Uni\_Rnd}()) / (\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}.at(vid).v->get\_state\_vec()->
+45                     at(\hyperlink{classnw_1_1_reaction___evt_ae20c8b7d42ef1607200e1e2541db9a70}{educt\_vec}.at(0))->get\_n\_molecules() * \hyperlink{classnw_1_1___event_a29c77fb164e745cdb5c5fda4f191cd37}{c});
+46     \textcolor{keywordflow}{return} \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[vid].t;
+47 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_ch_flux___rct___evt_a59d8b2ededb919b5b2cf4358de9a6137}{\index{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}!init@{init}}
+\index{init@{init}!nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classnw_1_1_ch_flux___rct___evt_a59d8b2ededb919b5b2cf4358de9a6137}
+
+
+Implementation of the \hyperlink{classnw_1_1___event_ae2c608ee2508058d6f318ca2ca8f4317}{\+\_\+\+Event\+::init()} method. 
+
+The educt of this first order reaction is not modified by the event itself. The educt vector has therefore to be generated manually. 
+
+Implements \hyperlink{classnw_1_1___event_ae2c608ee2508058d6f318ca2ca8f4317}{nw\+::\+\_\+\+Event}.
+
+
+\begin{DoxyCode}
+6                          \{
+7     \hyperlink{classnw_1_1_reaction___evt_ae20c8b7d42ef1607200e1e2541db9a70}{educt\_vec}.push\_back(\hyperlink{classnw_1_1_ch_flux___rct___evt_a29702aefc95f39082b9d8a9278e3b0f8}{ch\_spc\_id});
+8     \hyperlink{classnw_1_1___event_a29c77fb164e745cdb5c5fda4f191cd37}{c}=\hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k};
+9     \hyperlink{classnw_1_1_ch_flux___rct___evt_a4034ee90e8ec27a92665a5591fad165d}{update}(0);
+10 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_ch_flux___rct___evt_a4034ee90e8ec27a92665a5591fad165d}{\index{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}!update@{update}}
+\index{update@{update}!nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt\+::update (
+\begin{DoxyParamCaption}
+\item[{double}]{last\+\_\+tau}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classnw_1_1_ch_flux___rct___evt_a4034ee90e8ec27a92665a5591fad165d}
+
+
+Implementation of the \hyperlink{classnw_1_1___event_a882115f8652c881bc8ed43f1050ccba3}{\+\_\+\+Event\+::update} method. 
+
+\begin{DoxyReturn}{Returns}
+New tau value for this \hyperlink{classnw_1_1___event}{\+\_\+\+Event} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em last\+\_\+tau} & Tau value of previous firing \hyperlink{classnw_1_1___event}{\+\_\+\+Event}\\
+\hline
+\end{DoxyParams}
+The channel flux reaction event differs from its mother class in its update function. ~\newline
+~\newline
+Note\+: This event cannot be part of the dependency graph, because there is no event that causes a new number of open channels. A new tau value is calculated every simulation step. This is a sub-\/optimal implementation. One option is to manually add this event to the dependency graph of the sub\+Unit\+Switch reaction. 
+
+Implements \hyperlink{classnw_1_1___event_a882115f8652c881bc8ed43f1050ccba3}{nw\+::\+\_\+\+Event}.
+
+
+\begin{DoxyCode}
+12                                             \{
+13 
+14     \textcolor{keywordtype}{double} minTau = INFINITY;
+15     \textcolor{keywordtype}{double} actTau;
+16 
+17 \textcolor{comment}{//  run through the tv vector}
+18     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long) \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}.size(); i++) \{
+19 \textcolor{comment}{//      check for voxel that have been affected by last executed event}
+20         \textcolor{keywordflow}{if} (\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}.at(i).v->get\_dirty\_flag()) \{
+21             actTau = \hyperlink{classnw_1_1_ch_flux___rct___evt_a929abfad936dfc3501b8b5b523112ab9}{calc\_tau}(i);
+22 \textcolor{comment}{//          find smallest tau value (->next voxel) for this event}
+23             \textcolor{keywordflow}{if} (actTau < minTau) \{
+24                 minTau = actTau;
+25                 \hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel} = i;
+26             \}
+27 \textcolor{comment}{//      this voxel has not been affected by last event}
+28         \} \textcolor{keywordflow}{else} \{
+29 \textcolor{comment}{//          adjust tau value to global times scale}
+30             \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}.at(i).t -= last\_tau;
+31 \textcolor{comment}{//          find smallest tau value (->next voxel) for this event}
+32             \textcolor{keywordflow}{if} (\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t < minTau) \{
+33                 minTau = \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t;
+34                 \hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel} = i;
+35             \}
+36         \}
+37     \}
+38     this->\hyperlink{classnw_1_1___event_aaa705b35c06c0cb2e0a4f3daa9ee8037}{dirty\_flag} = \textcolor{keyword}{false};
+39 
+40     \textcolor{keywordflow}{return} minTau;
+41 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classnw_1_1_ch_flux___rct___evt_a29702aefc95f39082b9d8a9278e3b0f8}{\index{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}!ch\+\_\+spc\+\_\+id@{ch\+\_\+spc\+\_\+id}}
+\index{ch\+\_\+spc\+\_\+id@{ch\+\_\+spc\+\_\+id}!nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}}
+\subsubsection[{ch\+\_\+spc\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt\+::ch\+\_\+spc\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_ch_flux___rct___evt_a29702aefc95f39082b9d8a9278e3b0f8}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Events/\hyperlink{_ch_flux___rct___evt_8h}{Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt.\+h}\item 
+Events/\hyperlink{_ch_flux___rct___evt_8cpp}{Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt.\+cpp}\end{DoxyCompactItemize}

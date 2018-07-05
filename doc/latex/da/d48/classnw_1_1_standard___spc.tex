@@ -1,0 +1,150 @@
+\hypertarget{classnw_1_1_standard___spc}{\section{nw\+:\+:Standard\+\_\+\+Spc Class Reference}
+\label{classnw_1_1_standard___spc}\index{nw\+::\+Standard\+\_\+\+Spc@{nw\+::\+Standard\+\_\+\+Spc}}
+}
+
+
+Basic implementation of a standard moecular species.  
+
+
+
+
+{\ttfamily \#include $<$Standard\+\_\+\+Spc.\+h$>$}
+
+Inheritance diagram for nw\+:\+:Standard\+\_\+\+Spc\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{da/d48/classnw_1_1_standard___spc}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1_standard___spc_aba0f0fbe55666cbcf5fbdd8d66f51565}{Standard\+\_\+\+Spc} (long \hyperlink{classnw_1_1___species_ac42dfe1c656c17178a9649093519ebb7}{id}, std\+::string \hyperlink{classnw_1_1___species_a7b8ede09e28941beb48cf27f1247e2f9}{name}, double \hyperlink{classnw_1_1___species_ac66cdd3bdd5be88791e00d063b4e92a2}{initial\+\_\+conc})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classnw_1_1_standard___spc_a8113363092a1784829d8f22149d2cef0}{$\sim$\+Standard\+\_\+\+Spc} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+long \hyperlink{classnw_1_1_standard___spc_aa1b07cee6c86dd83aa9970c0964d16fc}{get\+\_\+n\+\_\+molecules} ()
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___species_a6e3e68477663ff511d75fb24cf01cb9f}{\+\_\+\+Species\+::get\+\_\+n\+\_\+molecules()} method. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_standard___spc_aed4c0ba53c924011269b59a4a5181fe4}{mod\+\_\+n\+\_\+molecules} (long n)
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___species_ac7955c9fe040d8cae8f3cae4684ed96b}{\+\_\+\+Species\+::mod\+\_\+n\+\_\+molecules()} method. \end{DoxyCompactList}\item 
+\hyperlink{classnw_1_1___species}{\+\_\+\+Species} $\ast$ \hyperlink{classnw_1_1_standard___spc_abc6e6a61ebdcd1e1b917c3e3a5f9cd24}{copy} ()
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___species_aea43d96b0b1c9e88953f40fbe58e7f29}{\+\_\+\+Species\+::copy()} method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Basic implementation of a standard moecular species. 
+
+Basic unit of a \hyperlink{classnw_1_1_gillespie___sys}{Gillespie\+\_\+\+Sys}. Every \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} has a state\+\_\+vector that consists of molecular \hyperlink{classnw_1_1___species}{\+\_\+\+Species}. A \hyperlink{classnw_1_1___species}{\+\_\+\+Species} is defined by its current number of molecules, its id and name, and a dirty\+\_\+flag. The dirty flag indicates that the species has been updated during the previous \hyperlink{classnw_1_1___event}{\+\_\+\+Event}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnw_1_1_standard___spc_aba0f0fbe55666cbcf5fbdd8d66f51565}{\index{nw\+::\+Standard\+\_\+\+Spc@{nw\+::\+Standard\+\_\+\+Spc}!Standard\+\_\+\+Spc@{Standard\+\_\+\+Spc}}
+\index{Standard\+\_\+\+Spc@{Standard\+\_\+\+Spc}!nw\+::\+Standard\+\_\+\+Spc@{nw\+::\+Standard\+\_\+\+Spc}}
+\subsubsection[{Standard\+\_\+\+Spc}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+Standard\+\_\+\+Spc\+::\+Standard\+\_\+\+Spc (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{std\+::string}]{name, }
+\item[{double}]{initial\+\_\+conc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1_standard___spc_aba0f0fbe55666cbcf5fbdd8d66f51565}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \hyperlink{classnw_1_1___species}{\+\_\+\+Species} I\+D. \\
+\hline
+{\em name} & \hyperlink{classnw_1_1___species}{\+\_\+\+Species} name \\
+\hline
+{\em initial\+\_\+conc} & \hyperlink{classnw_1_1___species}{\+\_\+\+Species} Initial concentration \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+21 :\hyperlink{classnw_1_1___species_af74ef3f4a59f3c8fa9ff6b1acc83be86}{\_Species}(\textcolor{keywordtype}{id},\hyperlink{classnw_1_1___species_a7b8ede09e28941beb48cf27f1247e2f9}{name},\hyperlink{classnw_1_1___species_ac66cdd3bdd5be88791e00d063b4e92a2}{initial\_conc})\{\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___spc_a8113363092a1784829d8f22149d2cef0}{\index{nw\+::\+Standard\+\_\+\+Spc@{nw\+::\+Standard\+\_\+\+Spc}!````~Standard\+\_\+\+Spc@{$\sim$\+Standard\+\_\+\+Spc}}
+\index{````~Standard\+\_\+\+Spc@{$\sim$\+Standard\+\_\+\+Spc}!nw\+::\+Standard\+\_\+\+Spc@{nw\+::\+Standard\+\_\+\+Spc}}
+\subsubsection[{$\sim$\+Standard\+\_\+\+Spc}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+Standard\+\_\+\+Spc\+::$\sim$\+Standard\+\_\+\+Spc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1_standard___spc_a8113363092a1784829d8f22149d2cef0}
+
+
+Destructor. 
+
+
+\begin{DoxyCode}
+23 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnw_1_1_standard___spc_abc6e6a61ebdcd1e1b917c3e3a5f9cd24}{\index{nw\+::\+Standard\+\_\+\+Spc@{nw\+::\+Standard\+\_\+\+Spc}!copy@{copy}}
+\index{copy@{copy}!nw\+::\+Standard\+\_\+\+Spc@{nw\+::\+Standard\+\_\+\+Spc}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+Species}$\ast$ nw\+::\+Standard\+\_\+\+Spc\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1_standard___spc_abc6e6a61ebdcd1e1b917c3e3a5f9cd24}
+
+
+Implementation of the \hyperlink{classnw_1_1___species_aea43d96b0b1c9e88953f40fbe58e7f29}{\+\_\+\+Species\+::copy()} method. 
+
+
+
+Implements \hyperlink{classnw_1_1___species_aea43d96b0b1c9e88953f40fbe58e7f29}{nw\+::\+\_\+\+Species}.
+
+
+\begin{DoxyCode}
+30                     \{
+31         \hyperlink{classnw_1_1___species_af74ef3f4a59f3c8fa9ff6b1acc83be86}{\_Species}* s = \textcolor{keyword}{new} \hyperlink{classnw_1_1_standard___spc_aba0f0fbe55666cbcf5fbdd8d66f51565}{Standard\_Spc}(\textcolor{keywordtype}{id},\hyperlink{classnw_1_1___species_a7b8ede09e28941beb48cf27f1247e2f9}{name},
+      \hyperlink{classnw_1_1___species_ac66cdd3bdd5be88791e00d063b4e92a2}{initial\_conc});
+32         \textcolor{keywordflow}{return} s;\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___spc_aa1b07cee6c86dd83aa9970c0964d16fc}{\index{nw\+::\+Standard\+\_\+\+Spc@{nw\+::\+Standard\+\_\+\+Spc}!get\+\_\+n\+\_\+molecules@{get\+\_\+n\+\_\+molecules}}
+\index{get\+\_\+n\+\_\+molecules@{get\+\_\+n\+\_\+molecules}!nw\+::\+Standard\+\_\+\+Spc@{nw\+::\+Standard\+\_\+\+Spc}}
+\subsubsection[{get\+\_\+n\+\_\+molecules}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Standard\+\_\+\+Spc\+::get\+\_\+n\+\_\+molecules (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1_standard___spc_aa1b07cee6c86dd83aa9970c0964d16fc}
+
+
+Implementation of the \hyperlink{classnw_1_1___species_a6e3e68477663ff511d75fb24cf01cb9f}{\+\_\+\+Species\+::get\+\_\+n\+\_\+molecules()} method. 
+
+
+
+Implements \hyperlink{classnw_1_1___species_a6e3e68477663ff511d75fb24cf01cb9f}{nw\+::\+\_\+\+Species}.
+
+
+\begin{DoxyCode}
+25 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___species_af6ae0232b4f994b464a2f69cb022b33f}{n\_molecules};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___spc_aed4c0ba53c924011269b59a4a5181fe4}{\index{nw\+::\+Standard\+\_\+\+Spc@{nw\+::\+Standard\+\_\+\+Spc}!mod\+\_\+n\+\_\+molecules@{mod\+\_\+n\+\_\+molecules}}
+\index{mod\+\_\+n\+\_\+molecules@{mod\+\_\+n\+\_\+molecules}!nw\+::\+Standard\+\_\+\+Spc@{nw\+::\+Standard\+\_\+\+Spc}}
+\subsubsection[{mod\+\_\+n\+\_\+molecules}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Standard\+\_\+\+Spc\+::mod\+\_\+n\+\_\+molecules (
+\begin{DoxyParamCaption}
+\item[{long}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1_standard___spc_aed4c0ba53c924011269b59a4a5181fe4}
+
+
+Implementation of the \hyperlink{classnw_1_1___species_ac7955c9fe040d8cae8f3cae4684ed96b}{\+\_\+\+Species\+::mod\+\_\+n\+\_\+molecules()} method. 
+
+
+
+Implements \hyperlink{classnw_1_1___species_ac7955c9fe040d8cae8f3cae4684ed96b}{nw\+::\+\_\+\+Species}.
+
+
+\begin{DoxyCode}
+27                                 \{
+28         \hyperlink{classnw_1_1___species_af6ae0232b4f994b464a2f69cb022b33f}{n\_molecules} += n; \textcolor{keywordflow}{if}(n!=0)\{\hyperlink{classnw_1_1___species_a79157bae3920ce7bba35e3f75b2aad6f}{dirty\_flag} = \textcolor{keyword}{true};\}\}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Species/\hyperlink{_standard___spc_8h}{Standard\+\_\+\+Spc.\+h}\end{DoxyCompactItemize}

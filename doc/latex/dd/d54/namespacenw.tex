@@ -1,0 +1,116 @@
+\hypertarget{namespacenw}{\section{nw Namespace Reference}
+\label{namespacenw}\index{nw@{nw}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnw_1_1___event}{\+\_\+\+Event}
+\begin{DoxyCompactList}\small\item\em Abstract base class for system state transitions (events). \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1___input}{\+\_\+\+Input}
+\begin{DoxyCompactList}\small\item\em Abstract base class for input procedures. \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1___random}{\+\_\+\+Random}
+\begin{DoxyCompactList}\small\item\em abstract base class to define an interface for Random Generators \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1___species}{\+\_\+\+Species}
+\begin{DoxyCompactList}\small\item\em Abstract base class for the molecular species of a system. \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1___system}{\+\_\+\+System}
+\begin{DoxyCompactList}\small\item\em Abstract base class for the implementation of simulation algorithms. \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}
+\begin{DoxyCompactList}\small\item\em Abstract base class for voxel (discrete building blocks of the simulation volume) \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1_border___vxl}{Border\+\_\+\+Vxl}
+\begin{DoxyCompactList}\small\item\em Specialized \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} that can be used to define a system with equilibrium as boundary condition. \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1_channel___spc}{Channel\+\_\+\+Spc}
+\begin{DoxyCompactList}\small\item\em Realization of channel proteins comprised of a fixed number of subunits that open whenever a predefined number of those subunits are in an active state. \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1_ch_flux___rct___evt}{Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}
+\begin{DoxyCompactList}\small\item\em Channel flux reaction event. \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1_diffusion___evt}{Diffusion\+\_\+\+Evt}
+\begin{DoxyCompactList}\small\item\em Realization of diffusion between two voxels. \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1_gillespie___sys}{Gillespie\+\_\+\+Sys}
+\begin{DoxyCompactList}\small\item\em Coordinates the stochastic simulation algorithm. \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1_reaction___evt}{Reaction\+\_\+\+Evt}
+\begin{DoxyCompactList}\small\item\em Implementation of the reaction of one ore two molecules. \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1_standard___ipt}{Standard\+\_\+\+Ipt}
+\begin{DoxyCompactList}\small\item\em Input class that parses a .xml files and generates a \hyperlink{classnw_1_1_gillespie___sys}{Gillespie\+\_\+\+Sys}. \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1_standard___spc}{Standard\+\_\+\+Spc}
+\begin{DoxyCompactList}\small\item\em Basic implementation of a standard moecular species. \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1_standard___vxl}{Standard\+\_\+\+Vxl}
+\begin{DoxyCompactList}\small\item\em Standard voxel implementation. \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1_sub_unit_switch___rct___evt}{Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}
+\begin{DoxyCompactList}\small\item\em Subunit switch reaction event. \end{DoxyCompactList}\item 
+class \hyperlink{classnw_1_1_uni___rnd}{Uni\+\_\+\+Rnd}
+\begin{DoxyCompactList}\small\item\em \char`\"{}\+Minimal\char`\"{} random number generator of Park and Miller \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef vector$<$ \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} $\ast$ $>$ \hyperlink{namespacenw_ad7146b8b5a9de9be416847f41135722c}{Voxel\+Vector}
+\begin{DoxyCompactList}\small\item\em typedefs of Vector related structures \end{DoxyCompactList}\item 
+typedef Voxel\+Vector\+::iterator \hyperlink{namespacenw_a79f35b5a82b764c7144ecf3074e926c0}{Voxel\+Iterator}
+\begin{DoxyCompactList}\small\item\em typedefs of a \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} vector iterator \end{DoxyCompactList}\item 
+typedef vector$<$ \hyperlink{classnw_1_1___event}{\+\_\+\+Event} $\ast$ $>$ \hyperlink{namespacenw_a0d9ea27d7802637354c7892806eac1fc}{Event\+Vector}
+\begin{DoxyCompactList}\small\item\em typedefs of a \hyperlink{classnw_1_1___event}{\+\_\+\+Event} reference vector \end{DoxyCompactList}\item 
+typedef Event\+Vector\+::iterator \hyperlink{namespacenw_a543a4f72e609ca94582c1c7c10303e0b}{Event\+Iterator}
+\begin{DoxyCompactList}\small\item\em typedefs of a \hyperlink{classnw_1_1___event}{\+\_\+\+Event} vector iterator \end{DoxyCompactList}\item 
+typedef vector$<$ \hyperlink{classnw_1_1___species}{\+\_\+\+Species} $\ast$ $>$ \hyperlink{namespacenw_a68aa8285591d78ebfc793c531bd43a23}{Species\+Vector}
+\begin{DoxyCompactList}\small\item\em typedefs of Species related structures \end{DoxyCompactList}\item 
+typedef Species\+Vector\+::iterator \hyperlink{namespacenw_a28941aaaa0562445c168a620b63547d2}{Species\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const double \hyperlink{namespacenw_ad890cfa7dd9eaf8d5b6754723e516c4a}{N\+\_\+\+A\+V\+O} = 6.\+022e23
+\item 
+static const string \hyperlink{namespacenw_a7d9622d3fd42f8d91bb8b8a79688518d}{N\+E\+G\+A\+T\+I\+V\+E\+T\+A\+U\+M\+S\+G} = \char`\"{}N\+E\+G\+A\+T\+I\+V\+E T\+A\+U E\+R\+R\+O\+R L\+A\+S\+T E\+V\+E\+N\+T \char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message that is thrown, whenever the smallest tau value becomes negative. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacenw_a543a4f72e609ca94582c1c7c10303e0b}{\index{nw@{nw}!Event\+Iterator@{Event\+Iterator}}
+\index{Event\+Iterator@{Event\+Iterator}!nw@{nw}}
+\subsubsection[{Event\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef Event\+Vector\+::iterator {\bf nw\+::\+Event\+Iterator}}}\label{namespacenw_a543a4f72e609ca94582c1c7c10303e0b}
+
+
+typedefs of a \hyperlink{classnw_1_1___event}{\+\_\+\+Event} vector iterator 
+
+\hypertarget{namespacenw_a0d9ea27d7802637354c7892806eac1fc}{\index{nw@{nw}!Event\+Vector@{Event\+Vector}}
+\index{Event\+Vector@{Event\+Vector}!nw@{nw}}
+\subsubsection[{Event\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}typedef vector$<${\bf \+\_\+\+Event}$\ast$$>$ {\bf nw\+::\+Event\+Vector}}}\label{namespacenw_a0d9ea27d7802637354c7892806eac1fc}
+
+
+typedefs of a \hyperlink{classnw_1_1___event}{\+\_\+\+Event} reference vector 
+
+\hypertarget{namespacenw_a28941aaaa0562445c168a620b63547d2}{\index{nw@{nw}!Species\+Iterator@{Species\+Iterator}}
+\index{Species\+Iterator@{Species\+Iterator}!nw@{nw}}
+\subsubsection[{Species\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef Species\+Vector\+::iterator {\bf nw\+::\+Species\+Iterator}}}\label{namespacenw_a28941aaaa0562445c168a620b63547d2}
+\hypertarget{namespacenw_a68aa8285591d78ebfc793c531bd43a23}{\index{nw@{nw}!Species\+Vector@{Species\+Vector}}
+\index{Species\+Vector@{Species\+Vector}!nw@{nw}}
+\subsubsection[{Species\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}typedef vector$<${\bf \+\_\+\+Species}$\ast$$>$ {\bf nw\+::\+Species\+Vector}}}\label{namespacenw_a68aa8285591d78ebfc793c531bd43a23}
+
+
+typedefs of Species related structures 
+
+\hypertarget{namespacenw_a79f35b5a82b764c7144ecf3074e926c0}{\index{nw@{nw}!Voxel\+Iterator@{Voxel\+Iterator}}
+\index{Voxel\+Iterator@{Voxel\+Iterator}!nw@{nw}}
+\subsubsection[{Voxel\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef Voxel\+Vector\+::iterator {\bf nw\+::\+Voxel\+Iterator}}}\label{namespacenw_a79f35b5a82b764c7144ecf3074e926c0}
+
+
+typedefs of a \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} vector iterator 
+
+\hypertarget{namespacenw_ad7146b8b5a9de9be416847f41135722c}{\index{nw@{nw}!Voxel\+Vector@{Voxel\+Vector}}
+\index{Voxel\+Vector@{Voxel\+Vector}!nw@{nw}}
+\subsubsection[{Voxel\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}typedef vector$<$ {\bf \+\_\+\+Voxel} $\ast$ $>$ {\bf nw\+::\+Voxel\+Vector}}}\label{namespacenw_ad7146b8b5a9de9be416847f41135722c}
+
+
+typedefs of Vector related structures 
+
+typedefs of a \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} reference vector 
+
+\subsection{Variable Documentation}
+\hypertarget{namespacenw_ad890cfa7dd9eaf8d5b6754723e516c4a}{\index{nw@{nw}!N\+\_\+\+A\+V\+O@{N\+\_\+\+A\+V\+O}}
+\index{N\+\_\+\+A\+V\+O@{N\+\_\+\+A\+V\+O}!nw@{nw}}
+\subsubsection[{N\+\_\+\+A\+V\+O}]{\setlength{\rightskip}{0pt plus 5cm}const double nw\+::\+N\+\_\+\+A\+V\+O = 6.\+022e23\hspace{0.3cm}{\ttfamily [static]}}}\label{namespacenw_ad890cfa7dd9eaf8d5b6754723e516c4a}
+Definition of Avogadro's constant \hypertarget{namespacenw_a7d9622d3fd42f8d91bb8b8a79688518d}{\index{nw@{nw}!N\+E\+G\+A\+T\+I\+V\+E\+T\+A\+U\+M\+S\+G@{N\+E\+G\+A\+T\+I\+V\+E\+T\+A\+U\+M\+S\+G}}
+\index{N\+E\+G\+A\+T\+I\+V\+E\+T\+A\+U\+M\+S\+G@{N\+E\+G\+A\+T\+I\+V\+E\+T\+A\+U\+M\+S\+G}!nw@{nw}}
+\subsubsection[{N\+E\+G\+A\+T\+I\+V\+E\+T\+A\+U\+M\+S\+G}]{\setlength{\rightskip}{0pt plus 5cm}const string nw\+::\+N\+E\+G\+A\+T\+I\+V\+E\+T\+A\+U\+M\+S\+G = \char`\"{}N\+E\+G\+A\+T\+I\+V\+E T\+A\+U E\+R\+R\+O\+R L\+A\+S\+T E\+V\+E\+N\+T \char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{namespacenw_a7d9622d3fd42f8d91bb8b8a79688518d}
+
+
+Error message that is thrown, whenever the smallest tau value becomes negative. 
+

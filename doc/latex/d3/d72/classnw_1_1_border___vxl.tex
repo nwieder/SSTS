@@ -1,0 +1,112 @@
+\hypertarget{classnw_1_1_border___vxl}{\section{nw\+:\+:Border\+\_\+\+Vxl Class Reference}
+\label{classnw_1_1_border___vxl}\index{nw\+::\+Border\+\_\+\+Vxl@{nw\+::\+Border\+\_\+\+Vxl}}
+}
+
+
+Specialized \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} that can be used to define a system with equilibrium as boundary condition.  
+
+
+
+
+{\ttfamily \#include $<$Border\+\_\+\+Vxl.\+h$>$}
+
+Inheritance diagram for nw\+:\+:Border\+\_\+\+Vxl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d3/d72/classnw_1_1_border___vxl}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1_border___vxl_a9fec31173af0a4b458af9670d274c7c9}{Border\+\_\+\+Vxl} (long \hyperlink{classnw_1_1___voxel_a01b73aff9af26230df4c483c5bd81896}{id}, double \hyperlink{classnw_1_1___voxel_ad9c3dbd0ea989af6ba7e1b5e09f6a989}{box\+\_\+length}, \hyperlink{namespacenw_a68aa8285591d78ebfc793c531bd43a23}{Species\+Vector} \hyperlink{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{state\+\_\+vec})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classnw_1_1_border___vxl_a6874c3e65b625da883448d2c6811a0b7}{$\sim$\+Border\+\_\+\+Vxl} ()
+\item 
+void \hyperlink{classnw_1_1_border___vxl_aa7bd84871cf4a9781a535a0a1922dcc8}{update\+\_\+state} (std\+::vector$<$ long $>$ sc\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___voxel_a5842ac3c24bda907204852db0cf46810}{\+\_\+\+Voxel\+::update\+\_\+state()} method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Specialized \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} that can be used to define a system with equilibrium as boundary condition. 
+
+The equilibrium boundary condition is an open system that is in equilibrium with itself and the surroundings. Border voxel serve as neighbor voxel for marginal voxel. Their state vector represents an equilibrium state of the considered system and exchanges non-\/stationary molecules with the main simulation voxels. The only exception is that the state of the border voxel is constant and thus drives the main simulation voxel towards the initial equilibrium. This plays an particular important role when conducting ion channels are introduced to the model. Without the eflux via border voxel, ions introduced via the channel would accumulate inside the main simulation voxel and thus disturb the relaxation of the system towards its equilibrium state. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnw_1_1_border___vxl_a9fec31173af0a4b458af9670d274c7c9}{\index{nw\+::\+Border\+\_\+\+Vxl@{nw\+::\+Border\+\_\+\+Vxl}!Border\+\_\+\+Vxl@{Border\+\_\+\+Vxl}}
+\index{Border\+\_\+\+Vxl@{Border\+\_\+\+Vxl}!nw\+::\+Border\+\_\+\+Vxl@{nw\+::\+Border\+\_\+\+Vxl}}
+\subsubsection[{Border\+\_\+\+Vxl}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+Border\+\_\+\+Vxl\+::\+Border\+\_\+\+Vxl (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{double}]{box\+\_\+length, }
+\item[{{\bf Species\+Vector}}]{state\+\_\+vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1_border___vxl_a9fec31173af0a4b458af9670d274c7c9}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} I\+D \\
+\hline
+{\em box\+\_\+length} & \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} box length \\
+\hline
+{\em state\+\_\+vec} & \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} state vector \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+27                                                                     :
+28         \hyperlink{classnw_1_1___voxel_a0622dd383528f5115c6a450b6cbb1b34}{\_Voxel}(\textcolor{keywordtype}{id}, \hyperlink{classnw_1_1___voxel_ad9c3dbd0ea989af6ba7e1b5e09f6a989}{box\_length}, \hyperlink{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{state\_vec}) \{\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_border___vxl_a6874c3e65b625da883448d2c6811a0b7}{\index{nw\+::\+Border\+\_\+\+Vxl@{nw\+::\+Border\+\_\+\+Vxl}!````~Border\+\_\+\+Vxl@{$\sim$\+Border\+\_\+\+Vxl}}
+\index{````~Border\+\_\+\+Vxl@{$\sim$\+Border\+\_\+\+Vxl}!nw\+::\+Border\+\_\+\+Vxl@{nw\+::\+Border\+\_\+\+Vxl}}
+\subsubsection[{$\sim$\+Border\+\_\+\+Vxl}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+Border\+\_\+\+Vxl\+::$\sim$\+Border\+\_\+\+Vxl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1_border___vxl_a6874c3e65b625da883448d2c6811a0b7}
+Destructor 
+\begin{DoxyCode}
+30 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnw_1_1_border___vxl_aa7bd84871cf4a9781a535a0a1922dcc8}{\index{nw\+::\+Border\+\_\+\+Vxl@{nw\+::\+Border\+\_\+\+Vxl}!update\+\_\+state@{update\+\_\+state}}
+\index{update\+\_\+state@{update\+\_\+state}!nw\+::\+Border\+\_\+\+Vxl@{nw\+::\+Border\+\_\+\+Vxl}}
+\subsubsection[{update\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Border\+\_\+\+Vxl\+::update\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ long $>$}]{sc\+\_\+vec}
+\end{DoxyParamCaption}
+)}}\label{classnw_1_1_border___vxl_aa7bd84871cf4a9781a535a0a1922dcc8}
+
+
+Implementation of the \hyperlink{classnw_1_1___voxel_a5842ac3c24bda907204852db0cf46810}{\+\_\+\+Voxel\+::update\+\_\+state()} method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sc\+\_\+vec} & State change vector of firing event\\
+\hline
+\end{DoxyParams}
+The state vector of the Border voxel is constant. This function thus does not alter the number of molecules. However, it does set respective dirty\+\_\+flags. 
+\begin{DoxyCode}
+7 \{
+8     this->\hyperlink{classnw_1_1___voxel_a9c331fe7c0fd8691ef0124f33809764f}{dirty\_flag} = \textcolor{keyword}{true};
+9 
+10 \textcolor{comment}{//  do not update the state vector of Border\_vxl!}
+11     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < sc\_vec.size(); ++i) \{
+12         \textcolor{keywordflow}{if} (sc\_vec[i] != 0) \{
+13             \hyperlink{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{state\_vec}[i]->set\_dirty\_flag(\textcolor{keyword}{true});
+14         \}
+15     \}
+16 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Voxel/\hyperlink{_border___vxl_8h}{Border\+\_\+\+Vxl.\+h}\item 
+Voxel/\hyperlink{_border___vxl_8cpp}{Border\+\_\+\+Vxl.\+cpp}\end{DoxyCompactItemize}

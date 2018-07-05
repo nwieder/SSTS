@@ -1,0 +1,338 @@
+\hypertarget{classnw_1_1_diffusion___evt}{\section{nw\+:\+:Diffusion\+\_\+\+Evt Class Reference}
+\label{classnw_1_1_diffusion___evt}\index{nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}}
+}
+
+
+Realization of diffusion between two voxels.  
+
+
+
+
+{\ttfamily \#include $<$Diffusion\+\_\+\+Evt.\+h$>$}
+
+Inheritance diagram for nw\+:\+:Diffusion\+\_\+\+Evt\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{db/d40/classnw_1_1_diffusion___evt}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1_diffusion___evt_aa7a2892e0b8c19e58df2a37ab71213cc}{Diffusion\+\_\+\+Evt} (long \hyperlink{classnw_1_1___event_a8f7ce287f596266dd763ec7db2f74090}{id}, string \hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name}, double \hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k}, \hyperlink{namespacenw_ad7146b8b5a9de9be416847f41135722c}{Voxel\+Vector} vvc, long diff\+\_\+spc\+\_\+id, \hyperlink{classnw_1_1_uni___rnd}{Uni\+\_\+\+Rnd} $\ast$\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg})
+\begin{DoxyCompactList}\small\item\em Constructor of Diffusion Event. \end{DoxyCompactList}\item 
+virtual \hyperlink{classnw_1_1_diffusion___evt_a13608fc5a0cbe6e77caeca4cd77def61}{$\sim$\+Diffusion\+\_\+\+Evt} ()
+\item 
+double \hyperlink{classnw_1_1_diffusion___evt_a35841daf14d9ba472c0ed1f414187097}{update} (double)
+\begin{DoxyCompactList}\small\item\em Diffusion implementation of \hyperlink{classnw_1_1___event_a882115f8652c881bc8ed43f1050ccba3}{\+\_\+\+Event\+::update()} method. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_diffusion___evt_a5cd6413241bd01ecb6a58fc0359ab57b}{execute} ()
+\begin{DoxyCompactList}\small\item\em Diffusion implementation of \hyperlink{classnw_1_1___event_aa022418fb765582a053ac75cbc3436d6}{\+\_\+\+Event\+::execute()} method. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_diffusion___evt_adaaca9b5b7e6902189dfc79d8d5a4f99}{init} ()
+\begin{DoxyCompactList}\small\item\em Diffusion implementation of \hyperlink{classnw_1_1___event_ae2c608ee2508058d6f318ca2ca8f4317}{\+\_\+\+Event\+::init()} method initializes a diffusion. State change vector is generated and the event propensity is calculated. \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1_diffusion___evt_a468711cd0c37b2129898cb8e79c2f085}{get\+\_\+a} ()
+\begin{DoxyCompactList}\small\item\em Diffusion implementation of \hyperlink{classnw_1_1___event_a75945699f539cefab36eb6693a389918}{\+\_\+\+Event\+::get\+\_\+a()} method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classnw_1_1_diffusion___evt_a45b4ac64dd8f202de5b1e590b7a88621}{calc\+\_\+tau} (long)
+\begin{DoxyCompactList}\small\item\em function to calculate next tau value of a voxel. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_diffusion___evt_a207aa73a53839282e1a399b5d4d7c3d1}{build\+\_\+sc\+\_\+vec} ()
+\begin{DoxyCompactList}\small\item\em builds the state change vector and the inverse state change vector of the diffusion event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ long $>$ \hyperlink{classnw_1_1_diffusion___evt_ab975d8f0ae97844b4d43222e94871707}{inv\+\_\+sc\+\_\+vec}
+\begin{DoxyCompactList}\small\item\em inverse sc\+\_\+vec to update origin diffusion voxel ($\ast$ -\/1) \end{DoxyCompactList}\item 
+long \hyperlink{classnw_1_1_diffusion___evt_a7193335899a1d41a902dff91fc0029dd}{diff\+\_\+spec\+\_\+id}
+\begin{DoxyCompactList}\small\item\em id of the species which diffusion is represented by this Event \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Realization of diffusion between two voxels. 
+
+The Diffusion\+\_\+\+Event alters the stae vector of two adjacent Voxel. The \hyperlink{classnw_1_1_diffusion___evt_a5cd6413241bd01ecb6a58fc0359ab57b}{execute()} function thus needs a second random number to determine the diffusion partner from the voxel diff list. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnw_1_1_diffusion___evt_aa7a2892e0b8c19e58df2a37ab71213cc}{\index{nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}!Diffusion\+\_\+\+Evt@{Diffusion\+\_\+\+Evt}}
+\index{Diffusion\+\_\+\+Evt@{Diffusion\+\_\+\+Evt}!nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}}
+\subsubsection[{Diffusion\+\_\+\+Evt}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+Diffusion\+\_\+\+Evt\+::\+Diffusion\+\_\+\+Evt (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{string}]{name, }
+\item[{double}]{k, }
+\item[{{\bf Voxel\+Vector}}]{vvc, }
+\item[{long}]{diff\+\_\+spc\+\_\+id, }
+\item[{{\bf Uni\+\_\+\+Rnd} $\ast$}]{rg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1_diffusion___evt_aa7a2892e0b8c19e58df2a37ab71213cc}
+
+
+Constructor of Diffusion Event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \hyperlink{classnw_1_1___event}{\+\_\+\+Event} I\+D \\
+\hline
+{\em name} & \hyperlink{classnw_1_1___event}{\+\_\+\+Event} name \\
+\hline
+{\em k} & \hyperlink{classnw_1_1___event}{\+\_\+\+Event} rate constant \\
+\hline
+{\em vvc} & vector of all voxel where this event can occur \\
+\hline
+{\em diff\+\_\+spc\+\_\+id} & indicates the id of the diffusing molecule species \\
+\hline
+{\em rg} & Pointer to the Random\+\_\+\+Generator \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+26                                                                                                 :
+27         \hyperlink{classnw_1_1___event_a5efb757db20b083de6da605ea4b2bbae}{\_Event}(\textcolor{keywordtype}{id},\hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name},\hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k},vvc,\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg})\{
+28         this->\hyperlink{classnw_1_1_diffusion___evt_a7193335899a1d41a902dff91fc0029dd}{diff\_spec\_id} = diff\_spc\_id;
+29         \hyperlink{classnw_1_1_diffusion___evt_a207aa73a53839282e1a399b5d4d7c3d1}{build\_sc\_vec}();
+30     \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_diffusion___evt_a13608fc5a0cbe6e77caeca4cd77def61}{\index{nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}!````~Diffusion\+\_\+\+Evt@{$\sim$\+Diffusion\+\_\+\+Evt}}
+\index{````~Diffusion\+\_\+\+Evt@{$\sim$\+Diffusion\+\_\+\+Evt}!nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}}
+\subsubsection[{$\sim$\+Diffusion\+\_\+\+Evt}]{\setlength{\rightskip}{0pt plus 5cm}virtual nw\+::\+Diffusion\+\_\+\+Evt\+::$\sim$\+Diffusion\+\_\+\+Evt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1_diffusion___evt_a13608fc5a0cbe6e77caeca4cd77def61}
+Destructor 
+\begin{DoxyCode}
+32 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnw_1_1_diffusion___evt_a207aa73a53839282e1a399b5d4d7c3d1}{\index{nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}!build\+\_\+sc\+\_\+vec@{build\+\_\+sc\+\_\+vec}}
+\index{build\+\_\+sc\+\_\+vec@{build\+\_\+sc\+\_\+vec}!nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}}
+\subsubsection[{build\+\_\+sc\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Diffusion\+\_\+\+Evt\+::build\+\_\+sc\+\_\+vec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1_diffusion___evt_a207aa73a53839282e1a399b5d4d7c3d1}
+
+
+builds the state change vector and the inverse state change vector of the diffusion event. 
+
+Helper function to build an inverse sc\+\_\+vector. Number of molecules in the origin Voxel has to be decreased, while number of molecules in the target voxel has to be increased. Thus \hyperlink{classnw_1_1_diffusion___evt}{Diffusion\+\_\+\+Evt} requires two state change vectors.\+builds a state change vector using diff\+\_\+spec\+\_\+id 
+\begin{DoxyCode}
+85                                 \{
+86 \textcolor{comment}{//  build sc\_vec}
+87     \hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\_vec}.assign(\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[0].v->get\_state\_vec()->size(),0);
+88     \hyperlink{classnw_1_1_diffusion___evt_ab975d8f0ae97844b4d43222e94871707}{inv\_sc\_vec}.assign(\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[0].v->get\_state\_vec()->size(),0);
+89     \hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\_vec}[\hyperlink{classnw_1_1_diffusion___evt_a7193335899a1d41a902dff91fc0029dd}{diff\_spec\_id}] = -1;
+90     \hyperlink{classnw_1_1_diffusion___evt_ab975d8f0ae97844b4d43222e94871707}{inv\_sc\_vec}[\hyperlink{classnw_1_1_diffusion___evt_a7193335899a1d41a902dff91fc0029dd}{diff\_spec\_id}] = 1;
+91 
+92 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_diffusion___evt_a45b4ac64dd8f202de5b1e590b7a88621}{\index{nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}!calc\+\_\+tau@{calc\+\_\+tau}}
+\index{calc\+\_\+tau@{calc\+\_\+tau}!nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}}
+\subsubsection[{calc\+\_\+tau}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+Diffusion\+\_\+\+Evt\+::calc\+\_\+tau (
+\begin{DoxyParamCaption}
+\item[{long}]{vid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1_diffusion___evt_a45b4ac64dd8f202de5b1e590b7a88621}
+
+
+function to calculate next tau value of a voxel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vid} & the Voxel id of the voxel which has to be updated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new tau value 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+94                                       \{
+95 \textcolor{comment}{//  adapt the c value to the number of diffusion sites!}
+96     \textcolor{keywordtype}{double} c\_adapted =  \hyperlink{classnw_1_1___event_a29c77fb164e745cdb5c5fda4f191cd37}{c} * \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}.at(vid).v->get\_diff\_vec()->size();
+97 \textcolor{comment}{//  calculate tau}
+98     \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[vid].t = -log(\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg}->\hyperlink{classnw_1_1_uni___rnd_ad7883ef0ce4c591612bcb41678104773}{get\_Uni\_Rnd}()) / (\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[vid].v->get\_state\_vec()->at(
+      \hyperlink{classnw_1_1_diffusion___evt_a7193335899a1d41a902dff91fc0029dd}{diff\_spec\_id})->get\_n\_molecules() * c\_adapted);
+99 
+100     \textcolor{keywordflow}{return} \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[vid].t;
+101 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_diffusion___evt_a5cd6413241bd01ecb6a58fc0359ab57b}{\index{nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}!execute@{execute}}
+\index{execute@{execute}!nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Diffusion\+\_\+\+Evt\+::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classnw_1_1_diffusion___evt_a5cd6413241bd01ecb6a58fc0359ab57b}
+
+
+Diffusion implementation of \hyperlink{classnw_1_1___event_aa022418fb765582a053ac75cbc3436d6}{\+\_\+\+Event\+::execute()} method. 
+
+Two voxels have to be updated. Decrease the number of molecules by one inside the origin voxel and increase the number of molecules by one in the target voxel. The target voxel is determined randomly from the diffusion vector that defines the vicinity relation of different voxel. 
+
+Implements \hyperlink{classnw_1_1___event_aa022418fb765582a053ac75cbc3436d6}{nw\+::\+\_\+\+Event}.
+
+
+\begin{DoxyCode}
+21                            \{
+22 \textcolor{comment}{//  update diffusion origin voxel with the inverse state change vector}
+23     \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[\hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel}].v->update\_state(\hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\_vec});
+24 
+25 \textcolor{comment}{//  choose diffusion partner}
+26     \textcolor{keywordtype}{double} r = \hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg}->\hyperlink{classnw_1_1_uni___rnd_ad7883ef0ce4c591612bcb41678104773}{get\_Uni\_Rnd}();
+27     \textcolor{keywordtype}{double} d; \textcolor{comment}{// temp}
+28     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[\hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel}].v->get\_diff\_vec()->size(); ++i)\{
+29         d = (double)(i+1)/\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[\hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel}].v->get\_diff\_vec()->size();
+30         \textcolor{keywordflow}{if}(r-d < 0)\{
+31             \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[\hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel}].v->get\_diff\_vec()->at(i)->update\_state(
+      \hyperlink{classnw_1_1_diffusion___evt_ab975d8f0ae97844b4d43222e94871707}{inv\_sc\_vec});
+32             \textcolor{keywordflow}{break};
+33         \}
+34     \}
+35 
+36 \textcolor{comment}{//  set dirty flag to indicate that dependent events have to be updated properly}
+37     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1___event_a3f87b2dff69d07977f0a5e10936f38f6}{dep\_list}.size(); i++)\{
+38         \hyperlink{classnw_1_1___event_a3f87b2dff69d07977f0a5e10936f38f6}{dep\_list}[i]->set\_flag(\textcolor{keyword}{true});
+39     \}
+40 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_diffusion___evt_a468711cd0c37b2129898cb8e79c2f085}{\index{nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}!get\+\_\+a@{get\+\_\+a}}
+\index{get\+\_\+a@{get\+\_\+a}!nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}}
+\subsubsection[{get\+\_\+a}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+Diffusion\+\_\+\+Evt\+::get\+\_\+a (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classnw_1_1_diffusion___evt_a468711cd0c37b2129898cb8e79c2f085}
+
+
+Diffusion implementation of \hyperlink{classnw_1_1___event_a75945699f539cefab36eb6693a389918}{\+\_\+\+Event\+::get\+\_\+a()} method. 
+
+
+
+Implements \hyperlink{classnw_1_1___event_a75945699f539cefab36eb6693a389918}{nw\+::\+\_\+\+Event}.
+
+
+\begin{DoxyCode}
+103                            \{
+104     \textcolor{keywordtype}{double} a\_ges = 0;
+105     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{long} i = 0; i < (long) \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}.size(); i++)\{
+106         a\_ges += \hyperlink{classnw_1_1___event_a29c77fb164e745cdb5c5fda4f191cd37}{c}*\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].v->get\_state\_vec()->at(\hyperlink{classnw_1_1_diffusion___evt_a7193335899a1d41a902dff91fc0029dd}{diff\_spec\_id})->get\_n\_molecules() * 
+      \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].v->get\_diff\_vec()->size();
+107     \}
+108     \textcolor{keywordflow}{return} a\_ges;
+109 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_diffusion___evt_adaaca9b5b7e6902189dfc79d8d5a4f99}{\index{nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}!init@{init}}
+\index{init@{init}!nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Diffusion\+\_\+\+Evt\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classnw_1_1_diffusion___evt_adaaca9b5b7e6902189dfc79d8d5a4f99}
+
+
+Diffusion implementation of \hyperlink{classnw_1_1___event_ae2c608ee2508058d6f318ca2ca8f4317}{\+\_\+\+Event\+::init()} method initializes a diffusion. State change vector is generated and the event propensity is calculated. 
+
+
+
+Implements \hyperlink{classnw_1_1___event_ae2c608ee2508058d6f318ca2ca8f4317}{nw\+::\+\_\+\+Event}.
+
+
+\begin{DoxyCode}
+9                         \{
+10 
+11 \textcolor{comment}{//  calculate the correct diffusion probability constant according to the voxel volume}
+12     this->\hyperlink{classnw_1_1___event_a29c77fb164e745cdb5c5fda4f191cd37}{c} = (\hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k}*1e-3)/pow(\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[0].v->get\_box\_length()*1e6,2);
+13 
+14 \textcolor{comment}{//  build state change vector}
+15     \hyperlink{classnw_1_1_diffusion___evt_a207aa73a53839282e1a399b5d4d7c3d1}{build\_sc\_vec}();
+16 
+17 \textcolor{comment}{//  update the first time}
+18     \hyperlink{classnw_1_1_diffusion___evt_a35841daf14d9ba472c0ed1f414187097}{update}(0);
+19 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_diffusion___evt_a35841daf14d9ba472c0ed1f414187097}{\index{nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}!update@{update}}
+\index{update@{update}!nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+Diffusion\+\_\+\+Evt\+::update (
+\begin{DoxyParamCaption}
+\item[{double}]{last\+\_\+tau}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classnw_1_1_diffusion___evt_a35841daf14d9ba472c0ed1f414187097}
+
+
+Diffusion implementation of \hyperlink{classnw_1_1___event_a882115f8652c881bc8ed43f1050ccba3}{\+\_\+\+Event\+::update()} method. 
+
+
+
+Implements \hyperlink{classnw_1_1___event_a882115f8652c881bc8ed43f1050ccba3}{nw\+::\+\_\+\+Event}.
+
+
+\begin{DoxyCode}
+42                                            \{
+43 
+44     \textcolor{keywordtype}{double} minTau = INFINITY, actTau;
+45 
+46 \textcolor{comment}{//  check if this event depends on the last executed event}
+47     \textcolor{keywordflow}{if} (this->\hyperlink{classnw_1_1___event_aaa705b35c06c0cb2e0a4f3daa9ee8037}{dirty\_flag}) \{
+48 \textcolor{comment}{//      run through the tv vector}
+49         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}.size(); ++i) \{
+50 \textcolor{comment}{//          check for voxel that have been affected by last executed event}
+51             \textcolor{keywordflow}{if} (\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].v->get\_dirty\_flag()) \{
+52                 actTau = \hyperlink{classnw_1_1_diffusion___evt_a45b4ac64dd8f202de5b1e590b7a88621}{calc\_tau}(i);
+53 \textcolor{comment}{//              find smallest tau value (->next voxel) for this event}
+54                 \textcolor{keywordflow}{if} (actTau < minTau) \{
+55                     minTau = actTau;
+56                     \hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel} = i;
+57                 \}
+58 \textcolor{comment}{//          voxel has not been affected by last event}
+59             \} \textcolor{keywordflow}{else} \{
+60 \textcolor{comment}{//              adjust tau value to global times scale}
+61                 \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t -= last\_tau;
+62 \textcolor{comment}{//              find smallest tau value (->next voxel) for this event}
+63                 \textcolor{keywordflow}{if} (\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t < minTau) \{
+64                     minTau = \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t;
+65                     \hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel} = i;
+66                 \}
+67             \}
+68         \}
+69 \textcolor{comment}{//  event has not been affected by last event}
+70     \} \textcolor{keywordflow}{else} \{
+71 \textcolor{comment}{//      adjust tau values to global times scale}
+72         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}.size(); ++i) \{
+73             \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t -= last\_tau;
+74             \textcolor{keywordflow}{if} (\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t < minTau) \{
+75                 minTau = \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t;
+76                 \hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel} = i;
+77             \}
+78         \}
+79     \}
+80 
+81     this->\hyperlink{classnw_1_1___event_aaa705b35c06c0cb2e0a4f3daa9ee8037}{dirty\_flag} = \textcolor{keyword}{false};
+82     \textcolor{keywordflow}{return} minTau;
+83 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classnw_1_1_diffusion___evt_a7193335899a1d41a902dff91fc0029dd}{\index{nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}!diff\+\_\+spec\+\_\+id@{diff\+\_\+spec\+\_\+id}}
+\index{diff\+\_\+spec\+\_\+id@{diff\+\_\+spec\+\_\+id}!nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}}
+\subsubsection[{diff\+\_\+spec\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Diffusion\+\_\+\+Evt\+::diff\+\_\+spec\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1_diffusion___evt_a7193335899a1d41a902dff91fc0029dd}
+
+
+id of the species which diffusion is represented by this Event 
+
+\hypertarget{classnw_1_1_diffusion___evt_ab975d8f0ae97844b4d43222e94871707}{\index{nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}!inv\+\_\+sc\+\_\+vec@{inv\+\_\+sc\+\_\+vec}}
+\index{inv\+\_\+sc\+\_\+vec@{inv\+\_\+sc\+\_\+vec}!nw\+::\+Diffusion\+\_\+\+Evt@{nw\+::\+Diffusion\+\_\+\+Evt}}
+\subsubsection[{inv\+\_\+sc\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$long$>$ nw\+::\+Diffusion\+\_\+\+Evt\+::inv\+\_\+sc\+\_\+vec\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1_diffusion___evt_ab975d8f0ae97844b4d43222e94871707}
+
+
+inverse sc\+\_\+vec to update origin diffusion voxel ($\ast$ -\/1) 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Events/\hyperlink{_diffusion___evt_8h}{Diffusion\+\_\+\+Evt.\+h}\item 
+Events/\hyperlink{_diffusion___evt_8cpp}{Diffusion\+\_\+\+Evt.\+cpp}\end{DoxyCompactItemize}

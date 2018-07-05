@@ -1,0 +1,290 @@
+\hypertarget{classnw_1_1___voxel}{\section{nw\+:\+:\+\_\+\+Voxel Class Reference}
+\label{classnw_1_1___voxel}\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+}
+
+
+Abstract base class for voxel (discrete building blocks of the simulation volume)  
+
+
+
+
+{\ttfamily \#include $<$\+\_\+\+Voxel.\+h$>$}
+
+Inheritance diagram for nw\+:\+:\+\_\+\+Voxel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d3/d7a/classnw_1_1___voxel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1___voxel_a0622dd383528f5115c6a450b6cbb1b34}{\+\_\+\+Voxel} (long \hyperlink{classnw_1_1___voxel_a01b73aff9af26230df4c483c5bd81896}{id}, double \hyperlink{classnw_1_1___voxel_ad9c3dbd0ea989af6ba7e1b5e09f6a989}{box\+\_\+length}, \hyperlink{namespacenw_a68aa8285591d78ebfc793c531bd43a23}{Species\+Vector} \hyperlink{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{state\+\_\+vec})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classnw_1_1___voxel_ac179b9c8ef72a7bef8ba54a89fcfa4a9}{$\sim$\+\_\+\+Voxel} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnw_1_1___voxel_a5842ac3c24bda907204852db0cf46810}{update\+\_\+state} (vector$<$ long $>$ sc\+\_\+vec)=0
+\begin{DoxyCompactList}\small\item\em Update the state vector of voxel. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1___voxel_a09cd07ce7f9099eed8820e5c5f2b3977}{clean} ()
+\begin{DoxyCompactList}\small\item\em Clean dirty flag (set dirty\+\_\+flag = false). \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1___voxel_a86f184c141fa863b796e9248222be7e9}{add\+\_\+neighbour} (\hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} $\ast$v)
+\begin{DoxyCompactList}\small\item\em Add voxel to diffusion vector. \end{DoxyCompactList}\item 
+bool \hyperlink{classnw_1_1___voxel_aff78d5b2069500df3116fbc0b4c767a0}{get\+\_\+dirty\+\_\+flag} ()
+\item 
+double \hyperlink{classnw_1_1___voxel_a6c420e07f31de22e981f933a36a57b22}{get\+\_\+volume} ()
+\item 
+double \hyperlink{classnw_1_1___voxel_a836eab78d769eae2b732335a91d84148}{get\+\_\+box\+\_\+length} ()
+\item 
+long \hyperlink{classnw_1_1___voxel_a0336ad5b120b40c4ad3f0012f50def1b}{get\+\_\+id} ()
+\item 
+\hyperlink{namespacenw_a68aa8285591d78ebfc793c531bd43a23}{Species\+Vector} $\ast$ \hyperlink{classnw_1_1___voxel_a91f1d799645722bf5fe15c34137433b1}{get\+\_\+state\+\_\+vec} ()
+\item 
+vector$<$ \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} $\ast$ $>$ $\ast$ \hyperlink{classnw_1_1___voxel_a688c8c9ca0a3a533e557a800d9f3b511}{get\+\_\+diff\+\_\+vec} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{classnw_1_1___voxel_a01b73aff9af26230df4c483c5bd81896}{id}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} I\+D \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1___voxel_ad9c3dbd0ea989af6ba7e1b5e09f6a989}{box\+\_\+length}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} box length \mbox{[}micro m\mbox{]} \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1___voxel_ab55b70a476c9335f0df9d276105c0335}{volume}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} volume \mbox{[}l\mbox{]} \end{DoxyCompactList}\item 
+bool \hyperlink{classnw_1_1___voxel_a9c331fe7c0fd8691ef0124f33809764f}{dirty\+\_\+flag}
+\begin{DoxyCompactList}\small\item\em Indicates if the state vector of this \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} has been changed. \end{DoxyCompactList}\item 
+\hyperlink{namespacenw_a68aa8285591d78ebfc793c531bd43a23}{Species\+Vector} \hyperlink{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{state\+\_\+vec}
+\begin{DoxyCompactList}\small\item\em Reference list for all existing \hyperlink{classnw_1_1_standard___spc}{Standard\+\_\+\+Spc} in this \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}, defining the state of this \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} $\ast$ $>$ \hyperlink{classnw_1_1___voxel_abb780e4dc55e1cde47756aef6e2d746f}{diff\+\_\+vec}
+\begin{DoxyCompactList}\small\item\em Reference list of all diffusion neighbors of this \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract base class for voxel (discrete building blocks of the simulation volume) 
+
+A \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} is characterized by its spatial extend (volume), its state vector and its vicinity relations. To access the state vector, the function \hyperlink{classnw_1_1___voxel_a5842ac3c24bda907204852db0cf46810}{update\+\_\+state()} updates the state according to a state\+\_\+change\+\_\+vector (sc\+\_\+vec). It is cruical that the sc\+\_\+vec has the same format as the state vector of the \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}. Since only \+\_\+\+Voxels affected by the previous \hyperlink{classnw_1_1___event}{\+\_\+\+Event} need to be updated, a dirty\+\_\+flag system in analogy to the dirty\+\_\+flag system in \hyperlink{classnw_1_1___event}{\+\_\+\+Event} exists. To define vicinity relations of different \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} for Diffusion \+\_\+\+Events, each \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} contains a reference list to all adjacent \+\_\+\+Voxels (diff\+\_\+vec). 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnw_1_1___voxel_a0622dd383528f5115c6a450b6cbb1b34}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!\+\_\+\+Voxel@{\+\_\+\+Voxel}}
+\index{\+\_\+\+Voxel@{\+\_\+\+Voxel}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{\+\_\+\+Voxel}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+\_\+\+Voxel\+::\+\_\+\+Voxel (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{double}]{box\+\_\+length, }
+\item[{{\bf Species\+Vector}}]{state\+\_\+vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___voxel_a0622dd383528f5115c6a450b6cbb1b34}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Voxel I\+D \\
+\hline
+{\em box\+\_\+length} & Assuming a cubic \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} geometry, the box\+\_\+lenght is used to define the size of a \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}. \\
+\hline
+{\em state\+\_\+vec} & Species vector representing the state of this \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+32                                                                :
+33         \hyperlink{classnw_1_1___voxel_a01b73aff9af26230df4c483c5bd81896}{id}(\textcolor{keywordtype}{id}),
+34         \hyperlink{classnw_1_1___voxel_ad9c3dbd0ea989af6ba7e1b5e09f6a989}{box\_length}(\hyperlink{classnw_1_1___voxel_ad9c3dbd0ea989af6ba7e1b5e09f6a989}{box\_length}),
+35         \hyperlink{classnw_1_1___voxel_a9c331fe7c0fd8691ef0124f33809764f}{dirty\_flag}(\textcolor{keyword}{true}),
+36         \hyperlink{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{state\_vec}(\hyperlink{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{state\_vec})\{
+37         this->\hyperlink{classnw_1_1___voxel_ab55b70a476c9335f0df9d276105c0335}{volume} = pow(this->\hyperlink{classnw_1_1___voxel_ad9c3dbd0ea989af6ba7e1b5e09f6a989}{box\_length},3)*1e3; \textcolor{comment}{// convert m^3 to liter (factor 1e3)}
+38         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long)\hyperlink{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{state\_vec}.size();i++) \{ \textcolor{comment}{// set the number of molecules of all
+       species}
+39             this->\hyperlink{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{state\_vec}[i]->set\_n\_molecules(this->\hyperlink{classnw_1_1___voxel_ab55b70a476c9335f0df9d276105c0335}{volume}); \textcolor{comment}{/*std::cout <<
+       state\_vec[i]->get\_name() << ": " << state\_vec[i]->get\_n\_molecules() << std::endl;*/}
+40         \}
+41     \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___voxel_ac179b9c8ef72a7bef8ba54a89fcfa4a9}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!````~\+\_\+\+Voxel@{$\sim$\+\_\+\+Voxel}}
+\index{````~\+\_\+\+Voxel@{$\sim$\+\_\+\+Voxel}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{$\sim$\+\_\+\+Voxel}]{\setlength{\rightskip}{0pt plus 5cm}virtual nw\+::\+\_\+\+Voxel\+::$\sim$\+\_\+\+Voxel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1___voxel_ac179b9c8ef72a7bef8ba54a89fcfa4a9}
+
+
+Destructor. 
+
+  
+\begin{DoxyCode}
+43                      \{
+44         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{state\_vec}.size(); ++i)\{\textcolor{keywordflow}{if}(\hyperlink{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{state\_vec}.at(i))\{\textcolor{keyword}{delete} 
+      \hyperlink{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{state\_vec}.at(i);\hyperlink{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{state\_vec}.at(i)=NULL;\}\}
+45     \};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnw_1_1___voxel_a86f184c141fa863b796e9248222be7e9}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!add\+\_\+neighbour@{add\+\_\+neighbour}}
+\index{add\+\_\+neighbour@{add\+\_\+neighbour}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{add\+\_\+neighbour}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+\_\+\+Voxel\+::add\+\_\+neighbour (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+Voxel} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___voxel_a86f184c141fa863b796e9248222be7e9}
+
+
+Add voxel to diffusion vector. 
+
+The diffusion vector defines the spatial connection between a set of voxel. It serves as lookup table for diffusion events to decide which neighbour voxel becomes the diffusion partner. The add\+\_\+neighbour function is called after all Voxel have been created. 
+\begin{DoxyCode}
+63 \{\hyperlink{classnw_1_1___voxel_abb780e4dc55e1cde47756aef6e2d746f}{diff\_vec}.push\_back(v);\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___voxel_a09cd07ce7f9099eed8820e5c5f2b3977}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!clean@{clean}}
+\index{clean@{clean}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{clean}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+\_\+\+Voxel\+::clean (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___voxel_a09cd07ce7f9099eed8820e5c5f2b3977}
+
+
+Clean dirty flag (set dirty\+\_\+flag = false). 
+
+The dirty flag is indicates if this \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} needs to be updated. Every time an event occurs inside this \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}, the dirty flag is set to {\ttfamily T\+R\+U\+E} and indicates the tau values of this \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} needs to be updated (this concerns only \+\_\+\+Events that depend on the previous fired \hyperlink{classnw_1_1___event}{\+\_\+\+Event}). 
+\begin{DoxyCode}
+57 \{\hyperlink{classnw_1_1___voxel_a9c331fe7c0fd8691ef0124f33809764f}{dirty\_flag} = \textcolor{keyword}{false};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___voxel_a836eab78d769eae2b732335a91d84148}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!get\+\_\+box\+\_\+length@{get\+\_\+box\+\_\+length}}
+\index{get\+\_\+box\+\_\+length@{get\+\_\+box\+\_\+length}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{get\+\_\+box\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+\_\+\+Voxel\+::get\+\_\+box\+\_\+length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___voxel_a836eab78d769eae2b732335a91d84148}
+
+\begin{DoxyCode}
+68 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___voxel_ad9c3dbd0ea989af6ba7e1b5e09f6a989}{box\_length};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___voxel_a688c8c9ca0a3a533e557a800d9f3b511}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!get\+\_\+diff\+\_\+vec@{get\+\_\+diff\+\_\+vec}}
+\index{get\+\_\+diff\+\_\+vec@{get\+\_\+diff\+\_\+vec}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{get\+\_\+diff\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \+\_\+\+Voxel}$\ast$$>$$\ast$ nw\+::\+\_\+\+Voxel\+::get\+\_\+diff\+\_\+vec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___voxel_a688c8c9ca0a3a533e557a800d9f3b511}
+
+\begin{DoxyCode}
+71 \{\textcolor{keywordflow}{return}  &\hyperlink{classnw_1_1___voxel_abb780e4dc55e1cde47756aef6e2d746f}{diff\_vec};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___voxel_aff78d5b2069500df3116fbc0b4c767a0}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!get\+\_\+dirty\+\_\+flag@{get\+\_\+dirty\+\_\+flag}}
+\index{get\+\_\+dirty\+\_\+flag@{get\+\_\+dirty\+\_\+flag}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{get\+\_\+dirty\+\_\+flag}]{\setlength{\rightskip}{0pt plus 5cm}bool nw\+::\+\_\+\+Voxel\+::get\+\_\+dirty\+\_\+flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___voxel_aff78d5b2069500df3116fbc0b4c767a0}
+
+\begin{DoxyCode}
+66 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___voxel_a9c331fe7c0fd8691ef0124f33809764f}{dirty\_flag};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___voxel_a0336ad5b120b40c4ad3f0012f50def1b}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!get\+\_\+id@{get\+\_\+id}}
+\index{get\+\_\+id@{get\+\_\+id}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{get\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+\_\+\+Voxel\+::get\+\_\+id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___voxel_a0336ad5b120b40c4ad3f0012f50def1b}
+
+\begin{DoxyCode}
+69 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___voxel_a01b73aff9af26230df4c483c5bd81896}{id};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___voxel_a91f1d799645722bf5fe15c34137433b1}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!get\+\_\+state\+\_\+vec@{get\+\_\+state\+\_\+vec}}
+\index{get\+\_\+state\+\_\+vec@{get\+\_\+state\+\_\+vec}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{get\+\_\+state\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Species\+Vector}$\ast$ nw\+::\+\_\+\+Voxel\+::get\+\_\+state\+\_\+vec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___voxel_a91f1d799645722bf5fe15c34137433b1}
+
+\begin{DoxyCode}
+70 \{\textcolor{keywordflow}{return} &\hyperlink{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{state\_vec};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___voxel_a6c420e07f31de22e981f933a36a57b22}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!get\+\_\+volume@{get\+\_\+volume}}
+\index{get\+\_\+volume@{get\+\_\+volume}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{get\+\_\+volume}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+\_\+\+Voxel\+::get\+\_\+volume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___voxel_a6c420e07f31de22e981f933a36a57b22}
+
+\begin{DoxyCode}
+67 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___voxel_ab55b70a476c9335f0df9d276105c0335}{volume};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___voxel_a5842ac3c24bda907204852db0cf46810}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!update\+\_\+state@{update\+\_\+state}}
+\index{update\+\_\+state@{update\+\_\+state}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{update\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}virtual void nw\+::\+\_\+\+Voxel\+::update\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{vector$<$ long $>$}]{sc\+\_\+vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classnw_1_1___voxel_a5842ac3c24bda907204852db0cf46810}
+
+
+Update the state vector of voxel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sc\+\_\+vec} & State change vector of firing event\\
+\hline
+\end{DoxyParams}
+If an event changes the molecular number of \hyperlink{classnw_1_1___species}{\+\_\+\+Species} in a \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}, it uses this function to update the state vector with its state change vector. 
+
+Implemented in \hyperlink{classnw_1_1_standard___vxl_a1d8906f5bbbce6315585959bd1b1a935}{nw\+::\+Standard\+\_\+\+Vxl}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classnw_1_1___voxel_ad9c3dbd0ea989af6ba7e1b5e09f6a989}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!box\+\_\+length@{box\+\_\+length}}
+\index{box\+\_\+length@{box\+\_\+length}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{box\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+\_\+\+Voxel\+::box\+\_\+length\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___voxel_ad9c3dbd0ea989af6ba7e1b5e09f6a989}
+
+
+\hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} box length \mbox{[}micro m\mbox{]} 
+
+\hypertarget{classnw_1_1___voxel_abb780e4dc55e1cde47756aef6e2d746f}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!diff\+\_\+vec@{diff\+\_\+vec}}
+\index{diff\+\_\+vec@{diff\+\_\+vec}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{diff\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \+\_\+\+Voxel}$\ast$$>$ nw\+::\+\_\+\+Voxel\+::diff\+\_\+vec\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___voxel_abb780e4dc55e1cde47756aef6e2d746f}
+
+
+Reference list of all diffusion neighbors of this \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}. 
+
+\hypertarget{classnw_1_1___voxel_a9c331fe7c0fd8691ef0124f33809764f}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!dirty\+\_\+flag@{dirty\+\_\+flag}}
+\index{dirty\+\_\+flag@{dirty\+\_\+flag}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{dirty\+\_\+flag}]{\setlength{\rightskip}{0pt plus 5cm}bool nw\+::\+\_\+\+Voxel\+::dirty\+\_\+flag\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___voxel_a9c331fe7c0fd8691ef0124f33809764f}
+
+
+Indicates if the state vector of this \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} has been changed. 
+
+\hypertarget{classnw_1_1___voxel_a01b73aff9af26230df4c483c5bd81896}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!id@{id}}
+\index{id@{id}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+\_\+\+Voxel\+::id\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___voxel_a01b73aff9af26230df4c483c5bd81896}
+
+
+\hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} I\+D 
+
+\hypertarget{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!state\+\_\+vec@{state\+\_\+vec}}
+\index{state\+\_\+vec@{state\+\_\+vec}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{state\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Species\+Vector} nw\+::\+\_\+\+Voxel\+::state\+\_\+vec\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___voxel_a7762f59802c2a0b54bd18acbf803ff34}
+
+
+Reference list for all existing \hyperlink{classnw_1_1_standard___spc}{Standard\+\_\+\+Spc} in this \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}, defining the state of this \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}. 
+
+\hypertarget{classnw_1_1___voxel_ab55b70a476c9335f0df9d276105c0335}{\index{nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}!volume@{volume}}
+\index{volume@{volume}!nw\+::\+\_\+\+Voxel@{nw\+::\+\_\+\+Voxel}}
+\subsubsection[{volume}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+\_\+\+Voxel\+::volume\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___voxel_ab55b70a476c9335f0df9d276105c0335}
+
+
+\hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} volume \mbox{[}l\mbox{]} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Voxel/\hyperlink{___voxel_8h}{\+\_\+\+Voxel.\+h}\end{DoxyCompactItemize}

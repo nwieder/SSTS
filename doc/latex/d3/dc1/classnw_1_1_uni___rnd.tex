@@ -1,0 +1,159 @@
+\hypertarget{classnw_1_1_uni___rnd}{\section{nw\+:\+:Uni\+\_\+\+Rnd Class Reference}
+\label{classnw_1_1_uni___rnd}\index{nw\+::\+Uni\+\_\+\+Rnd@{nw\+::\+Uni\+\_\+\+Rnd}}
+}
+
+
+\char`\"{}\+Minimal\char`\"{} random number generator of Park and Miller  
+
+
+
+
+{\ttfamily \#include $<$Uni\+\_\+\+Rnd.\+h$>$}
+
+Inheritance diagram for nw\+:\+:Uni\+\_\+\+Rnd\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d3/dc1/classnw_1_1_uni___rnd}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1_uni___rnd_ac25386221e6f2da28eb74445c5378b6e}{Uni\+\_\+\+Rnd} ()
+\begin{DoxyCompactList}\small\item\em Seed random generator with current time. \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1_uni___rnd_ad7883ef0ce4c591612bcb41678104773}{get\+\_\+\+Uni\+\_\+\+Rnd} ()
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___random_a943da227bd614e34718967a0521a51d1}{\+\_\+\+Random\+::get\+\_\+\+Uni\+\_\+\+Rnd()} method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classnw_1_1_uni___rnd_a1599d3ea8e72738bbfbad814e9e233ac}{uni\+\_\+\+Rnd} (long $\ast$)
+\begin{DoxyCompactList}\small\item\em generates uniform random variable \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{classnw_1_1_uni___rnd_a0b5e34f5df24a4e15eed8be7b15a695c}{seed}
+\begin{DoxyCompactList}\small\item\em Random generator seed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\char`\"{}\+Minimal\char`\"{} random number generator of Park and Miller 
+
+with Bays-\/\+Durham shuffle and added safeguards. Returns a uniform random deviate between 0.\+0 and 1.\+0 (exclusive of the endpoint values). Call with idum a negative integer to initialize; thereafter, do not alter idum between successive deviates in a sequence. R\+N\+M\+X should approximate the largest floating value that is less than 1. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnw_1_1_uni___rnd_ac25386221e6f2da28eb74445c5378b6e}{\index{nw\+::\+Uni\+\_\+\+Rnd@{nw\+::\+Uni\+\_\+\+Rnd}!Uni\+\_\+\+Rnd@{Uni\+\_\+\+Rnd}}
+\index{Uni\+\_\+\+Rnd@{Uni\+\_\+\+Rnd}!nw\+::\+Uni\+\_\+\+Rnd@{nw\+::\+Uni\+\_\+\+Rnd}}
+\subsubsection[{Uni\+\_\+\+Rnd}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+Uni\+\_\+\+Rnd\+::\+Uni\+\_\+\+Rnd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1_uni___rnd_ac25386221e6f2da28eb74445c5378b6e}
+
+
+Seed random generator with current time. 
+
+
+\begin{DoxyCode}
+19 \{\hyperlink{classnw_1_1_uni___rnd_a0b5e34f5df24a4e15eed8be7b15a695c}{seed} = long(time(0)) * -1;\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnw_1_1_uni___rnd_ad7883ef0ce4c591612bcb41678104773}{\index{nw\+::\+Uni\+\_\+\+Rnd@{nw\+::\+Uni\+\_\+\+Rnd}!get\+\_\+\+Uni\+\_\+\+Rnd@{get\+\_\+\+Uni\+\_\+\+Rnd}}
+\index{get\+\_\+\+Uni\+\_\+\+Rnd@{get\+\_\+\+Uni\+\_\+\+Rnd}!nw\+::\+Uni\+\_\+\+Rnd@{nw\+::\+Uni\+\_\+\+Rnd}}
+\subsubsection[{get\+\_\+\+Uni\+\_\+\+Rnd}]{\setlength{\rightskip}{0pt plus 5cm}double Uni\+\_\+\+Rnd\+::get\+\_\+\+Uni\+\_\+\+Rnd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classnw_1_1_uni___rnd_ad7883ef0ce4c591612bcb41678104773}
+
+
+Implementation of the \hyperlink{classnw_1_1___random_a943da227bd614e34718967a0521a51d1}{\+\_\+\+Random\+::get\+\_\+\+Uni\+\_\+\+Rnd()} method. 
+
+\begin{DoxyReturn}{Returns}
+Uniform random deviate between 0.\+0 and 1.\+0 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classnw_1_1___random_a943da227bd614e34718967a0521a51d1}{nw\+::\+\_\+\+Random}.
+
+
+\begin{DoxyCode}
+63                            \{
+64     \textcolor{keywordtype}{double} \hyperlink{classnw_1_1___random_acfb88075bfcae45bbbd989568cef5250}{r} = \hyperlink{classnw_1_1_uni___rnd_a1599d3ea8e72738bbfbad814e9e233ac}{uni\_Rnd}(&\hyperlink{classnw_1_1_uni___rnd_a0b5e34f5df24a4e15eed8be7b15a695c}{seed});
+65     \textcolor{keywordflow}{return} \hyperlink{classnw_1_1___random_acfb88075bfcae45bbbd989568cef5250}{r};
+66 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_uni___rnd_a1599d3ea8e72738bbfbad814e9e233ac}{\index{nw\+::\+Uni\+\_\+\+Rnd@{nw\+::\+Uni\+\_\+\+Rnd}!uni\+\_\+\+Rnd@{uni\+\_\+\+Rnd}}
+\index{uni\+\_\+\+Rnd@{uni\+\_\+\+Rnd}!nw\+::\+Uni\+\_\+\+Rnd@{nw\+::\+Uni\+\_\+\+Rnd}}
+\subsubsection[{uni\+\_\+\+Rnd}]{\setlength{\rightskip}{0pt plus 5cm}double Uni\+\_\+\+Rnd\+::uni\+\_\+\+Rnd (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{idum}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_uni___rnd_a1599d3ea8e72738bbfbad814e9e233ac}
+
+
+generates uniform random variable 
+
+\begin{DoxyReturn}{Returns}
+uniform random deviate between 0.\+0 and 1.\+0 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+22                                  \{
+23 
+24     \textcolor{keywordtype}{int} j;
+25     \textcolor{keywordtype}{long} k;
+26     \textcolor{keyword}{static} \textcolor{keywordtype}{long} iy=0;
+27     \textcolor{keyword}{static} \textcolor{keywordtype}{long} iv[\hyperlink{_uni___rnd_8cpp_a0e93cfb2d62849853fd34957ba6e6fdc}{NTAB}];
+28     \textcolor{keywordtype}{double} temp;
+29 \textcolor{comment}{//  Initialize.}
+30     \textcolor{keywordflow}{if} (*idum <= 0 || !iy)\{
+31 \textcolor{comment}{//      Make sure to prevent idum = 0.}
+32         \textcolor{keywordflow}{if} (-(*idum) < 1) *idum=1;
+33         \textcolor{keywordflow}{else} *idum = -(*idum);
+34 \textcolor{comment}{//      Load the shuffle table (after 8 warm-ups).}
+35         \textcolor{keywordflow}{for} (j=\hyperlink{_uni___rnd_8cpp_a0e93cfb2d62849853fd34957ba6e6fdc}{NTAB}+7;j>=0;j--)\{
+36             k=(*idum)/\hyperlink{_uni___rnd_8cpp_ab7c5f3342853af6bb48d0ca00b05efbe}{IQ};
+37             *idum=\hyperlink{_uni___rnd_8cpp_ae4b0efde4fa4613b407716d265d19b0a}{IA}*(*idum-k*\hyperlink{_uni___rnd_8cpp_ab7c5f3342853af6bb48d0ca00b05efbe}{IQ})-\hyperlink{_uni___rnd_8cpp_a68e22635ff207d8ca10459833856bd75}{IR}*k;
+38             \textcolor{keywordflow}{if} (*idum < 0) *idum += \hyperlink{_uni___rnd_8cpp_a51c0dfe766601d31e907fceae818a7ca}{IM};
+39             \textcolor{keywordflow}{if} (j < \hyperlink{_uni___rnd_8cpp_a0e93cfb2d62849853fd34957ba6e6fdc}{NTAB}) iv[j] = *idum;
+40         \}
+41        iy=iv[0];
+42     \}
+43 \textcolor{comment}{//  Start here when not initializing.}
+44     k=(*idum)/\hyperlink{_uni___rnd_8cpp_ab7c5f3342853af6bb48d0ca00b05efbe}{IQ};
+45 \textcolor{comment}{//  Compute idum=(IA*idum) % IM without over}
+46     *idum=\hyperlink{_uni___rnd_8cpp_ae4b0efde4fa4613b407716d265d19b0a}{IA}*(*idum-k*\hyperlink{_uni___rnd_8cpp_ab7c5f3342853af6bb48d0ca00b05efbe}{IQ})-\hyperlink{_uni___rnd_8cpp_a68e22635ff207d8ca10459833856bd75}{IR}*k;
+47 
+48 \textcolor{comment}{//  flows by Schrage's method.}
+49     \textcolor{keywordflow}{if} (*idum < 0) *idum += \hyperlink{_uni___rnd_8cpp_a51c0dfe766601d31e907fceae818a7ca}{IM};
+50 
+51 \textcolor{comment}{//  Will be in the range 0..NTAB-1.}
+52     j=iy/\hyperlink{_uni___rnd_8cpp_a62339d74dd5d9d00480e1a288cf88fe8}{NDIV};
+53 \textcolor{comment}{//  Output previously stored value and refill the}
+54     iy=iv[j];
+55 \textcolor{comment}{//  shuffle table.}
+56     iv[j] = *idum;
+57 
+58 \textcolor{comment}{//  Because users don't expect endpoint values.}
+59     \textcolor{keywordflow}{if} ((temp=\hyperlink{_uni___rnd_8cpp_ad301e6a88b1c01108f4867f2ea6f683c}{AM}*iy) > \hyperlink{_uni___rnd_8cpp_aa7436c9270ffb06f8c1eae8d2e605cec}{RNMX}) \textcolor{keywordflow}{return} \hyperlink{_uni___rnd_8cpp_aa7436c9270ffb06f8c1eae8d2e605cec}{RNMX};
+60     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} temp;
+61 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classnw_1_1_uni___rnd_a0b5e34f5df24a4e15eed8be7b15a695c}{\index{nw\+::\+Uni\+\_\+\+Rnd@{nw\+::\+Uni\+\_\+\+Rnd}!seed@{seed}}
+\index{seed@{seed}!nw\+::\+Uni\+\_\+\+Rnd@{nw\+::\+Uni\+\_\+\+Rnd}}
+\subsubsection[{seed}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Uni\+\_\+\+Rnd\+::seed\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_uni___rnd_a0b5e34f5df24a4e15eed8be7b15a695c}
+
+
+Random generator seed. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Random/\hyperlink{_uni___rnd_8h}{Uni\+\_\+\+Rnd.\+h}\item 
+Random/\hyperlink{_uni___rnd_8cpp}{Uni\+\_\+\+Rnd.\+cpp}\end{DoxyCompactItemize}

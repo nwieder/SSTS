@@ -1,0 +1,85 @@
+\hypertarget{classnw_1_1___system}{\section{nw\+:\+:\+\_\+\+System Class Reference}
+\label{classnw_1_1___system}\index{nw\+::\+\_\+\+System@{nw\+::\+\_\+\+System}}
+}
+
+
+Abstract base class for the implementation of simulation algorithms.  
+
+
+
+
+{\ttfamily \#include $<$\+\_\+\+System.\+h$>$}
+
+Inheritance diagram for nw\+:\+:\+\_\+\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d4/d68/classnw_1_1___system}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1___system_aecf5603295f3d88f2767aadf25db202a}{\+\_\+\+System} ()
+\item 
+virtual \hyperlink{classnw_1_1___system_a450424d880a58f8b1e4c460357b2356b}{$\sim$\+\_\+\+System} ()
+\item 
+virtual void \hyperlink{classnw_1_1___system_ae0276aebba39a971d6e240a86a389713}{go} (long n\+\_\+it)=0
+\begin{DoxyCompactList}\small\item\em executes simulation algorithm \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract base class for the implementation of simulation algorithms. 
+
+Algorithms integrated in this software framework are derived from \hyperlink{classnw_1_1___system}{\+\_\+\+System}. It solely requires the existence of the function \hyperlink{classnw_1_1___system_ae0276aebba39a971d6e240a86a389713}{go()} that executes the algorithm. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnw_1_1___system_aecf5603295f3d88f2767aadf25db202a}{\index{nw\+::\+\_\+\+System@{nw\+::\+\_\+\+System}!\+\_\+\+System@{\+\_\+\+System}}
+\index{\+\_\+\+System@{\+\_\+\+System}!nw\+::\+\_\+\+System@{nw\+::\+\_\+\+System}}
+\subsubsection[{\+\_\+\+System}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+\_\+\+System\+::\+\_\+\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___system_aecf5603295f3d88f2767aadf25db202a}
+
+\begin{DoxyCode}
+13 \{\};
+\end{DoxyCode}
+\hypertarget{classnw_1_1___system_a450424d880a58f8b1e4c460357b2356b}{\index{nw\+::\+\_\+\+System@{nw\+::\+\_\+\+System}!````~\+\_\+\+System@{$\sim$\+\_\+\+System}}
+\index{````~\+\_\+\+System@{$\sim$\+\_\+\+System}!nw\+::\+\_\+\+System@{nw\+::\+\_\+\+System}}
+\subsubsection[{$\sim$\+\_\+\+System}]{\setlength{\rightskip}{0pt plus 5cm}virtual nw\+::\+\_\+\+System\+::$\sim$\+\_\+\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1___system_a450424d880a58f8b1e4c460357b2356b}
+
+\begin{DoxyCode}
+14 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnw_1_1___system_ae0276aebba39a971d6e240a86a389713}{\index{nw\+::\+\_\+\+System@{nw\+::\+\_\+\+System}!go@{go}}
+\index{go@{go}!nw\+::\+\_\+\+System@{nw\+::\+\_\+\+System}}
+\subsubsection[{go}]{\setlength{\rightskip}{0pt plus 5cm}virtual void nw\+::\+\_\+\+System\+::go (
+\begin{DoxyParamCaption}
+\item[{long}]{n\+\_\+it}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classnw_1_1___system_ae0276aebba39a971d6e240a86a389713}
+
+
+executes simulation algorithm 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+it} & Current number of simulation run (required for output file names to distinguish between multiple trajectories resulting from multiple simulation runs during one program call.) \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classnw_1_1_gillespie___sys_ad21aa35a51bac13fe64dc6d838e77aee}{nw\+::\+Gillespie\+\_\+\+Sys}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+System/\hyperlink{___system_8h}{\+\_\+\+System.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,374 @@
+\hypertarget{classnw_1_1_channel___spc}{\section{nw\+:\+:Channel\+\_\+\+Spc Class Reference}
+\label{classnw_1_1_channel___spc}\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+}
+
+
+Realization of channel proteins comprised of a fixed number of subunits that open whenever a predefined number of those subunits are in an active state.  
+
+
+
+
+{\ttfamily \#include $<$Channel\+\_\+\+Spc.\+h$>$}
+
+Inheritance diagram for nw\+:\+:Channel\+\_\+\+Spc\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{db/dde/classnw_1_1_channel___spc}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1_channel___spc_a050d0e4c96bc1ad37b259185e678b0b9}{Channel\+\_\+\+Spc} (long \hyperlink{classnw_1_1___species_ac42dfe1c656c17178a9649093519ebb7}{id}, string \hyperlink{classnw_1_1___species_a7b8ede09e28941beb48cf27f1247e2f9}{name}, double \hyperlink{classnw_1_1___species_ac66cdd3bdd5be88791e00d063b4e92a2}{initial\+\_\+conc}, int \hyperlink{classnw_1_1_channel___spc_a2b63ef7e5147046919cf96060b57e078}{n\+\_\+\+Subunits}, int \hyperlink{classnw_1_1_channel___spc_a52e6e8aae67ebfb6cec1b79e7f125542}{n\+\_\+\+Subunits\+\_\+\+To\+\_\+\+Open})
+\begin{DoxyCompactList}\small\item\em Constructor of Channel Species. \end{DoxyCompactList}\item 
+\hyperlink{classnw_1_1_channel___spc_a6bcdcda43c49d5223ccf9398c63f5170}{$\sim$\+Channel\+\_\+\+Spc} ()
+\item 
+long \hyperlink{classnw_1_1_channel___spc_a20a1e6dd089794ad0e1035635a1e3fe0}{get\+\_\+n\+\_\+molecules} ()
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___species_a6e3e68477663ff511d75fb24cf01cb9f}{\+\_\+\+Species\+::get\+\_\+n\+\_\+molecules()} method. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_channel___spc_a03347a88efec50ad3acd0ff4025ed23d}{mod\+\_\+n\+\_\+molecules} (long n)
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___species_ac7955c9fe040d8cae8f3cae4684ed96b}{\+\_\+\+Species\+::mod\+\_\+n\+\_\+molecules()} method. \end{DoxyCompactList}\item 
+\hyperlink{classnw_1_1___species}{\+\_\+\+Species} $\ast$ \hyperlink{classnw_1_1_channel___spc_ab35f288a4021c302b4e2dc09e54578b1}{copy} ()
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___species_aea43d96b0b1c9e88953f40fbe58e7f29}{\+\_\+\+Species\+::copy()} method. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_channel___spc_af8d5d7097d343e6646c6c11a1744024d}{set\+\_\+n\+\_\+molecules} (double \hyperlink{classnw_1_1___species_a80896a55f086f468396e76ae8f1e8285}{volume})
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___species_a53d06cca549a83bfff71303174707926}{\+\_\+\+Species\+::set\+\_\+n\+\_\+molecules()} method. \end{DoxyCompactList}\item 
+long \hyperlink{classnw_1_1_channel___spc_aecd939824b8d2a275cbe360f60ae4a2d}{get\+\_\+n\+\_\+\+Activable\+\_\+\+Ch} ()
+\item 
+long \hyperlink{classnw_1_1_channel___spc_a99c02ea4a145d6531ed2328de073fb37}{get\+\_\+n\+\_\+\+Inactivable\+\_\+\+Ch} ()
+\item 
+void \hyperlink{classnw_1_1_channel___spc_ab5176b0d9aed2ac68a142488d11b5e81}{activate\+\_\+\+Subunit} (long)
+\begin{DoxyCompactList}\small\item\em Activates a subunit if the Sub\+Unit\+Switch Reaction Event increases the number of active subunits. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_channel___spc_a190172435ab84f9210ae027d06aae81a}{inactivate\+\_\+\+Subunit} (long)
+\begin{DoxyCompactList}\small\item\em Inactivates a subunit if the Sub\+Unit\+Switch Reaction Event decreases the number of active subunits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classnw_1_1_channel___spc_a2b63ef7e5147046919cf96060b57e078}{n\+\_\+\+Subunits}
+\begin{DoxyCompactList}\small\item\em Number of subunits of this channel species. \end{DoxyCompactList}\item 
+int \hyperlink{classnw_1_1_channel___spc_a52e6e8aae67ebfb6cec1b79e7f125542}{n\+\_\+\+Subunits\+\_\+\+To\+\_\+\+Open}
+\begin{DoxyCompactList}\small\item\em Number of activated subunits that are required to open the channel. \end{DoxyCompactList}\item 
+long \hyperlink{classnw_1_1_channel___spc_a67fd1b83563c30ec86802bdab420c95d}{n\+\_\+active\+\_\+\+Ch}
+\begin{DoxyCompactList}\small\item\em Number of currently active channels. \end{DoxyCompactList}\item 
+long \hyperlink{classnw_1_1_channel___spc_ac6ae04b799c751bb61918b4ab163ce85}{n\+\_\+fully\+\_\+activated\+\_\+\+Ch}
+\begin{DoxyCompactList}\small\item\em Number of completely activated channels (no subunit activation possible). \end{DoxyCompactList}\item 
+long \hyperlink{classnw_1_1_channel___spc_a35afc71aa0eeb5b1e4a2089a5c1f65ae}{n\+\_\+fully\+\_\+inactivated\+\_\+\+Ch}
+\begin{DoxyCompactList}\small\item\em Number of completely inactivated channels (no subunit inactivation possible) \end{DoxyCompactList}\item 
+vector$<$ long $>$ \hyperlink{classnw_1_1_channel___spc_aca3ddf4eba759eeeb835bba168795a11}{ch\+\_\+\+Vec}
+\begin{DoxyCompactList}\small\item\em Vector representing the number of active subunits of each channel. \end{DoxyCompactList}\item 
+vector$<$ long $>$\+::iterator \hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\+\_\+it}
+\begin{DoxyCompactList}\small\item\em Vector iterator that iterates through the channel vector to update it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Realization of channel proteins comprised of a fixed number of subunits that open whenever a predefined number of those subunits are in an active state. 
+
+This species works a little different from others. It is an "imaginary" \hyperlink{classnw_1_1___species}{\+\_\+\+Species}. It only subsumes a certain number of other Species (here subunits). The molecular count only changes if there are enough active subunits. A channel only exists in this implementation if it is open. To keep track of active subunits, there is an event called subunit switch reaction that defines the transition between an inactive and an active subunit. If this event occurs it typecasts the Species at the channel species id (class attribute to be defined in the input file\+: ch\+\_\+spc\+\_\+id) to a channel species and calls activate\+\_\+subunit() resp. inactivate\+\_\+subunit(). ~\newline
+~\newline
+Note\+: To avoid the typcast which can cause instabilities, it might be benifical to extend the existing framework with an event handling system. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnw_1_1_channel___spc_a050d0e4c96bc1ad37b259185e678b0b9}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!Channel\+\_\+\+Spc@{Channel\+\_\+\+Spc}}
+\index{Channel\+\_\+\+Spc@{Channel\+\_\+\+Spc}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{Channel\+\_\+\+Spc}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+Channel\+\_\+\+Spc\+::\+Channel\+\_\+\+Spc (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{string}]{name, }
+\item[{double}]{initial\+\_\+conc, }
+\item[{int}]{n\+\_\+\+Subunits, }
+\item[{int}]{n\+\_\+\+Subunits\+\_\+\+To\+\_\+\+Open}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1_channel___spc_a050d0e4c96bc1ad37b259185e678b0b9}
+
+
+Constructor of Channel Species. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \hyperlink{classnw_1_1___species}{\+\_\+\+Species} I\+D \\
+\hline
+{\em name} & \hyperlink{classnw_1_1___species}{\+\_\+\+Species} name \\
+\hline
+{\em initial\+\_\+conc} & \hyperlink{classnw_1_1___species}{\+\_\+\+Species} initial concentration \\
+\hline
+{\em n\+\_\+\+Subunits} & Number of existing subunits the channel is build of. \\
+\hline
+{\em n\+\_\+\+Subunits\+\_\+\+To\+\_\+\+Open} & Required number of active subunits to open the channel \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+35                                                                                                   :
+36         \hyperlink{classnw_1_1___species_af74ef3f4a59f3c8fa9ff6b1acc83be86}{\_Species}(\textcolor{keywordtype}{id},\hyperlink{classnw_1_1___species_a7b8ede09e28941beb48cf27f1247e2f9}{name},\hyperlink{classnw_1_1___species_ac66cdd3bdd5be88791e00d063b4e92a2}{initial\_conc}),
+37         \hyperlink{classnw_1_1_channel___spc_a2b63ef7e5147046919cf96060b57e078}{n\_Subunits}(\hyperlink{classnw_1_1_channel___spc_a2b63ef7e5147046919cf96060b57e078}{n\_Subunits}),
+38         \hyperlink{classnw_1_1_channel___spc_a52e6e8aae67ebfb6cec1b79e7f125542}{n\_Subunits\_To\_Open}(\hyperlink{classnw_1_1_channel___spc_a52e6e8aae67ebfb6cec1b79e7f125542}{n\_Subunits\_To\_Open}),
+39         \hyperlink{classnw_1_1_channel___spc_a67fd1b83563c30ec86802bdab420c95d}{n\_active\_Ch}(0),
+40         \hyperlink{classnw_1_1_channel___spc_ac6ae04b799c751bb61918b4ab163ce85}{n\_fully\_activated\_Ch}(0),
+41         \hyperlink{classnw_1_1_channel___spc_a35afc71aa0eeb5b1e4a2089a5c1f65ae}{n\_fully\_inactivated\_Ch}(0)\{\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_channel___spc_a6bcdcda43c49d5223ccf9398c63f5170}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!````~Channel\+\_\+\+Spc@{$\sim$\+Channel\+\_\+\+Spc}}
+\index{````~Channel\+\_\+\+Spc@{$\sim$\+Channel\+\_\+\+Spc}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{$\sim$\+Channel\+\_\+\+Spc}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+Channel\+\_\+\+Spc\+::$\sim$\+Channel\+\_\+\+Spc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1_channel___spc_a6bcdcda43c49d5223ccf9398c63f5170}
+Destructor 
+\begin{DoxyCode}
+43 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnw_1_1_channel___spc_ab5176b0d9aed2ac68a142488d11b5e81}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!activate\+\_\+\+Subunit@{activate\+\_\+\+Subunit}}
+\index{activate\+\_\+\+Subunit@{activate\+\_\+\+Subunit}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{activate\+\_\+\+Subunit}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Channel\+\_\+\+Spc\+::activate\+\_\+\+Subunit (
+\begin{DoxyParamCaption}
+\item[{long}]{rnd\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{classnw_1_1_channel___spc_ab5176b0d9aed2ac68a142488d11b5e81}
+
+
+Activates a subunit if the Sub\+Unit\+Switch Reaction Event increases the number of active subunits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rnd\+\_\+id} & Random number to pick a channel whose subunit will be activated.\\
+\hline
+\end{DoxyParams}
+If a subunit is activated, first of all a random number has to be generated (see Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+evt) to pick one of the existing channels whose subunit is activated.~\newline
+~\newline
+Note\+: It is not possible to increase the number of active channel subunits if all subunits are in the active state. This makes this function a little bit more complex. 
+\begin{DoxyCode}
+6                                              \{
+7     \hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\_it} = \hyperlink{classnw_1_1_channel___spc_aca3ddf4eba759eeeb835bba168795a11}{ch\_Vec}.begin();
+8 
+9 \textcolor{comment}{//  iterate to an activatable channel}
+10     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i <= size\_t(rnd\_id);++i)\{
+11         \textcolor{keywordflow}{if}(i!=0)\{\hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\_it}++;\}
+12         \textcolor{keywordflow}{while}(*\hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\_it} == \hyperlink{classnw_1_1_channel___spc_a2b63ef7e5147046919cf96060b57e078}{n\_Subunits})\{
+13             \hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\_it}++;
+14         \}
+15     \}
+16 
+17 \textcolor{comment}{//  decrease number of completely inactivated Channel if it was a Channel with 0 active subunits}
+18     \textcolor{keywordflow}{if}(*\hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\_it} == 0)\{\hyperlink{classnw_1_1_channel___spc_a35afc71aa0eeb5b1e4a2089a5c1f65ae}{n\_fully\_inactivated\_Ch}--; 
+      \hyperlink{classnw_1_1___species_a79157bae3920ce7bba35e3f75b2aad6f}{dirty\_flag} = \textcolor{keyword}{true};\}
+19 \textcolor{comment}{//  increase number of active subunits and check if the channel is open!}
+20     \textcolor{keywordflow}{if}(++*\hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\_it} == \hyperlink{classnw_1_1_channel___spc_a52e6e8aae67ebfb6cec1b79e7f125542}{n\_Subunits\_To\_Open})\{\hyperlink{classnw_1_1_channel___spc_a67fd1b83563c30ec86802bdab420c95d}{n\_active\_Ch}++; 
+      \hyperlink{classnw_1_1___species_a79157bae3920ce7bba35e3f75b2aad6f}{dirty\_flag} = \textcolor{keyword}{true};\}
+21 \textcolor{comment}{//  if the channel is completely activated, increase number of fully activated channels}
+22     \textcolor{keywordflow}{if} (*\hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\_it} == \hyperlink{classnw_1_1_channel___spc_a2b63ef7e5147046919cf96060b57e078}{n\_Subunits}) \{\hyperlink{classnw_1_1_channel___spc_ac6ae04b799c751bb61918b4ab163ce85}{n\_fully\_activated\_Ch}++; 
+      \hyperlink{classnw_1_1___species_a79157bae3920ce7bba35e3f75b2aad6f}{dirty\_flag} = \textcolor{keyword}{true};\}
+23 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_channel___spc_ab35f288a4021c302b4e2dc09e54578b1}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!copy@{copy}}
+\index{copy@{copy}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+Species}$\ast$ nw\+::\+Channel\+\_\+\+Spc\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1_channel___spc_ab35f288a4021c302b4e2dc09e54578b1}
+
+
+Implementation of the \hyperlink{classnw_1_1___species_aea43d96b0b1c9e88953f40fbe58e7f29}{\+\_\+\+Species\+::copy()} method. 
+
+
+
+Implements \hyperlink{classnw_1_1___species_aea43d96b0b1c9e88953f40fbe58e7f29}{nw\+::\+\_\+\+Species}.
+
+
+\begin{DoxyCode}
+57                     \{
+58         \hyperlink{classnw_1_1___species_af74ef3f4a59f3c8fa9ff6b1acc83be86}{\_Species}* s = \textcolor{keyword}{new} \hyperlink{classnw_1_1_channel___spc_a050d0e4c96bc1ad37b259185e678b0b9}{Channel\_Spc}(\textcolor{keywordtype}{id},\hyperlink{classnw_1_1___species_a7b8ede09e28941beb48cf27f1247e2f9}{name},
+      \hyperlink{classnw_1_1___species_ac66cdd3bdd5be88791e00d063b4e92a2}{initial\_conc},\hyperlink{classnw_1_1_channel___spc_a2b63ef7e5147046919cf96060b57e078}{n\_Subunits},\hyperlink{classnw_1_1_channel___spc_a52e6e8aae67ebfb6cec1b79e7f125542}{n\_Subunits\_To\_Open});
+59         \textcolor{keywordflow}{return} s;\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_channel___spc_aecd939824b8d2a275cbe360f60ae4a2d}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!get\+\_\+n\+\_\+\+Activable\+\_\+\+Ch@{get\+\_\+n\+\_\+\+Activable\+\_\+\+Ch}}
+\index{get\+\_\+n\+\_\+\+Activable\+\_\+\+Ch@{get\+\_\+n\+\_\+\+Activable\+\_\+\+Ch}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{get\+\_\+n\+\_\+\+Activable\+\_\+\+Ch}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Channel\+\_\+\+Spc\+::get\+\_\+n\+\_\+\+Activable\+\_\+\+Ch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1_channel___spc_aecd939824b8d2a275cbe360f60ae4a2d}
+
+\begin{DoxyCode}
+73 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___species_af6ae0232b4f994b464a2f69cb022b33f}{n\_molecules} - \hyperlink{classnw_1_1_channel___spc_ac6ae04b799c751bb61918b4ab163ce85}{n\_fully\_activated\_Ch};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_channel___spc_a99c02ea4a145d6531ed2328de073fb37}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!get\+\_\+n\+\_\+\+Inactivable\+\_\+\+Ch@{get\+\_\+n\+\_\+\+Inactivable\+\_\+\+Ch}}
+\index{get\+\_\+n\+\_\+\+Inactivable\+\_\+\+Ch@{get\+\_\+n\+\_\+\+Inactivable\+\_\+\+Ch}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{get\+\_\+n\+\_\+\+Inactivable\+\_\+\+Ch}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Channel\+\_\+\+Spc\+::get\+\_\+n\+\_\+\+Inactivable\+\_\+\+Ch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1_channel___spc_a99c02ea4a145d6531ed2328de073fb37}
+
+\begin{DoxyCode}
+74 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___species_af6ae0232b4f994b464a2f69cb022b33f}{n\_molecules} - \hyperlink{classnw_1_1_channel___spc_a35afc71aa0eeb5b1e4a2089a5c1f65ae}{n\_fully\_inactivated\_Ch};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_channel___spc_a20a1e6dd089794ad0e1035635a1e3fe0}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!get\+\_\+n\+\_\+molecules@{get\+\_\+n\+\_\+molecules}}
+\index{get\+\_\+n\+\_\+molecules@{get\+\_\+n\+\_\+molecules}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{get\+\_\+n\+\_\+molecules}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Channel\+\_\+\+Spc\+::get\+\_\+n\+\_\+molecules (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1_channel___spc_a20a1e6dd089794ad0e1035635a1e3fe0}
+
+
+Implementation of the \hyperlink{classnw_1_1___species_a6e3e68477663ff511d75fb24cf01cb9f}{\+\_\+\+Species\+::get\+\_\+n\+\_\+molecules()} method. 
+
+\begin{DoxyReturn}{Returns}
+Number of open channel.
+\end{DoxyReturn}
+Only the number of open channels are returned. The total number of channels includes closed non-\/conducting channels. 
+
+Implements \hyperlink{classnw_1_1___species_a6e3e68477663ff511d75fb24cf01cb9f}{nw\+::\+\_\+\+Species}.
+
+
+\begin{DoxyCode}
+49 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1_channel___spc_a67fd1b83563c30ec86802bdab420c95d}{n\_active\_Ch};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_channel___spc_a190172435ab84f9210ae027d06aae81a}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!inactivate\+\_\+\+Subunit@{inactivate\+\_\+\+Subunit}}
+\index{inactivate\+\_\+\+Subunit@{inactivate\+\_\+\+Subunit}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{inactivate\+\_\+\+Subunit}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Channel\+\_\+\+Spc\+::inactivate\+\_\+\+Subunit (
+\begin{DoxyParamCaption}
+\item[{long}]{rnd\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{classnw_1_1_channel___spc_a190172435ab84f9210ae027d06aae81a}
+
+
+Inactivates a subunit if the Sub\+Unit\+Switch Reaction Event decreases the number of active subunits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rnd\+\_\+id} & random number to pick a channel whose subunit will be inactivated.\\
+\hline
+\end{DoxyParams}
+If a subunit is inactivated, first of all a random number has to be generated (see Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+evt) to pick one of the existing channels whose subunit is inactivated.~\newline
+~\newline
+Note\+: It is not possible to decrease the number of active channel subunits if all subunits are inactivated. This makes this function a little bit more complex. 
+\begin{DoxyCode}
+25                                                \{
+26     \hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\_it} = \hyperlink{classnw_1_1_channel___spc_aca3ddf4eba759eeeb835bba168795a11}{ch\_Vec}.begin();
+27 \textcolor{comment}{//  iterate to an inactivatable channel}
+28     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i <= (size\_t)rnd\_id;++i)\{
+29         \textcolor{keywordflow}{if}(i!=0)\{\hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\_it}++;\}
+30         \textcolor{keywordflow}{while}(*\hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\_it} == 0)\{
+31             \hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\_it}++;
+32         \}
+33     \}
+34 
+35 \textcolor{comment}{//  decrease number of fully activated Channel if it was a Channel with maximum active subunits}
+36     \textcolor{keywordflow}{if}(*\hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\_it} == \hyperlink{classnw_1_1_channel___spc_a2b63ef7e5147046919cf96060b57e078}{n\_Subunits})\{\hyperlink{classnw_1_1_channel___spc_ac6ae04b799c751bb61918b4ab163ce85}{n\_fully\_activated\_Ch}--; 
+      \hyperlink{classnw_1_1___species_a79157bae3920ce7bba35e3f75b2aad6f}{dirty\_flag} = \textcolor{keyword}{true};\}
+37 \textcolor{comment}{//  decrease number of active subunits and check if the channel is open!}
+38     \textcolor{keywordflow}{if}(*\hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\_it} == \hyperlink{classnw_1_1_channel___spc_a52e6e8aae67ebfb6cec1b79e7f125542}{n\_Subunits\_To\_Open})\{\hyperlink{classnw_1_1_channel___spc_a67fd1b83563c30ec86802bdab420c95d}{n\_active\_Ch}--; 
+      \hyperlink{classnw_1_1___species_a79157bae3920ce7bba35e3f75b2aad6f}{dirty\_flag} = \textcolor{keyword}{true};\}
+39 \textcolor{comment}{//  if the channel is completely inactivated, increase number of fully inactivated channels}
+40     \textcolor{keywordflow}{if} (--*\hyperlink{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{ch\_it} == 0) \{\hyperlink{classnw_1_1_channel___spc_a35afc71aa0eeb5b1e4a2089a5c1f65ae}{n\_fully\_inactivated\_Ch}++; 
+      \hyperlink{classnw_1_1___species_a79157bae3920ce7bba35e3f75b2aad6f}{dirty\_flag} = \textcolor{keyword}{true};\}
+41 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_channel___spc_a03347a88efec50ad3acd0ff4025ed23d}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!mod\+\_\+n\+\_\+molecules@{mod\+\_\+n\+\_\+molecules}}
+\index{mod\+\_\+n\+\_\+molecules@{mod\+\_\+n\+\_\+molecules}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{mod\+\_\+n\+\_\+molecules}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Channel\+\_\+\+Spc\+::mod\+\_\+n\+\_\+molecules (
+\begin{DoxyParamCaption}
+\item[{long}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1_channel___spc_a03347a88efec50ad3acd0ff4025ed23d}
+
+
+Implementation of the \hyperlink{classnw_1_1___species_ac7955c9fe040d8cae8f3cae4684ed96b}{\+\_\+\+Species\+::mod\+\_\+n\+\_\+molecules()} method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Summand that is added to the current number of molecules.\\
+\hline
+\end{DoxyParams}
+This function is empty, because at the moment there is no way how the number of channels could be modified but through the subunitswitch reaction which calls \hyperlink{classnw_1_1_channel___spc_ab5176b0d9aed2ac68a142488d11b5e81}{activate\+\_\+\+Subunit()} resp. \hyperlink{classnw_1_1_channel___spc_a190172435ab84f9210ae027d06aae81a}{inactivate\+\_\+\+Subunit()} 
+
+Implements \hyperlink{classnw_1_1___species_ac7955c9fe040d8cae8f3cae4684ed96b}{nw\+::\+\_\+\+Species}.
+
+
+\begin{DoxyCode}
+55 \{\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_channel___spc_af8d5d7097d343e6646c6c11a1744024d}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!set\+\_\+n\+\_\+molecules@{set\+\_\+n\+\_\+molecules}}
+\index{set\+\_\+n\+\_\+molecules@{set\+\_\+n\+\_\+molecules}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{set\+\_\+n\+\_\+molecules}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Channel\+\_\+\+Spc\+::set\+\_\+n\+\_\+molecules (
+\begin{DoxyParamCaption}
+\item[{double}]{volume}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1_channel___spc_af8d5d7097d343e6646c6c11a1744024d}
+
+
+Implementation of the \hyperlink{classnw_1_1___species_a53d06cca549a83bfff71303174707926}{\+\_\+\+Species\+::set\+\_\+n\+\_\+molecules()} method. 
+
+Initialization of the channel species. A vector with a length equal to the number of existing channels is created. Each element of this vector holds the number of active subunits for one particular channel protein. If the number of active subunits inside one vector field becomes equal or bigger than the number of subunits required to open a channel, the number of activated channel is increased by one. All channel are initially closed. 
+
+Reimplemented from \hyperlink{classnw_1_1___species_a53d06cca549a83bfff71303174707926}{nw\+::\+\_\+\+Species}.
+
+
+\begin{DoxyCode}
+67                                        \{
+68     \hyperlink{classnw_1_1___species_af6ae0232b4f994b464a2f69cb022b33f}{n\_molecules} = \hyperlink{classnw_1_1___species_a80896a55f086f468396e76ae8f1e8285}{volume}*1e-6*\hyperlink{namespacenw_ad890cfa7dd9eaf8d5b6754723e516c4a}{N\_AVO}*\hyperlink{classnw_1_1___species_ac66cdd3bdd5be88791e00d063b4e92a2}{initial\_conc};
+69     \hyperlink{classnw_1_1_channel___spc_aca3ddf4eba759eeeb835bba168795a11}{ch\_Vec}.assign(\hyperlink{classnw_1_1___species_af6ae0232b4f994b464a2f69cb022b33f}{n\_molecules},0);
+70     this->\hyperlink{classnw_1_1_channel___spc_a35afc71aa0eeb5b1e4a2089a5c1f65ae}{n\_fully\_inactivated\_Ch} = \hyperlink{classnw_1_1___species_af6ae0232b4f994b464a2f69cb022b33f}{n\_molecules};\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!ch\+\_\+it@{ch\+\_\+it}}
+\index{ch\+\_\+it@{ch\+\_\+it}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{ch\+\_\+it}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$long$>$\+::iterator nw\+::\+Channel\+\_\+\+Spc\+::ch\+\_\+it\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_channel___spc_a025013604067ea03dce585fb5a785408}
+
+
+Vector iterator that iterates through the channel vector to update it. 
+
+\hypertarget{classnw_1_1_channel___spc_aca3ddf4eba759eeeb835bba168795a11}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!ch\+\_\+\+Vec@{ch\+\_\+\+Vec}}
+\index{ch\+\_\+\+Vec@{ch\+\_\+\+Vec}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{ch\+\_\+\+Vec}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$long$>$ nw\+::\+Channel\+\_\+\+Spc\+::ch\+\_\+\+Vec\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_channel___spc_aca3ddf4eba759eeeb835bba168795a11}
+
+
+Vector representing the number of active subunits of each channel. 
+
+\hypertarget{classnw_1_1_channel___spc_a67fd1b83563c30ec86802bdab420c95d}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!n\+\_\+active\+\_\+\+Ch@{n\+\_\+active\+\_\+\+Ch}}
+\index{n\+\_\+active\+\_\+\+Ch@{n\+\_\+active\+\_\+\+Ch}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{n\+\_\+active\+\_\+\+Ch}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Channel\+\_\+\+Spc\+::n\+\_\+active\+\_\+\+Ch\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_channel___spc_a67fd1b83563c30ec86802bdab420c95d}
+
+
+Number of currently active channels. 
+
+\hypertarget{classnw_1_1_channel___spc_ac6ae04b799c751bb61918b4ab163ce85}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!n\+\_\+fully\+\_\+activated\+\_\+\+Ch@{n\+\_\+fully\+\_\+activated\+\_\+\+Ch}}
+\index{n\+\_\+fully\+\_\+activated\+\_\+\+Ch@{n\+\_\+fully\+\_\+activated\+\_\+\+Ch}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{n\+\_\+fully\+\_\+activated\+\_\+\+Ch}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Channel\+\_\+\+Spc\+::n\+\_\+fully\+\_\+activated\+\_\+\+Ch\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_channel___spc_ac6ae04b799c751bb61918b4ab163ce85}
+
+
+Number of completely activated channels (no subunit activation possible). 
+
+\hypertarget{classnw_1_1_channel___spc_a35afc71aa0eeb5b1e4a2089a5c1f65ae}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!n\+\_\+fully\+\_\+inactivated\+\_\+\+Ch@{n\+\_\+fully\+\_\+inactivated\+\_\+\+Ch}}
+\index{n\+\_\+fully\+\_\+inactivated\+\_\+\+Ch@{n\+\_\+fully\+\_\+inactivated\+\_\+\+Ch}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{n\+\_\+fully\+\_\+inactivated\+\_\+\+Ch}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Channel\+\_\+\+Spc\+::n\+\_\+fully\+\_\+inactivated\+\_\+\+Ch\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_channel___spc_a35afc71aa0eeb5b1e4a2089a5c1f65ae}
+
+
+Number of completely inactivated channels (no subunit inactivation possible) 
+
+\hypertarget{classnw_1_1_channel___spc_a2b63ef7e5147046919cf96060b57e078}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!n\+\_\+\+Subunits@{n\+\_\+\+Subunits}}
+\index{n\+\_\+\+Subunits@{n\+\_\+\+Subunits}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{n\+\_\+\+Subunits}]{\setlength{\rightskip}{0pt plus 5cm}int nw\+::\+Channel\+\_\+\+Spc\+::n\+\_\+\+Subunits\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_channel___spc_a2b63ef7e5147046919cf96060b57e078}
+
+
+Number of subunits of this channel species. 
+
+\hypertarget{classnw_1_1_channel___spc_a52e6e8aae67ebfb6cec1b79e7f125542}{\index{nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}!n\+\_\+\+Subunits\+\_\+\+To\+\_\+\+Open@{n\+\_\+\+Subunits\+\_\+\+To\+\_\+\+Open}}
+\index{n\+\_\+\+Subunits\+\_\+\+To\+\_\+\+Open@{n\+\_\+\+Subunits\+\_\+\+To\+\_\+\+Open}!nw\+::\+Channel\+\_\+\+Spc@{nw\+::\+Channel\+\_\+\+Spc}}
+\subsubsection[{n\+\_\+\+Subunits\+\_\+\+To\+\_\+\+Open}]{\setlength{\rightskip}{0pt plus 5cm}int nw\+::\+Channel\+\_\+\+Spc\+::n\+\_\+\+Subunits\+\_\+\+To\+\_\+\+Open\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_channel___spc_a52e6e8aae67ebfb6cec1b79e7f125542}
+
+
+Number of activated subunits that are required to open the channel. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Species/\hyperlink{_channel___spc_8h}{Channel\+\_\+\+Spc.\+h}\item 
+Species/\hyperlink{_channel___spc_8cpp}{Channel\+\_\+\+Spc.\+cpp}\end{DoxyCompactItemize}

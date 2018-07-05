@@ -1,0 +1,665 @@
+\hypertarget{classnw_1_1_gillespie___sys}{\section{nw\+:\+:Gillespie\+\_\+\+Sys Class Reference}
+\label{classnw_1_1_gillespie___sys}\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+}
+
+
+Coordinates the stochastic simulation algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Gillespie\+\_\+\+Sys.\+h$>$}
+
+Inheritance diagram for nw\+:\+:Gillespie\+\_\+\+Sys\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{df/d2f/classnw_1_1_gillespie___sys}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1_gillespie___sys_aded1bb2d3c24e90b4da4e8f078b9f1b9}{Gillespie\+\_\+\+Sys} (long, long, double, double, \hyperlink{namespacenw_a0d9ea27d7802637354c7892806eac1fc}{Event\+Vector} $\ast$, \hyperlink{namespacenw_ad7146b8b5a9de9be416847f41135722c}{Voxel\+Vector} $\ast$, string, vector$<$ long $>$, vector$<$ long $>$)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classnw_1_1_gillespie___sys_ac1af358ef52d7a1c2e150f61e6005d6c}{$\sim$\+Gillespie\+\_\+\+Sys} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_gillespie___sys_ad21aa35a51bac13fe64dc6d838e77aee}{go} (long)
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___system_ae0276aebba39a971d6e240a86a389713}{\+\_\+\+System\+::go()} method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classnw_1_1_gillespie___sys_a48bc0eec3fc239802276ea1499326352}{system\+\_\+output} ()
+\begin{DoxyCompactList}\small\item\em file output of the system. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_gillespie___sys_a52f0966bbf0a561851a4e8cb52e07f51}{build\+\_\+dep\+\_\+graph} ()
+\begin{DoxyCompactList}\small\item\em build the dependency graph with defined Events. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_gillespie___sys_afb3cc7c5515ff9646fa3ecc9c4a44e61}{print\+\_\+system\+\_\+state} ()
+\begin{DoxyCompactList}\small\item\em print current \hyperlink{classnw_1_1_gillespie___sys}{Gillespie\+\_\+\+Sys} State to console \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{classnw_1_1_gillespie___sys_aa5b4943f29fb0276596ace75e384565e}{output\+\_\+mode}
+\begin{DoxyCompactList}\small\item\em timing mode \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classnw_1_1_gillespie___sys_a56184d8a2afdebca9cfe6e08e191fe51}{n\+\_\+steps}
+\begin{DoxyCompactList}\small\item\em Holds number of simulation steps. \end{DoxyCompactList}\item 
+long \hyperlink{classnw_1_1_gillespie___sys_a31f847a062a1cdc9b4a7eed103447da7}{opcntr}
+\begin{DoxyCompactList}\small\item\em Output counter. \end{DoxyCompactList}\item 
+long \hyperlink{classnw_1_1_gillespie___sys_a2e7300d68c9faccf444866e67842133f}{channel\+\_\+state}
+\begin{DoxyCompactList}\small\item\em Tracks the channel state during the simulation to trigger the open/close timing output. \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1_gillespie___sys_a232687e1809761fea124e81aa7273f3c}{max\+\_\+\+Sim\+\_\+\+Time}
+\begin{DoxyCompactList}\small\item\em Maximal simulation time. \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1_gillespie___sys_a0de156c39c87a334da7477cb2a9c02cf}{rec\+\_\+interval}
+\begin{DoxyCompactList}\small\item\em Time interval, system state is recorded. \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1_gillespie___sys_ac83bb4eaee1f8b46610a8243a83fb3ad}{curr\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Current time. \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1_gillespie___sys_a2209a66c1cd88b06fb8a0e8b41d72b29}{rec\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Recording interval counter. \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1_gillespie___sys_a72cfc8f0044d7f2130f834aba5e22e18}{a\+\_\+0}
+\begin{DoxyCompactList}\small\item\em Get current total system propensity a0. \end{DoxyCompactList}\item 
+string \hyperlink{classnw_1_1_gillespie___sys_a07aa57de819107467a13af8ceadb4be9}{output\+\_\+dir\+\_\+path}
+\begin{DoxyCompactList}\small\item\em Output directory path. \end{DoxyCompactList}\item 
+stringstream \hyperlink{classnw_1_1_gillespie___sys_a989a4288ca9dd4eaf9a5ef45c805260e}{data\+\_\+path}
+\begin{DoxyCompactList}\small\item\em Data output path. \end{DoxyCompactList}\item 
+stringstream \hyperlink{classnw_1_1_gillespie___sys_a24b051d05da3cc35a983536371522e2c}{info\+\_\+path}
+\begin{DoxyCompactList}\small\item\em Simulation info output path. \end{DoxyCompactList}\item 
+stringstream \hyperlink{classnw_1_1_gillespie___sys_ab1709cadc7e452ec3834ac66a3354203}{oc\+\_\+path}
+\begin{DoxyCompactList}\small\item\em Event logging output path. \end{DoxyCompactList}\item 
+stringstream \hyperlink{classnw_1_1_gillespie___sys_a0d0bfd2a96ed9314b0189791d941fded}{dcol\+\_\+path}
+\begin{DoxyCompactList}\small\item\em Data collection parameter path. \end{DoxyCompactList}\item 
+ofstream \hyperlink{classnw_1_1_gillespie___sys_aec438472b938a410f0d31af0ae73a164}{data\+\_\+output\+\_\+file}
+\begin{DoxyCompactList}\small\item\em Output file stream for simulation data output. \end{DoxyCompactList}\item 
+ofstream \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\+\_\+output\+\_\+file}
+\begin{DoxyCompactList}\small\item\em Output file stream for simulation info output. \end{DoxyCompactList}\item 
+ofstream \hyperlink{classnw_1_1_gillespie___sys_a4209e0d87ac2e0c5b9cad1074a900c80}{oc\+\_\+log\+\_\+file}
+\begin{DoxyCompactList}\small\item\em Output file stream for event logging. \end{DoxyCompactList}\item 
+ofstream \hyperlink{classnw_1_1_gillespie___sys_add6ed57b7c25852fab96b93b9acf9bff}{dcol\+\_\+file}
+\begin{DoxyCompactList}\small\item\em Output file stream for data collection parameters. \end{DoxyCompactList}\item 
+vector$<$ long $>$ \hyperlink{classnw_1_1_gillespie___sys_a98aa1c6ddc1cd3307882ef3bbf646e6a}{evt\+\_\+cntr}
+\begin{DoxyCompactList}\small\item\em Counts number of Event execution. \end{DoxyCompactList}\item 
+vector$<$ long $>$ \hyperlink{classnw_1_1_gillespie___sys_ae404ea4b9fea834a9c576778004fe0fe}{distr\+\_\+vec}
+\begin{DoxyCompactList}\small\item\em Holds the distribution of molecular count of \hyperlink{classnw_1_1___species}{\+\_\+\+Species} with id=0. \end{DoxyCompactList}\item 
+vector$<$ long $>$ \hyperlink{classnw_1_1_gillespie___sys_a138ba3dc15d538a31dbc7c1200bc5637}{osid}
+\begin{DoxyCompactList}\small\item\em Output species id vector. \end{DoxyCompactList}\item 
+vector$<$ long $>$ \hyperlink{classnw_1_1_gillespie___sys_a136eaaf0a00fc739e797f3b2bea22386}{ovid}
+\begin{DoxyCompactList}\small\item\em Output voxel id vector. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classnw_1_1___event}{\+\_\+\+Event} $\ast$ $>$ $\ast$ \hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\+\_\+vec}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classnw_1_1___event}{\+\_\+\+Event} vector \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} $\ast$ $>$ $\ast$ \hyperlink{classnw_1_1_gillespie___sys_acf4d19490ed7a8447296d7c206ef0590}{vxl\+\_\+vec}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} vector \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Coordinates the stochastic simulation algorithm. 
+
+The main simulation loop is defined in this class. To run the algorithm, all system relevant data structures such as the \hyperlink{classnw_1_1___event}{\+\_\+\+Event} vector (evt\+\_\+vec) and the \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} (vxl\+\_\+vec) vector are attributes. The whole algorithm is based on the abstract base classes that define essential properties of each system component. The polymorph approach allows for a great extensibility of these components. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnw_1_1_gillespie___sys_aded1bb2d3c24e90b4da4e8f078b9f1b9}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!Gillespie\+\_\+\+Sys@{Gillespie\+\_\+\+Sys}}
+\index{Gillespie\+\_\+\+Sys@{Gillespie\+\_\+\+Sys}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{Gillespie\+\_\+\+Sys}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+Gillespie\+\_\+\+Sys\+::\+Gillespie\+\_\+\+Sys (
+\begin{DoxyParamCaption}
+\item[{long}]{output\+\_\+mode, }
+\item[{long}]{n\+\_\+steps, }
+\item[{double}]{max\+\_\+\+Sim\+\_\+\+Time, }
+\item[{double}]{rec\+\_\+interval, }
+\item[{{\bf Event\+Vector} $\ast$}]{evt\+\_\+vec, }
+\item[{{\bf Voxel\+Vector} $\ast$}]{vxl\+\_\+vec, }
+\item[{string}]{output\+\_\+dir\+\_\+path, }
+\item[{vector$<$ long $>$}]{osid, }
+\item[{vector$<$ long $>$}]{ovid}
+\end{DoxyParamCaption}
+)}}\label{classnw_1_1_gillespie___sys_aded1bb2d3c24e90b4da4e8f078b9f1b9}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+\_\+mode} & Output mode \\
+\hline
+{\em n\+\_\+steps} & Number of simulation steps. \\
+\hline
+{\em max\+\_\+\+Sim\+\_\+\+Time} & Maximum simulation time. \\
+\hline
+{\em rec\+\_\+interval} & Time record time interval (for equidistant timeseries) \\
+\hline
+{\em evt\+\_\+vec} & Pointer to a vector of pointers to all defined Events. \\
+\hline
+{\em vxl\+\_\+vec} & Pointer to a vector of pointers to all defined Voxel. \\
+\hline
+{\em osid} & Output Output \hyperlink{classnw_1_1___species}{\+\_\+\+Species} Vector \\
+\hline
+{\em ovid} & Output Output \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} Vector \\
+\hline
+{\em output\+\_\+dir\+\_\+path} & Output Directory Path \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+17                                                                  :
+18     \hyperlink{classnw_1_1_gillespie___sys_aa5b4943f29fb0276596ace75e384565e}{output\_mode}(\hyperlink{classnw_1_1_gillespie___sys_aa5b4943f29fb0276596ace75e384565e}{output\_mode}),
+19     \hyperlink{classnw_1_1_gillespie___sys_a56184d8a2afdebca9cfe6e08e191fe51}{n\_steps}(\hyperlink{classnw_1_1_gillespie___sys_a56184d8a2afdebca9cfe6e08e191fe51}{n\_steps}),
+20     \hyperlink{classnw_1_1_gillespie___sys_a31f847a062a1cdc9b4a7eed103447da7}{opcntr}(0),
+21     \hyperlink{classnw_1_1_gillespie___sys_a232687e1809761fea124e81aa7273f3c}{max\_Sim\_Time}(\hyperlink{classnw_1_1_gillespie___sys_a232687e1809761fea124e81aa7273f3c}{max\_Sim\_Time}),
+22     \hyperlink{classnw_1_1_gillespie___sys_a0de156c39c87a334da7477cb2a9c02cf}{rec\_interval}(\hyperlink{classnw_1_1_gillespie___sys_a0de156c39c87a334da7477cb2a9c02cf}{rec\_interval}),
+23     \hyperlink{classnw_1_1_gillespie___sys_ac83bb4eaee1f8b46610a8243a83fb3ad}{curr\_time}(0),
+24     \hyperlink{classnw_1_1_gillespie___sys_a2209a66c1cd88b06fb8a0e8b41d72b29}{rec\_time}(0),
+25     \hyperlink{classnw_1_1_gillespie___sys_a72cfc8f0044d7f2130f834aba5e22e18}{a\_0}(0),
+26     \hyperlink{classnw_1_1_gillespie___sys_a07aa57de819107467a13af8ceadb4be9}{output\_dir\_path}(\hyperlink{classnw_1_1_gillespie___sys_a07aa57de819107467a13af8ceadb4be9}{output\_dir\_path}),
+27     \hyperlink{classnw_1_1_gillespie___sys_a138ba3dc15d538a31dbc7c1200bc5637}{osid}(\hyperlink{classnw_1_1_gillespie___sys_a138ba3dc15d538a31dbc7c1200bc5637}{osid}),
+28     \hyperlink{classnw_1_1_gillespie___sys_a136eaaf0a00fc739e797f3b2bea22386}{ovid}(\hyperlink{classnw_1_1_gillespie___sys_a136eaaf0a00fc739e797f3b2bea22386}{ovid}),
+29     \hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}(\hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}),
+30     \hyperlink{classnw_1_1_gillespie___sys_acf4d19490ed7a8447296d7c206ef0590}{vxl\_vec}(\hyperlink{classnw_1_1_gillespie___sys_acf4d19490ed7a8447296d7c206ef0590}{vxl\_vec})
+31 \{
+32 
+33 \textcolor{comment}{//  initialize event counter vector}
+34     \hyperlink{classnw_1_1_gillespie___sys_a98aa1c6ddc1cd3307882ef3bbf646e6a}{evt\_cntr}.assign(\hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->size(), 0);
+35 \textcolor{comment}{//  initialize distribution vector}
+36     \hyperlink{classnw_1_1_gillespie___sys_ae404ea4b9fea834a9c576778004fe0fe}{distr\_vec}.assign(500, 0);
+37 
+38 \textcolor{comment}{//  initialize all Events}
+39     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->size(); ++i) \{
+40         \hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->at(i)->init();
+41     \}
+42 
+43     this->\hyperlink{classnw_1_1_gillespie___sys_a72cfc8f0044d7f2130f834aba5e22e18}{a\_0} = 0;
+44 \textcolor{comment}{//  Calculate a\_0 from all system events}
+45     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < this->\hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->size() ;++i)\{
+46         this->\hyperlink{classnw_1_1_gillespie___sys_a72cfc8f0044d7f2130f834aba5e22e18}{a\_0} += this->\hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->at(i)->get\_a();
+47     \}
+48 
+49 \textcolor{comment}{//  Adapt exit conditions and record interval according to the timing\_mode}
+50     \textcolor{keywordflow}{if} (this->\hyperlink{classnw_1_1_gillespie___sys_aa5b4943f29fb0276596ace75e384565e}{output\_mode} == 1)\{
+51         \textcolor{comment}{// set the record interval to 10 * average system waiting time}
+52         this->\hyperlink{classnw_1_1_gillespie___sys_a0de156c39c87a334da7477cb2a9c02cf}{rec\_interval} = 10 / \hyperlink{classnw_1_1_gillespie___sys_a72cfc8f0044d7f2130f834aba5e22e18}{a\_0};
+53     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (this->\hyperlink{classnw_1_1_gillespie___sys_aa5b4943f29fb0276596ace75e384565e}{output\_mode} == 2)\{
+54         this->\hyperlink{classnw_1_1_gillespie___sys_a0de156c39c87a334da7477cb2a9c02cf}{rec\_interval} = 0;
+55     \}
+56 
+57 \textcolor{comment}{//  print data output parameters for data analysis}
+58     this->\hyperlink{classnw_1_1_gillespie___sys_a0d0bfd2a96ed9314b0189791d941fded}{dcol\_path} << \hyperlink{classnw_1_1_gillespie___sys_a07aa57de819107467a13af8ceadb4be9}{output\_dir\_path} << \textcolor{stringliteral}{"sim\_param.py"};
+59     \textcolor{keyword}{const} \textcolor{keywordtype}{string} &tmp\_dcol = this->\hyperlink{classnw_1_1_gillespie___sys_a0d0bfd2a96ed9314b0189791d941fded}{dcol\_path}.str();
+60     this->\hyperlink{classnw_1_1_gillespie___sys_add6ed57b7c25852fab96b93b9acf9bff}{dcol\_file}.open(tmp\_dcol.c\_str());
+61     this->\hyperlink{classnw_1_1_gillespie___sys_add6ed57b7c25852fab96b93b9acf9bff}{dcol\_file} << \textcolor{stringliteral}{"mean\_tau = "} << 1/this->\hyperlink{classnw_1_1_gillespie___sys_a72cfc8f0044d7f2130f834aba5e22e18}{a\_0} << endl << \textcolor{stringliteral}{"dt = "}
+62                     << this->\hyperlink{classnw_1_1_gillespie___sys_a0de156c39c87a334da7477cb2a9c02cf}{rec\_interval} << endl << \textcolor{stringliteral}{"n\_steps= "} << this->
+      \hyperlink{classnw_1_1_gillespie___sys_a56184d8a2afdebca9cfe6e08e191fe51}{n\_steps}
+63                     << endl << \textcolor{stringliteral}{"T\_max = "} << this->\hyperlink{classnw_1_1_gillespie___sys_a232687e1809761fea124e81aa7273f3c}{max\_Sim\_Time} << endl << endl;
+64     this->\hyperlink{classnw_1_1_gillespie___sys_add6ed57b7c25852fab96b93b9acf9bff}{dcol\_file}.close();
+65     cout    << \textcolor{stringliteral}{"\(\backslash\)n### Timing Parameters ###\(\backslash\)n"} << \textcolor{stringliteral}{"mean\_tau = "} << 1/this->\hyperlink{classnw_1_1_gillespie___sys_a72cfc8f0044d7f2130f834aba5e22e18}{a\_0}
+66             << endl << \textcolor{stringliteral}{"dt = "} << this->\hyperlink{classnw_1_1_gillespie___sys_a0de156c39c87a334da7477cb2a9c02cf}{rec\_interval} << endl << \textcolor{stringliteral}{"n\_steps= "}
+67             << this->\hyperlink{classnw_1_1_gillespie___sys_a56184d8a2afdebca9cfe6e08e191fe51}{n\_steps} << endl << \textcolor{stringliteral}{"T\_max = "} << this->\hyperlink{classnw_1_1_gillespie___sys_a232687e1809761fea124e81aa7273f3c}{max\_Sim\_Time}
+68             << \textcolor{stringliteral}{"\(\backslash\)n######################"} << endl << endl;
+69 
+70 \textcolor{comment}{//  initialize channel state log}
+71     \hyperlink{classnw_1_1_gillespie___sys_a2e7300d68c9faccf444866e67842133f}{channel\_state} = 0;
+72 
+73 \textcolor{comment}{//  build the dependency graph}
+74     \hyperlink{classnw_1_1_gillespie___sys_a52f0966bbf0a561851a4e8cb52e07f51}{build\_dep\_graph}();
+75 
+76 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_gillespie___sys_ac1af358ef52d7a1c2e150f61e6005d6c}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!````~Gillespie\+\_\+\+Sys@{$\sim$\+Gillespie\+\_\+\+Sys}}
+\index{````~Gillespie\+\_\+\+Sys@{$\sim$\+Gillespie\+\_\+\+Sys}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{$\sim$\+Gillespie\+\_\+\+Sys}]{\setlength{\rightskip}{0pt plus 5cm}virtual nw\+::\+Gillespie\+\_\+\+Sys\+::$\sim$\+Gillespie\+\_\+\+Sys (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1_gillespie___sys_ac1af358ef52d7a1c2e150f61e6005d6c}
+
+
+Destructor. 
+
+
+\begin{DoxyCode}
+47 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnw_1_1_gillespie___sys_a52f0966bbf0a561851a4e8cb52e07f51}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!build\+\_\+dep\+\_\+graph@{build\+\_\+dep\+\_\+graph}}
+\index{build\+\_\+dep\+\_\+graph@{build\+\_\+dep\+\_\+graph}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{build\+\_\+dep\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Gillespie\+\_\+\+Sys\+::build\+\_\+dep\+\_\+graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a52f0966bbf0a561851a4e8cb52e07f51}
+
+
+build the dependency graph with defined Events. 
+
+The dependency graph is an important structure for the update procedure. Through analyzing the state change vectors, dependencies are recognized and saved. All state change vectors are compared to each other. If sc\+\_\+vec a at index k is != 0 and sc\+\_\+vec b at index k is $<$ 0, b is dependent on a. 
+\begin{DoxyCode}
+230                                    \{
+231 
+232     \textcolor{keywordflow}{try}\{
+233 \textcolor{comment}{//      temporary vectors}
+234         vector<long> sc\_a, sc\_b;
+235 
+236 \textcolor{comment}{//      find dependency relations based on state change vectors}
+237         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->size(); ++i)\{
+238             sc\_a = \hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->at(i)->get\_sc\_vec();
+239             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j = 0; j < \hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->size(); ++j)\{
+240                 sc\_b = \hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->at(j)->get\_sc\_vec();
+241                 \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->at(i) != \hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->at(j))\{
+242                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} k = 0; k < sc\_a.size(); ++k)\{
+243                         \textcolor{keywordflow}{if}(sc\_a.at(k) != 0 && sc\_b.at(k) < 0 )\{
+244                             \hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->at(i)->add\_dep\_list(\hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->at(j));
+245                             \textcolor{keywordflow}{break};
+246                         \}
+247                     \}
+248                 \}
+249             \}
+250         \}
+251     \}
+252 
+253     \textcolor{keywordflow}{catch}(exception& e)\{
+254         cout << \textcolor{stringliteral}{"System::build\_dep\_graph()"} << e.what();
+255     \}
+256 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_gillespie___sys_ad21aa35a51bac13fe64dc6d838e77aee}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!go@{go}}
+\index{go@{go}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{go}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Gillespie\+\_\+\+Sys\+::go (
+\begin{DoxyParamCaption}
+\item[{long}]{n\+\_\+it}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classnw_1_1_gillespie___sys_ad21aa35a51bac13fe64dc6d838e77aee}
+
+
+Implementation of the \hyperlink{classnw_1_1___system_ae0276aebba39a971d6e240a86a389713}{\+\_\+\+System\+::go()} method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+it} & Current number of simulation run (required for output file names to distinguish between multiple trajectories resulting from multiple simulation runs during one program call.)\\
+\hline
+\end{DoxyParams}
+Start the simulation algorithm until one of the exit condition is met. The algorithm consists of the following steps\+:
+\begin{DoxyEnumerate}
+\item sort the event vector ascending of its tau values
+\item execute first Element of the event vector
+\item update all events
+\item clean voxel (set dirty\+\_\+flags = {\ttfamily F\+A\+L\+S\+E})
+\item loop 
+\end{DoxyEnumerate}
+
+Implements \hyperlink{classnw_1_1___system_ae0276aebba39a971d6e240a86a389713}{nw\+::\+\_\+\+System}.
+
+
+\begin{DoxyCode}
+80 \{
+81     \textcolor{keywordflow}{try}\{
+82 
+83 \textcolor{comment}{//      build path to output files. n\_it represents the current simulation run.}
+84 
+85 \textcolor{comment}{//      data files containing molecular numbers}
+86         \hyperlink{classnw_1_1_gillespie___sys_a989a4288ca9dd4eaf9a5ef45c805260e}{data\_path} << \hyperlink{classnw_1_1_gillespie___sys_a07aa57de819107467a13af8ceadb4be9}{output\_dir\_path} << \textcolor{stringliteral}{"data\_"} << n\_it << \textcolor{stringliteral}{".e"};
+87 \textcolor{comment}{//      open/close log for channel dynamics}
+88         \hyperlink{classnw_1_1_gillespie___sys_ab1709cadc7e452ec3834ac66a3354203}{oc\_path} << \hyperlink{classnw_1_1_gillespie___sys_a07aa57de819107467a13af8ceadb4be9}{output\_dir\_path} << \textcolor{stringliteral}{"oc\_log\_"} << n\_it << \textcolor{stringliteral}{".e"};
+89 \textcolor{comment}{//      independent result log of every simulation run}
+90         \hyperlink{classnw_1_1_gillespie___sys_a24b051d05da3cc35a983536371522e2c}{info\_path} << \hyperlink{classnw_1_1_gillespie___sys_a07aa57de819107467a13af8ceadb4be9}{output\_dir\_path} << \textcolor{stringliteral}{"sim\_res.e"};
+91 
+92         \textcolor{keyword}{const} \textcolor{keywordtype}{string} &tmp\_data = \hyperlink{classnw_1_1_gillespie___sys_a989a4288ca9dd4eaf9a5ef45c805260e}{data\_path}.str();
+93         \textcolor{keyword}{const} \textcolor{keywordtype}{string} &tmp\_info = \hyperlink{classnw_1_1_gillespie___sys_a24b051d05da3cc35a983536371522e2c}{info\_path}.str();
+94         \textcolor{keyword}{const} \textcolor{keywordtype}{string} &tmp\_oclog = \hyperlink{classnw_1_1_gillespie___sys_ab1709cadc7e452ec3834ac66a3354203}{oc\_path}.str();
+95 
+96 \textcolor{comment}{//      connect streams to output file}
+97         \hyperlink{classnw_1_1_gillespie___sys_aec438472b938a410f0d31af0ae73a164}{data\_output\_file}.open(tmp\_data.c\_str());
+98         \hyperlink{classnw_1_1_gillespie___sys_a4209e0d87ac2e0c5b9cad1074a900c80}{oc\_log\_file}.open(tmp\_oclog.c\_str());
+99         \hyperlink{classnw_1_1_gillespie___sys_a4209e0d87ac2e0c5b9cad1074a900c80}{oc\_log\_file} << std::setprecision(10);
+100 
+101 \textcolor{comment}{//      reconnect to existing file (adding text)}
+102         \textcolor{keywordflow}{if} (n\_it == 1)\{
+103             \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file}.open(tmp\_info.c\_str());
+104         \}\textcolor{keywordflow}{else}\{
+105             \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file}.open(tmp\_info.c\_str(), ios::in | ios::ate);
+106         \}
+107 
+108 \textcolor{comment}{//      console output: indicate simulation start}
+109         \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file}<< \textcolor{stringliteral}{"###### Run: "} << n\_it << \textcolor{stringliteral}{" ######"} << endl;
+110         cout << \textcolor{stringliteral}{"--SIMULATION BEGIN-- \(\backslash\)n"} << endl;
+111         \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file} << \textcolor{stringliteral}{"--SIMULATION RESULTS-- \(\backslash\)n"} << endl;
+112 
+113 \textcolor{comment}{//      print the initial system state}
+114         \hyperlink{classnw_1_1_gillespie___sys_afb3cc7c5515ff9646fa3ecc9c4a44e61}{print\_system\_state}();
+115 
+116 \textcolor{comment}{//      ###############################}
+117 \textcolor{comment}{//      ## START THE SIMULATION LOOP ##}
+118 \textcolor{comment}{//      ###############################}
+119 
+120 \textcolor{comment}{//      set times}
+121         \textcolor{keywordtype}{double} tau = 0, begin, end;
+122         begin = time(0);
+123 
+124 \textcolor{comment}{//      check exit conditions}
+125         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1_gillespie___sys_a56184d8a2afdebca9cfe6e08e191fe51}{n\_steps}; ++i) \{
+126             \textcolor{keywordflow}{if} (\hyperlink{classnw_1_1_gillespie___sys_ac83bb4eaee1f8b46610a8243a83fb3ad}{curr\_time} <= \hyperlink{classnw_1_1_gillespie___sys_a232687e1809761fea124e81aa7273f3c}{max\_Sim\_Time}) \{
+127 
+128                 \textcolor{keywordtype}{long} nextIndex = 0;
+129                 \textcolor{keywordtype}{double} minTau = INFINITY;
+130 
+131 \textcolor{comment}{//              event update procedure}
+132                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j = 0; j < \hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->size(); ++j) \{
+133                     \textcolor{keywordtype}{double} actTau = \hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->at(j)->update(tau);
+134 \textcolor{comment}{//                  determine next Event Index}
+135                     \textcolor{keywordflow}{if} (actTau < minTau) \{
+136                         minTau = actTau;
+137                         nextIndex = j;
+138                     \}
+139                 \}
+140 
+141 \textcolor{comment}{//              update system times}
+142                 tau = minTau;
+143                 \hyperlink{classnw_1_1_gillespie___sys_a2209a66c1cd88b06fb8a0e8b41d72b29}{rec\_time} += tau;
+144                 \hyperlink{classnw_1_1_gillespie___sys_ac83bb4eaee1f8b46610a8243a83fb3ad}{curr\_time} += tau;
+145 
+146 \textcolor{comment}{//              update event counter}
+147                 \hyperlink{classnw_1_1_gillespie___sys_a98aa1c6ddc1cd3307882ef3bbf646e6a}{evt\_cntr}[nextIndex]++;
+148 
+149 \textcolor{comment}{//              execute next Event}
+150                 \hyperlink{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{evt\_vec}->at(nextIndex)->execute();
+151 
+152 \textcolor{comment}{//              print system state if necessary}
+153                 \hyperlink{classnw_1_1_gillespie___sys_a48bc0eec3fc239802276ea1499326352}{system\_output}();
+154 
+155             \} \textcolor{keywordflow}{else}\{
+156                 n\_steps = i;
+157                 \textcolor{keywordflow}{break};
+158             \}
+159         \}
+160 
+161 \textcolor{comment}{//      ############################}
+162 \textcolor{comment}{//      ## END OF SIMULATION LOOP ##}
+163 \textcolor{comment}{//      ############################}
+164 
+165         end = time(0);
+166 
+167 \textcolor{comment}{//      output of event distribution in info\_output\_file}
+168         cout << \textcolor{stringliteral}{"Event distribution:\(\backslash\)t"};
+169         \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file} << \textcolor{stringliteral}{"Event distribution:\(\backslash\)t"};
+170         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} p = 0; p < (long)\hyperlink{classnw_1_1_gillespie___sys_a98aa1c6ddc1cd3307882ef3bbf646e6a}{evt\_cntr}.size(); p++)\{
+171             cout << \hyperlink{classnw_1_1_gillespie___sys_a98aa1c6ddc1cd3307882ef3bbf646e6a}{evt\_cntr}.at(p) << \textcolor{stringliteral}{","};
+172             \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file} << \hyperlink{classnw_1_1_gillespie___sys_a98aa1c6ddc1cd3307882ef3bbf646e6a}{evt\_cntr}.at(p) << \textcolor{stringliteral}{","};
+173         \}
+174         cout << endl;
+175         \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file} << endl;
+176 
+177 \textcolor{comment}{//      system information output to info\_output\_file.}
+178         cout << \textcolor{stringliteral}{"Simulated time:\(\backslash\)t\(\backslash\)t"} << \hyperlink{classnw_1_1_gillespie___sys_ac83bb4eaee1f8b46610a8243a83fb3ad}{curr\_time} << \textcolor{stringliteral}{" ms"} << endl;
+179         \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file} << \textcolor{stringliteral}{"Simulated time:\(\backslash\)t\(\backslash\)t"} << \hyperlink{classnw_1_1_gillespie___sys_ac83bb4eaee1f8b46610a8243a83fb3ad}{curr\_time} << \textcolor{stringliteral}{" ms"} << endl;
+180         cout << \textcolor{stringliteral}{"Number of steps: \(\backslash\)t"} << n\_steps << endl;
+181         \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file} << \textcolor{stringliteral}{"Number of steps: \(\backslash\)t"} << n\_steps << endl;
+182         cout << \textcolor{stringliteral}{"Computation time:\(\backslash\)t"} << end - begin << \textcolor{stringliteral}{" s"} << endl;
+183         \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file} << \textcolor{stringliteral}{"Computation time:\(\backslash\)t"} << end - begin << \textcolor{stringliteral}{" s"} << endl;
+184 
+185 \textcolor{comment}{//      console output: indicate simulation end}
+186         \hyperlink{classnw_1_1_gillespie___sys_afb3cc7c5515ff9646fa3ecc9c4a44e61}{print\_system\_state}();
+187         cout << \textcolor{stringliteral}{"\(\backslash\)n--SIMULATION END--"} << endl;
+188         \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file} << \textcolor{stringliteral}{"\(\backslash\)n--SIMULATION END--"} << endl << endl << endl;
+189 
+190 \textcolor{comment}{//      disconnect stream from output file}
+191         \hyperlink{classnw_1_1_gillespie___sys_aec438472b938a410f0d31af0ae73a164}{data\_output\_file}.close();
+192         \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file}.close();
+193         \hyperlink{classnw_1_1_gillespie___sys_a4209e0d87ac2e0c5b9cad1074a900c80}{oc\_log\_file}.close();
+194     \}
+195 
+196     \textcolor{keywordflow}{catch}(exception& e)\{
+197         cout << \textcolor{stringliteral}{"System::go(): "} << e.what() << endl;
+198     \}
+199 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_gillespie___sys_afb3cc7c5515ff9646fa3ecc9c4a44e61}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!print\+\_\+system\+\_\+state@{print\+\_\+system\+\_\+state}}
+\index{print\+\_\+system\+\_\+state@{print\+\_\+system\+\_\+state}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{print\+\_\+system\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Gillespie\+\_\+\+Sys\+::print\+\_\+system\+\_\+state (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_afb3cc7c5515ff9646fa3ecc9c4a44e61}
+
+
+print current \hyperlink{classnw_1_1_gillespie___sys}{Gillespie\+\_\+\+Sys} State to console 
+
+
+\begin{DoxyCode}
+258                                       \{
+259 
+260 \textcolor{comment}{//  print current system state}
+261     cout << \textcolor{stringliteral}{"---System State---\(\backslash\)n"};
+262     \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file} << \textcolor{stringliteral}{"---System State---\(\backslash\)n"};
+263     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long)\hyperlink{classnw_1_1_gillespie___sys_acf4d19490ed7a8447296d7c206ef0590}{vxl\_vec}->size();i++)\{
+264         cout << \textcolor{stringliteral}{"Voxel "} << i << \textcolor{stringliteral}{": "};
+265         \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file} << \textcolor{stringliteral}{"Voxel "} << i << \textcolor{stringliteral}{": "};
+266         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} j = 0; j < (long)\hyperlink{classnw_1_1_gillespie___sys_acf4d19490ed7a8447296d7c206ef0590}{vxl\_vec}->at(i)->get\_state\_vec()->size(); j++)\{
+267             cout << \hyperlink{classnw_1_1_gillespie___sys_acf4d19490ed7a8447296d7c206ef0590}{vxl\_vec}->at(i)->get\_state\_vec()->at(j)->get\_n\_molecules() << \textcolor{stringliteral}{","};
+268             \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file} << \hyperlink{classnw_1_1_gillespie___sys_acf4d19490ed7a8447296d7c206ef0590}{vxl\_vec}->at(i)->get\_state\_vec()->at(j)->
+      get\_n\_molecules() << \textcolor{stringliteral}{","};
+269         \}
+270         cout << endl;
+271         \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file} << endl;
+272     \}
+273     cout << \textcolor{stringliteral}{"------------------\(\backslash\)n"};
+274     \hyperlink{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{info\_output\_file} << \textcolor{stringliteral}{"------------------\(\backslash\)n"};
+275 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_gillespie___sys_a48bc0eec3fc239802276ea1499326352}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!system\+\_\+output@{system\+\_\+output}}
+\index{system\+\_\+output@{system\+\_\+output}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{system\+\_\+output}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Gillespie\+\_\+\+Sys\+::system\+\_\+output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a48bc0eec3fc239802276ea1499326352}
+
+
+file output of the system. 
+
+The function \hyperlink{classnw_1_1_gillespie___sys_a48bc0eec3fc239802276ea1499326352}{system\+\_\+output()} takes care, that the a predefined part (input file) of the system state is recorded with a discrete record interval. 
+\begin{DoxyCode}
+201                                         \{
+202 \textcolor{comment}{//  print system state with a fixed time step dt (recording interval)}
+203     \textcolor{keywordflow}{if} (\hyperlink{classnw_1_1_gillespie___sys_a2209a66c1cd88b06fb8a0e8b41d72b29}{rec\_time} >= \hyperlink{classnw_1_1_gillespie___sys_a0de156c39c87a334da7477cb2a9c02cf}{rec\_interval})\{
+204 \textcolor{comment}{//          run through output voxel vector}
+205             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} k = 0; k < \hyperlink{classnw_1_1_gillespie___sys_a136eaaf0a00fc739e797f3b2bea22386}{ovid}.size(); ++k)\{
+206 \textcolor{comment}{//              run through output species id vector}
+207                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1_gillespie___sys_a138ba3dc15d538a31dbc7c1200bc5637}{osid}.size(); ++i)\{
+208                     \hyperlink{classnw_1_1_gillespie___sys_aec438472b938a410f0d31af0ae73a164}{data\_output\_file}<<  \hyperlink{classnw_1_1_gillespie___sys_acf4d19490ed7a8447296d7c206ef0590}{vxl\_vec}->at(\hyperlink{classnw_1_1_gillespie___sys_a136eaaf0a00fc739e797f3b2bea22386}{ovid}[k])->get\_state\_vec()
+209                                         ->at(\hyperlink{classnw_1_1_gillespie___sys_a138ba3dc15d538a31dbc7c1200bc5637}{osid}[i])->get\_n\_molecules() << \textcolor{stringliteral}{","};
+210                 \}
+211             \}
+212         \textcolor{keywordflow}{if} (this->\hyperlink{classnw_1_1_gillespie___sys_aa5b4943f29fb0276596ace75e384565e}{output\_mode} == 2)\{
+213             \hyperlink{classnw_1_1_gillespie___sys_aec438472b938a410f0d31af0ae73a164}{data\_output\_file} << \hyperlink{classnw_1_1_gillespie___sys_ac83bb4eaee1f8b46610a8243a83fb3ad}{curr\_time} << \textcolor{stringliteral}{","};
+214         \}
+215         \hyperlink{classnw_1_1_gillespie___sys_a31f847a062a1cdc9b4a7eed103447da7}{opcntr}++;
+216         \hyperlink{classnw_1_1_gillespie___sys_a2209a66c1cd88b06fb8a0e8b41d72b29}{rec\_time} -= \hyperlink{classnw_1_1_gillespie___sys_a0de156c39c87a334da7477cb2a9c02cf}{rec\_interval};
+217     \}
+218 
+219 \textcolor{comment}{//  check if the channel state changed and if so log the open and close times}
+220     \textcolor{keywordflow}{if}( \hyperlink{classnw_1_1_gillespie___sys_acf4d19490ed7a8447296d7c206ef0590}{vxl\_vec}->at(0)->get\_state\_vec()->at(\hyperlink{classnw_1_1_gillespie___sys_acf4d19490ed7a8447296d7c206ef0590}{vxl\_vec}->at(0)
+221         ->get\_state\_vec()->size()-1)->get\_n\_molecules() != \hyperlink{classnw_1_1_gillespie___sys_a2e7300d68c9faccf444866e67842133f}{channel\_state})\{
+222 \textcolor{comment}{//      update current channel state}
+223         \hyperlink{classnw_1_1_gillespie___sys_a2e7300d68c9faccf444866e67842133f}{channel\_state} = \hyperlink{classnw_1_1_gillespie___sys_acf4d19490ed7a8447296d7c206ef0590}{vxl\_vec}->at(0)->get\_state\_vec()->at(
+      \hyperlink{classnw_1_1_gillespie___sys_acf4d19490ed7a8447296d7c206ef0590}{vxl\_vec}->at(0)
+224                         ->get\_state\_vec()->size() - 1)->get\_n\_molecules();
+225 \textcolor{comment}{//      write current system time to oc\_log.e}
+226         \hyperlink{classnw_1_1_gillespie___sys_a4209e0d87ac2e0c5b9cad1074a900c80}{oc\_log\_file} << \hyperlink{classnw_1_1_gillespie___sys_ac83bb4eaee1f8b46610a8243a83fb3ad}{curr\_time} << \textcolor{stringliteral}{","};
+227     \}
+228 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classnw_1_1_gillespie___sys_a72cfc8f0044d7f2130f834aba5e22e18}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!a\+\_\+0@{a\+\_\+0}}
+\index{a\+\_\+0@{a\+\_\+0}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{a\+\_\+0}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+Gillespie\+\_\+\+Sys\+::a\+\_\+0\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a72cfc8f0044d7f2130f834aba5e22e18}
+
+
+Get current total system propensity a0. 
+
+\hypertarget{classnw_1_1_gillespie___sys_a2e7300d68c9faccf444866e67842133f}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!channel\+\_\+state@{channel\+\_\+state}}
+\index{channel\+\_\+state@{channel\+\_\+state}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{channel\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Gillespie\+\_\+\+Sys\+::channel\+\_\+state\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a2e7300d68c9faccf444866e67842133f}
+
+
+Tracks the channel state during the simulation to trigger the open/close timing output. 
+
+\hypertarget{classnw_1_1_gillespie___sys_ac83bb4eaee1f8b46610a8243a83fb3ad}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!curr\+\_\+time@{curr\+\_\+time}}
+\index{curr\+\_\+time@{curr\+\_\+time}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{curr\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+Gillespie\+\_\+\+Sys\+::curr\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_ac83bb4eaee1f8b46610a8243a83fb3ad}
+
+
+Current time. 
+
+\hypertarget{classnw_1_1_gillespie___sys_aec438472b938a410f0d31af0ae73a164}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!data\+\_\+output\+\_\+file@{data\+\_\+output\+\_\+file}}
+\index{data\+\_\+output\+\_\+file@{data\+\_\+output\+\_\+file}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{data\+\_\+output\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}ofstream nw\+::\+Gillespie\+\_\+\+Sys\+::data\+\_\+output\+\_\+file\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_aec438472b938a410f0d31af0ae73a164}
+
+
+Output file stream for simulation data output. 
+
+\hypertarget{classnw_1_1_gillespie___sys_a989a4288ca9dd4eaf9a5ef45c805260e}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!data\+\_\+path@{data\+\_\+path}}
+\index{data\+\_\+path@{data\+\_\+path}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{data\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}stringstream nw\+::\+Gillespie\+\_\+\+Sys\+::data\+\_\+path\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a989a4288ca9dd4eaf9a5ef45c805260e}
+
+
+Data output path. 
+
+\hypertarget{classnw_1_1_gillespie___sys_add6ed57b7c25852fab96b93b9acf9bff}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!dcol\+\_\+file@{dcol\+\_\+file}}
+\index{dcol\+\_\+file@{dcol\+\_\+file}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{dcol\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}ofstream nw\+::\+Gillespie\+\_\+\+Sys\+::dcol\+\_\+file\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_add6ed57b7c25852fab96b93b9acf9bff}
+
+
+Output file stream for data collection parameters. 
+
+\hypertarget{classnw_1_1_gillespie___sys_a0d0bfd2a96ed9314b0189791d941fded}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!dcol\+\_\+path@{dcol\+\_\+path}}
+\index{dcol\+\_\+path@{dcol\+\_\+path}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{dcol\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}stringstream nw\+::\+Gillespie\+\_\+\+Sys\+::dcol\+\_\+path\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a0d0bfd2a96ed9314b0189791d941fded}
+
+
+Data collection parameter path. 
+
+\hypertarget{classnw_1_1_gillespie___sys_ae404ea4b9fea834a9c576778004fe0fe}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!distr\+\_\+vec@{distr\+\_\+vec}}
+\index{distr\+\_\+vec@{distr\+\_\+vec}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{distr\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$long$>$ nw\+::\+Gillespie\+\_\+\+Sys\+::distr\+\_\+vec\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_ae404ea4b9fea834a9c576778004fe0fe}
+
+
+Holds the distribution of molecular count of \hyperlink{classnw_1_1___species}{\+\_\+\+Species} with id=0. 
+
+\hypertarget{classnw_1_1_gillespie___sys_a98aa1c6ddc1cd3307882ef3bbf646e6a}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!evt\+\_\+cntr@{evt\+\_\+cntr}}
+\index{evt\+\_\+cntr@{evt\+\_\+cntr}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{evt\+\_\+cntr}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$long$>$ nw\+::\+Gillespie\+\_\+\+Sys\+::evt\+\_\+cntr\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a98aa1c6ddc1cd3307882ef3bbf646e6a}
+
+
+Counts number of Event execution. 
+
+\hypertarget{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!evt\+\_\+vec@{evt\+\_\+vec}}
+\index{evt\+\_\+vec@{evt\+\_\+vec}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{evt\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \+\_\+\+Event}$\ast$$>$$\ast$ nw\+::\+Gillespie\+\_\+\+Sys\+::evt\+\_\+vec\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a3f9b4464bed7135f51413c57f086aef7}
+
+
+\hyperlink{classnw_1_1___event}{\+\_\+\+Event} vector 
+
+\hypertarget{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!info\+\_\+output\+\_\+file@{info\+\_\+output\+\_\+file}}
+\index{info\+\_\+output\+\_\+file@{info\+\_\+output\+\_\+file}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{info\+\_\+output\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}ofstream nw\+::\+Gillespie\+\_\+\+Sys\+::info\+\_\+output\+\_\+file\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a1137e63fe12d34f81110bf5e8ebe856c}
+
+
+Output file stream for simulation info output. 
+
+\hypertarget{classnw_1_1_gillespie___sys_a24b051d05da3cc35a983536371522e2c}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!info\+\_\+path@{info\+\_\+path}}
+\index{info\+\_\+path@{info\+\_\+path}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{info\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}stringstream nw\+::\+Gillespie\+\_\+\+Sys\+::info\+\_\+path\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a24b051d05da3cc35a983536371522e2c}
+
+
+Simulation info output path. 
+
+\hypertarget{classnw_1_1_gillespie___sys_a232687e1809761fea124e81aa7273f3c}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!max\+\_\+\+Sim\+\_\+\+Time@{max\+\_\+\+Sim\+\_\+\+Time}}
+\index{max\+\_\+\+Sim\+\_\+\+Time@{max\+\_\+\+Sim\+\_\+\+Time}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{max\+\_\+\+Sim\+\_\+\+Time}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+Gillespie\+\_\+\+Sys\+::max\+\_\+\+Sim\+\_\+\+Time\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a232687e1809761fea124e81aa7273f3c}
+
+
+Maximal simulation time. 
+
+\hypertarget{classnw_1_1_gillespie___sys_a56184d8a2afdebca9cfe6e08e191fe51}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!n\+\_\+steps@{n\+\_\+steps}}
+\index{n\+\_\+steps@{n\+\_\+steps}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{n\+\_\+steps}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t nw\+::\+Gillespie\+\_\+\+Sys\+::n\+\_\+steps\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a56184d8a2afdebca9cfe6e08e191fe51}
+
+
+Holds number of simulation steps. 
+
+\hypertarget{classnw_1_1_gillespie___sys_a4209e0d87ac2e0c5b9cad1074a900c80}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!oc\+\_\+log\+\_\+file@{oc\+\_\+log\+\_\+file}}
+\index{oc\+\_\+log\+\_\+file@{oc\+\_\+log\+\_\+file}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{oc\+\_\+log\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}ofstream nw\+::\+Gillespie\+\_\+\+Sys\+::oc\+\_\+log\+\_\+file\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a4209e0d87ac2e0c5b9cad1074a900c80}
+
+
+Output file stream for event logging. 
+
+\hypertarget{classnw_1_1_gillespie___sys_ab1709cadc7e452ec3834ac66a3354203}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!oc\+\_\+path@{oc\+\_\+path}}
+\index{oc\+\_\+path@{oc\+\_\+path}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{oc\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}stringstream nw\+::\+Gillespie\+\_\+\+Sys\+::oc\+\_\+path\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_ab1709cadc7e452ec3834ac66a3354203}
+
+
+Event logging output path. 
+
+\hypertarget{classnw_1_1_gillespie___sys_a31f847a062a1cdc9b4a7eed103447da7}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!opcntr@{opcntr}}
+\index{opcntr@{opcntr}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{opcntr}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Gillespie\+\_\+\+Sys\+::opcntr\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a31f847a062a1cdc9b4a7eed103447da7}
+
+
+Output counter. 
+
+\hypertarget{classnw_1_1_gillespie___sys_a138ba3dc15d538a31dbc7c1200bc5637}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!osid@{osid}}
+\index{osid@{osid}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{osid}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$long$>$ nw\+::\+Gillespie\+\_\+\+Sys\+::osid\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a138ba3dc15d538a31dbc7c1200bc5637}
+
+
+Output species id vector. 
+
+\hypertarget{classnw_1_1_gillespie___sys_a07aa57de819107467a13af8ceadb4be9}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!output\+\_\+dir\+\_\+path@{output\+\_\+dir\+\_\+path}}
+\index{output\+\_\+dir\+\_\+path@{output\+\_\+dir\+\_\+path}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{output\+\_\+dir\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}string nw\+::\+Gillespie\+\_\+\+Sys\+::output\+\_\+dir\+\_\+path\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a07aa57de819107467a13af8ceadb4be9}
+
+
+Output directory path. 
+
+\hypertarget{classnw_1_1_gillespie___sys_aa5b4943f29fb0276596ace75e384565e}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!output\+\_\+mode@{output\+\_\+mode}}
+\index{output\+\_\+mode@{output\+\_\+mode}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{output\+\_\+mode}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Gillespie\+\_\+\+Sys\+::output\+\_\+mode\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_aa5b4943f29fb0276596ace75e384565e}
+
+
+timing mode 
+
+0. write data output with predefined record interval
+\begin{DoxyEnumerate}
+\item optimized data output for time series analysis (set simulation time and n\+\_\+steps according to 1/a0)
+\item set record interval 0. Each simulation step is recorded 
+\end{DoxyEnumerate}\hypertarget{classnw_1_1_gillespie___sys_a136eaaf0a00fc739e797f3b2bea22386}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!ovid@{ovid}}
+\index{ovid@{ovid}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{ovid}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$long$>$ nw\+::\+Gillespie\+\_\+\+Sys\+::ovid\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a136eaaf0a00fc739e797f3b2bea22386}
+
+
+Output voxel id vector. 
+
+\hypertarget{classnw_1_1_gillespie___sys_a0de156c39c87a334da7477cb2a9c02cf}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!rec\+\_\+interval@{rec\+\_\+interval}}
+\index{rec\+\_\+interval@{rec\+\_\+interval}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{rec\+\_\+interval}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+Gillespie\+\_\+\+Sys\+::rec\+\_\+interval\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a0de156c39c87a334da7477cb2a9c02cf}
+
+
+Time interval, system state is recorded. 
+
+\hypertarget{classnw_1_1_gillespie___sys_a2209a66c1cd88b06fb8a0e8b41d72b29}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!rec\+\_\+time@{rec\+\_\+time}}
+\index{rec\+\_\+time@{rec\+\_\+time}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{rec\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+Gillespie\+\_\+\+Sys\+::rec\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_a2209a66c1cd88b06fb8a0e8b41d72b29}
+
+
+Recording interval counter. 
+
+\hypertarget{classnw_1_1_gillespie___sys_acf4d19490ed7a8447296d7c206ef0590}{\index{nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}!vxl\+\_\+vec@{vxl\+\_\+vec}}
+\index{vxl\+\_\+vec@{vxl\+\_\+vec}!nw\+::\+Gillespie\+\_\+\+Sys@{nw\+::\+Gillespie\+\_\+\+Sys}}
+\subsubsection[{vxl\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \+\_\+\+Voxel}$\ast$$>$$\ast$ nw\+::\+Gillespie\+\_\+\+Sys\+::vxl\+\_\+vec\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_gillespie___sys_acf4d19490ed7a8447296d7c206ef0590}
+
+
+\hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} vector 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+System/\hyperlink{_gillespie___sys_8h}{Gillespie\+\_\+\+Sys.\+h}\item 
+System/\hyperlink{_gillespie___sys_8cpp}{Gillespie\+\_\+\+Sys.\+cpp}\end{DoxyCompactItemize}

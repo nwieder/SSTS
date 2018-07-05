@@ -1,0 +1,31 @@
+\hypertarget{_gillespie___sys_8h}{\section{System/\+Gillespie\+\_\+\+Sys.h File Reference}
+\label{_gillespie___sys_8h}\index{System/\+Gillespie\+\_\+\+Sys.\+h@{System/\+Gillespie\+\_\+\+Sys.\+h}}
+}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include \char`\"{}\+\_\+\+System.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../\+Events/\+\_\+\+Event.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../\+Voxel/\+\_\+\+Voxel.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnw_1_1_gillespie___sys}{nw\+::\+Gillespie\+\_\+\+Sys}
+\begin{DoxyCompactList}\small\item\em Coordinates the stochastic simulation algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacenw}{nw}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef vector$<$ \+\_\+\+Event $\ast$ $>$ \hyperlink{namespacenw_a0d9ea27d7802637354c7892806eac1fc}{nw\+::\+Event\+Vector}
+\begin{DoxyCompactList}\small\item\em typedefs of a \hyperlink{classnw_1_1___event}{\+\_\+\+Event} reference vector \end{DoxyCompactList}\item 
+typedef Event\+Vector\+::iterator \hyperlink{namespacenw_a543a4f72e609ca94582c1c7c10303e0b}{nw\+::\+Event\+Iterator}
+\begin{DoxyCompactList}\small\item\em typedefs of a \hyperlink{classnw_1_1___event}{\+\_\+\+Event} vector iterator \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const string \hyperlink{namespacenw_a7d9622d3fd42f8d91bb8b8a79688518d}{nw\+::\+N\+E\+G\+A\+T\+I\+V\+E\+T\+A\+U\+M\+S\+G} = \char`\"{}N\+E\+G\+A\+T\+I\+V\+E T\+A\+U E\+R\+R\+O\+R L\+A\+S\+T E\+V\+E\+N\+T \char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message that is thrown, whenever the smallest tau value becomes negative. \end{DoxyCompactList}\end{DoxyCompactItemize}

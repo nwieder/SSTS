@@ -1,0 +1,405 @@
+\hypertarget{classnw_1_1___event}{\section{nw\+:\+:\+\_\+\+Event Class Reference}
+\label{classnw_1_1___event}\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+}
+
+
+Abstract base class for system state transitions (events).  
+
+
+
+
+{\ttfamily \#include $<$\+\_\+\+Event.\+h$>$}
+
+Inheritance diagram for nw\+:\+:\+\_\+\+Event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d8/d98/classnw_1_1___event}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnw_1_1___event_1_1tv__struct}{tv\+\_\+struct}
+\begin{DoxyCompactList}\small\item\em tau-\/voxel-\/structure (\hyperlink{structnw_1_1___event_1_1tv__struct}{tv\+\_\+struct}) is a structure that associates a tau value with a \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1___event_a5efb757db20b083de6da605ea4b2bbae}{\+\_\+\+Event} (long \hyperlink{classnw_1_1___event_a8f7ce287f596266dd763ec7db2f74090}{id}, string \hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name}, double \hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k}, \hyperlink{namespacenw_ad7146b8b5a9de9be416847f41135722c}{Voxel\+Vector} vvc, \hyperlink{classnw_1_1_uni___rnd}{Uni\+\_\+\+Rnd} $\ast$\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classnw_1_1___event_aede7a9b059e398c72320ad6d27ad6b2d}{$\sim$\+\_\+\+Event} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classnw_1_1___event_a882115f8652c881bc8ed43f1050ccba3}{update} (double last\+\_\+tau)=0
+\begin{DoxyCompactList}\small\item\em Updates the event. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnw_1_1___event_aa022418fb765582a053ac75cbc3436d6}{execute} ()=0
+\begin{DoxyCompactList}\small\item\em Event execution function. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnw_1_1___event_ae2c608ee2508058d6f318ca2ca8f4317}{init} ()=0
+\begin{DoxyCompactList}\small\item\em Event initialization. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classnw_1_1___event_a75945699f539cefab36eb6693a389918}{get\+\_\+a} ()=0
+\begin{DoxyCompactList}\small\item\em returns current \hyperlink{classnw_1_1___event}{\+\_\+\+Event} propensity a. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1___event_afae58637d427d9fa023850a1f8342912}{add\+\_\+dep\+\_\+list} (\hyperlink{classnw_1_1___event}{\+\_\+\+Event} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Adds an \hyperlink{classnw_1_1___event}{\+\_\+\+Event} pointer to the dependency list. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1___event_a05f533e8b22bece51864a24d1f4d8534}{set\+\_\+flag} (bool b)
+\begin{DoxyCompactList}\small\item\em set the dirty flag. \end{DoxyCompactList}\item 
+string \hyperlink{classnw_1_1___event_a982b9a043c4bcdd562b29cbba428760f}{get\+\_\+name} ()
+\item 
+long \hyperlink{classnw_1_1___event_abc5fa1db0c336b4d464f94274a015cf4}{get\+\_\+id} ()
+\item 
+double \hyperlink{classnw_1_1___event_ae58559a4aa257c900e3ff2e09bc0410b}{get\+\_\+tau} ()
+\item 
+vector$<$ long $>$ \hyperlink{classnw_1_1___event_a9b32388aa5263ab4ccd16c964c7a4a9b}{get\+\_\+sc\+\_\+vec} ()
+\item 
+vector$<$ \hyperlink{classnw_1_1___event}{\+\_\+\+Event} $\ast$ $>$ \hyperlink{classnw_1_1___event_a63d2e7f276e03337196eee24c0d43efc}{get\+\_\+dep\+\_\+list} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{classnw_1_1___event_a8f7ce287f596266dd763ec7db2f74090}{id}
+\begin{DoxyCompactList}\small\item\em I\+D. \end{DoxyCompactList}\item 
+string \hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name}
+\begin{DoxyCompactList}\small\item\em Name. \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k}
+\begin{DoxyCompactList}\small\item\em Rate constant. \end{DoxyCompactList}\item 
+vector$<$ long $>$ \hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\+\_\+vec}
+\begin{DoxyCompactList}\small\item\em State change vector. Defines an event in terms of a vector, representing the molecular change for each existing \hyperlink{classnw_1_1___species}{\+\_\+\+Species}. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{structnw_1_1___event_1_1tv__struct}{tv\+\_\+struct} $>$ \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\+\_\+vec}
+\begin{DoxyCompactList}\small\item\em Tau voxel vector. Container for tv\+\_\+structs, each representing a \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} where this \hyperlink{classnw_1_1___event}{\+\_\+\+Event} can occur. \end{DoxyCompactList}\item 
+\hyperlink{classnw_1_1_uni___rnd}{Uni\+\_\+\+Rnd} $\ast$ \hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg}
+\begin{DoxyCompactList}\small\item\em Uniform random number generator. \end{DoxyCompactList}\item 
+long \hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{next\+Voxel}
+\begin{DoxyCompactList}\small\item\em Index of next \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} to be executed. \end{DoxyCompactList}\item 
+double \hyperlink{classnw_1_1___event_a29c77fb164e745cdb5c5fda4f191cd37}{c}
+\begin{DoxyCompactList}\small\item\em Adapted \hyperlink{classnw_1_1___event}{\+\_\+\+Event} rate constant. Based on the type of \hyperlink{classnw_1_1___event}{\+\_\+\+Event} {\ttfamily c} is depends on \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} volume (bimoleuclar reactions) or \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} box length (diffusion) \end{DoxyCompactList}\item 
+bool \hyperlink{classnw_1_1___event_aaa705b35c06c0cb2e0a4f3daa9ee8037}{dirty\+\_\+flag}
+\begin{DoxyCompactList}\small\item\em indicates wheather or not the tau value has to be recalculated ({\ttfamily T\+R\+U\+E}) or adapted to the absolute time scale ({\ttfamily F\+A\+L\+S\+E}) \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classnw_1_1___event}{\+\_\+\+Event} $\ast$ $>$ \hyperlink{classnw_1_1___event_a3f87b2dff69d07977f0a5e10936f38f6}{dep\+\_\+list}
+\begin{DoxyCompactList}\small\item\em Dependency vector that stores references to \+\_\+\+Events that depend on this \hyperlink{classnw_1_1___event}{\+\_\+\+Event}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract base class for system state transitions (events). 
+
+A system state transition is called event and is defined by a propensity function, a state change vector and a dependency list. Propensity functions are derived from rate constants that result either from experimental observations and/or fundamental physical laws. A state change vector represent the stoichiometry of an event and represents the numerical changes in molecular populations caused by the respective event. The dependency list is an implementation of a dependency graph that defines how events influence each other. This data structure is crucial to implement Gibbson and Bruck's optimized update procedure. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnw_1_1___event_a5efb757db20b083de6da605ea4b2bbae}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!\+\_\+\+Event@{\+\_\+\+Event}}
+\index{\+\_\+\+Event@{\+\_\+\+Event}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{\+\_\+\+Event}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+\_\+\+Event\+::\+\_\+\+Event (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{string}]{name, }
+\item[{double}]{k, }
+\item[{{\bf Voxel\+Vector}}]{vvc, }
+\item[{{\bf Uni\+\_\+\+Rnd} $\ast$}]{rg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___event_a5efb757db20b083de6da605ea4b2bbae}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Event I\+D \\
+\hline
+{\em name} & Event name \\
+\hline
+{\em k} & Rate constant \\
+\hline
+{\em vvc} & Voxel vector containing all \+\_\+\+Voxels where this \hyperlink{classnw_1_1___event}{\+\_\+\+Event} can occur. \\
+\hline
+{\em rg} & Random generator that produces uniform distributed random numbers \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+35                                                                         :
+36         \hyperlink{classnw_1_1___event_a8f7ce287f596266dd763ec7db2f74090}{id}(\textcolor{keywordtype}{id}),
+37         \hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name}(\hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name}),
+38         \hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k}(\hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k}),
+39         \hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg}(\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg}),
+40         \hyperlink{classnw_1_1___event_aaa705b35c06c0cb2e0a4f3daa9ee8037}{dirty\_flag}(\textcolor{keyword}{true})\{
+41 
+42 \textcolor{comment}{//      add self-reference to dependency list.}
+43         this->\hyperlink{classnw_1_1___event_a3f87b2dff69d07977f0a5e10936f38f6}{dep\_list}.push\_back(\textcolor{keyword}{this});
+44 \textcolor{comment}{//      check if all voxel in the assigned voxel vector have the same size}
+45         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}.size(); i++)\{
+46             \textcolor{keywordflow}{if}(vvc[i]->get\_volume() != vvc[0]->get\_volume())\{
+47                 cout << \textcolor{stringliteral}{"ERROR: Voxel sizes in Event: "} << this->\hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name} << \textcolor{stringliteral}{" differ in size. "}
+48                         \textcolor{stringliteral}{"You either have to create another Event or resize the voxel to one size"}
+49                         << std::endl;
+50                 \textcolor{keywordflow}{break};
+51             \}
+52         \}
+53 
+54 \textcolor{comment}{//      create the tau voxel structure container that assigns a tau value to each \_Voxel}
+55 \textcolor{comment}{//      in the \_Voxel vector}
+56         \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}.resize(vvc.size());
+57         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}.size(); i++)\{
+58             \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].v = vvc[i];
+59             \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[i].t = 0.0;
+60         \}
+61     \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___event_aede7a9b059e398c72320ad6d27ad6b2d}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!````~\+\_\+\+Event@{$\sim$\+\_\+\+Event}}
+\index{````~\+\_\+\+Event@{$\sim$\+\_\+\+Event}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{$\sim$\+\_\+\+Event}]{\setlength{\rightskip}{0pt plus 5cm}virtual nw\+::\+\_\+\+Event\+::$\sim$\+\_\+\+Event (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1___event_aede7a9b059e398c72320ad6d27ad6b2d}
+
+
+Destructor. 
+
+
+\begin{DoxyCode}
+63 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnw_1_1___event_afae58637d427d9fa023850a1f8342912}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!add\+\_\+dep\+\_\+list@{add\+\_\+dep\+\_\+list}}
+\index{add\+\_\+dep\+\_\+list@{add\+\_\+dep\+\_\+list}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{add\+\_\+dep\+\_\+list}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+\_\+\+Event\+::add\+\_\+dep\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+Event} $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___event_afae58637d427d9fa023850a1f8342912}
+
+
+Adds an \hyperlink{classnw_1_1___event}{\+\_\+\+Event} pointer to the dependency list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & pointer to event that depends on this event\\
+\hline
+\end{DoxyParams}
+Is called during the generation of a dependency graph that connects dependent events with each other to speed up the update procedure. An \hyperlink{classnw_1_1___event}{\+\_\+\+Event} A depends on another \hyperlink{classnw_1_1___event}{\+\_\+\+Event} B, if at least one of the educts of A is also a product of B. 
+\begin{DoxyCode}
+96 \{\hyperlink{classnw_1_1___event_a3f87b2dff69d07977f0a5e10936f38f6}{dep\_list}.push\_back(e);\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___event_aa022418fb765582a053ac75cbc3436d6}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!execute@{execute}}
+\index{execute@{execute}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}virtual void nw\+::\+\_\+\+Event\+::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classnw_1_1___event_aa022418fb765582a053ac75cbc3436d6}
+
+
+Event execution function. 
+
+Executes (fires) this \hyperlink{classnw_1_1___event}{\+\_\+\+Event}. It looks in the \hyperlink{structnw_1_1___event_1_1tv__struct}{tv\+\_\+struct} for the voxel with the smallest associated tau value and calls its update\+\_\+state() function. 
+
+Implemented in \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_ab89891fae9287edc9d9a215788706093}{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}, \hyperlink{classnw_1_1_diffusion___evt_a5cd6413241bd01ecb6a58fc0359ab57b}{nw\+::\+Diffusion\+\_\+\+Evt}, and \hyperlink{classnw_1_1_reaction___evt_aec2fb342726ef17255ebf406a7c74392}{nw\+::\+Reaction\+\_\+\+Evt}.
+
+\hypertarget{classnw_1_1___event_a75945699f539cefab36eb6693a389918}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!get\+\_\+a@{get\+\_\+a}}
+\index{get\+\_\+a@{get\+\_\+a}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{get\+\_\+a}]{\setlength{\rightskip}{0pt plus 5cm}virtual double nw\+::\+\_\+\+Event\+::get\+\_\+a (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classnw_1_1___event_a75945699f539cefab36eb6693a389918}
+
+
+returns current \hyperlink{classnw_1_1___event}{\+\_\+\+Event} propensity a. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classnw_1_1___event}{\+\_\+\+Event} propensity a.
+\end{DoxyReturn}
+This function returns the a\+\_\+value of the event (inside all voxel in the tv\+\_\+vec) at the current system state. This information is used for analytical purposes 
+
+Implemented in \hyperlink{classnw_1_1_diffusion___evt_a468711cd0c37b2129898cb8e79c2f085}{nw\+::\+Diffusion\+\_\+\+Evt}, and \hyperlink{classnw_1_1_reaction___evt_a98001b8296e789db3da09791087c4a35}{nw\+::\+Reaction\+\_\+\+Evt}.
+
+\hypertarget{classnw_1_1___event_a63d2e7f276e03337196eee24c0d43efc}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!get\+\_\+dep\+\_\+list@{get\+\_\+dep\+\_\+list}}
+\index{get\+\_\+dep\+\_\+list@{get\+\_\+dep\+\_\+list}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{get\+\_\+dep\+\_\+list}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \+\_\+\+Event}$\ast$$>$ nw\+::\+\_\+\+Event\+::get\+\_\+dep\+\_\+list (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___event_a63d2e7f276e03337196eee24c0d43efc}
+
+\begin{DoxyCode}
+109 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___event_a3f87b2dff69d07977f0a5e10936f38f6}{dep\_list};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___event_abc5fa1db0c336b4d464f94274a015cf4}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!get\+\_\+id@{get\+\_\+id}}
+\index{get\+\_\+id@{get\+\_\+id}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{get\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+\_\+\+Event\+::get\+\_\+id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___event_abc5fa1db0c336b4d464f94274a015cf4}
+
+\begin{DoxyCode}
+106 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___event_a8f7ce287f596266dd763ec7db2f74090}{id};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___event_a982b9a043c4bcdd562b29cbba428760f}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{get\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}string nw\+::\+\_\+\+Event\+::get\+\_\+name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___event_a982b9a043c4bcdd562b29cbba428760f}
+
+\begin{DoxyCode}
+105 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___event_a9b32388aa5263ab4ccd16c964c7a4a9b}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!get\+\_\+sc\+\_\+vec@{get\+\_\+sc\+\_\+vec}}
+\index{get\+\_\+sc\+\_\+vec@{get\+\_\+sc\+\_\+vec}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{get\+\_\+sc\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$long$>$ nw\+::\+\_\+\+Event\+::get\+\_\+sc\+\_\+vec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___event_a9b32388aa5263ab4ccd16c964c7a4a9b}
+
+\begin{DoxyCode}
+108 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\_vec};\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___event_ae58559a4aa257c900e3ff2e09bc0410b}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!get\+\_\+tau@{get\+\_\+tau}}
+\index{get\+\_\+tau@{get\+\_\+tau}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{get\+\_\+tau}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+\_\+\+Event\+::get\+\_\+tau (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___event_ae58559a4aa257c900e3ff2e09bc0410b}
+
+\begin{DoxyCode}
+107 \{\textcolor{keywordflow}{return} \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[\hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel}].t;\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___event_ae2c608ee2508058d6f318ca2ca8f4317}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!init@{init}}
+\index{init@{init}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}virtual void nw\+::\+\_\+\+Event\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classnw_1_1___event_ae2c608ee2508058d6f318ca2ca8f4317}
+
+
+Event initialization. 
+
+
+
+Implemented in \hyperlink{classnw_1_1_diffusion___evt_adaaca9b5b7e6902189dfc79d8d5a4f99}{nw\+::\+Diffusion\+\_\+\+Evt}, \hyperlink{classnw_1_1_reaction___evt_a50daf1db256ed7e0b22a29ffac76a1b6}{nw\+::\+Reaction\+\_\+\+Evt}, and \hyperlink{classnw_1_1_ch_flux___rct___evt_a59d8b2ededb919b5b2cf4358de9a6137}{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}.
+
+\hypertarget{classnw_1_1___event_a05f533e8b22bece51864a24d1f4d8534}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!set\+\_\+flag@{set\+\_\+flag}}
+\index{set\+\_\+flag@{set\+\_\+flag}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{set\+\_\+flag}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+\_\+\+Event\+::set\+\_\+flag (
+\begin{DoxyParamCaption}
+\item[{bool}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1___event_a05f533e8b22bece51864a24d1f4d8534}
+
+
+set the dirty flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & boolean that is assigned to dirty\+\_\+flag.\\
+\hline
+\end{DoxyParams}
+As a \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}, every \hyperlink{classnw_1_1___event}{\+\_\+\+Event} has a dirty flag to indicate weather it has to be updated or not. 
+\begin{DoxyCode}
+102 \{\hyperlink{classnw_1_1___event_aaa705b35c06c0cb2e0a4f3daa9ee8037}{dirty\_flag}=b;\}
+\end{DoxyCode}
+\hypertarget{classnw_1_1___event_a882115f8652c881bc8ed43f1050ccba3}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!update@{update}}
+\index{update@{update}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual double nw\+::\+\_\+\+Event\+::update (
+\begin{DoxyParamCaption}
+\item[{double}]{last\+\_\+tau}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classnw_1_1___event_a882115f8652c881bc8ed43f1050ccba3}
+
+
+Updates the event. 
+
+\begin{DoxyReturn}{Returns}
+New tau value for this \hyperlink{classnw_1_1___event}{\+\_\+\+Event} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em last\+\_\+tau} & Tau value of previous firing \hyperlink{classnw_1_1___event}{\+\_\+\+Event}\\
+\hline
+\end{DoxyParams}
+Implementation of the update procedure. The tau value represents the time that has to pass until an event fires again. It has to be updated during every simulation step. An \hyperlink{classnw_1_1___event}{\+\_\+\+Event} with dirty\+\_\+flag = {\ttfamily T\+R\+U\+E} has to generate a new random number to recalculate a tau value. An \hyperlink{classnw_1_1___event}{\+\_\+\+Event} with dirty\+\_\+flag = {\ttfamily F\+A\+L\+S\+E} is adapted to the global time scale by subtracting the last tau from their (necessarily larger) current tau. No negative tau values should be returned!~\newline
+~\newline
+While updating the tau values, the method determines the smallest updated tau value and therefore the id of the next voxel to be exectuted. 
+
+Implemented in \hyperlink{classnw_1_1_reaction___evt_aaa2e896edd2263dbe78f5b5aa37fb091}{nw\+::\+Reaction\+\_\+\+Evt}, \hyperlink{classnw_1_1_diffusion___evt_a35841daf14d9ba472c0ed1f414187097}{nw\+::\+Diffusion\+\_\+\+Evt}, and \hyperlink{classnw_1_1_ch_flux___rct___evt_a4034ee90e8ec27a92665a5591fad165d}{nw\+::\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classnw_1_1___event_a29c77fb164e745cdb5c5fda4f191cd37}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!c@{c}}
+\index{c@{c}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{c}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+\_\+\+Event\+::c\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___event_a29c77fb164e745cdb5c5fda4f191cd37}
+
+
+Adapted \hyperlink{classnw_1_1___event}{\+\_\+\+Event} rate constant. Based on the type of \hyperlink{classnw_1_1___event}{\+\_\+\+Event} {\ttfamily c} is depends on \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} volume (bimoleuclar reactions) or \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} box length (diffusion) 
+
+\hypertarget{classnw_1_1___event_a3f87b2dff69d07977f0a5e10936f38f6}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!dep\+\_\+list@{dep\+\_\+list}}
+\index{dep\+\_\+list@{dep\+\_\+list}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{dep\+\_\+list}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \+\_\+\+Event}$\ast$$>$ nw\+::\+\_\+\+Event\+::dep\+\_\+list\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___event_a3f87b2dff69d07977f0a5e10936f38f6}
+
+
+Dependency vector that stores references to \+\_\+\+Events that depend on this \hyperlink{classnw_1_1___event}{\+\_\+\+Event}. 
+
+\hypertarget{classnw_1_1___event_aaa705b35c06c0cb2e0a4f3daa9ee8037}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!dirty\+\_\+flag@{dirty\+\_\+flag}}
+\index{dirty\+\_\+flag@{dirty\+\_\+flag}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{dirty\+\_\+flag}]{\setlength{\rightskip}{0pt plus 5cm}bool nw\+::\+\_\+\+Event\+::dirty\+\_\+flag\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___event_aaa705b35c06c0cb2e0a4f3daa9ee8037}
+
+
+indicates wheather or not the tau value has to be recalculated ({\ttfamily T\+R\+U\+E}) or adapted to the absolute time scale ({\ttfamily F\+A\+L\+S\+E}) 
+
+\hypertarget{classnw_1_1___event_a8f7ce287f596266dd763ec7db2f74090}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!id@{id}}
+\index{id@{id}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+\_\+\+Event\+::id\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___event_a8f7ce287f596266dd763ec7db2f74090}
+
+
+I\+D. 
+
+\hypertarget{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!k@{k}}
+\index{k@{k}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{k}]{\setlength{\rightskip}{0pt plus 5cm}double nw\+::\+\_\+\+Event\+::k\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}
+
+
+Rate constant. 
+
+\hypertarget{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!name@{name}}
+\index{name@{name}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}string nw\+::\+\_\+\+Event\+::name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}
+
+
+Name. 
+
+\hypertarget{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!next\+Voxel@{next\+Voxel}}
+\index{next\+Voxel@{next\+Voxel}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{next\+Voxel}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+\_\+\+Event\+::next\+Voxel\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}
+
+
+Index of next \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} to be executed. 
+
+\hypertarget{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!rg@{rg}}
+\index{rg@{rg}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{rg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uni\+\_\+\+Rnd}$\ast$ nw\+::\+\_\+\+Event\+::rg\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}
+
+
+Uniform random number generator. 
+
+\hypertarget{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!sc\+\_\+vec@{sc\+\_\+vec}}
+\index{sc\+\_\+vec@{sc\+\_\+vec}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{sc\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$long$>$ nw\+::\+\_\+\+Event\+::sc\+\_\+vec\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}
+
+
+State change vector. Defines an event in terms of a vector, representing the molecular change for each existing \hyperlink{classnw_1_1___species}{\+\_\+\+Species}. 
+
+\hypertarget{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{\index{nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}!tv\+\_\+vec@{tv\+\_\+vec}}
+\index{tv\+\_\+vec@{tv\+\_\+vec}!nw\+::\+\_\+\+Event@{nw\+::\+\_\+\+Event}}
+\subsubsection[{tv\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf tv\+\_\+struct}$>$ nw\+::\+\_\+\+Event\+::tv\+\_\+vec\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}
+
+
+Tau voxel vector. Container for tv\+\_\+structs, each representing a \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} where this \hyperlink{classnw_1_1___event}{\+\_\+\+Event} can occur. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Events/\hyperlink{___event_8h}{\+\_\+\+Event.\+h}\end{DoxyCompactItemize}

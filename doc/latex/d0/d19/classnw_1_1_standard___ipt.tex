@@ -1,0 +1,888 @@
+\hypertarget{classnw_1_1_standard___ipt}{\section{nw\+:\+:Standard\+\_\+\+Ipt Class Reference}
+\label{classnw_1_1_standard___ipt}\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+}
+
+
+Input class that parses a .xml files and generates a \hyperlink{classnw_1_1_gillespie___sys}{Gillespie\+\_\+\+Sys}.  
+
+
+
+
+{\ttfamily \#include $<$Standard\+\_\+\+Ipt.\+h$>$}
+
+Inheritance diagram for nw\+:\+:Standard\+\_\+\+Ipt\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d0/d19/classnw_1_1_standard___ipt}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnw_1_1_standard___ipt_1_1xml___ch___spc}{xml\+\_\+\+Ch\+\_\+\+Spc}
+\begin{DoxyCompactList}\small\item\em Structure with attributes of the \hyperlink{classnw_1_1_channel___spc}{Channel\+\_\+\+Spc} class. \end{DoxyCompactList}\item 
+struct \hyperlink{structnw_1_1_standard___ipt_1_1xml___ch_flux___rct___evt}{xml\+\_\+\+Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt}
+\begin{DoxyCompactList}\small\item\em Structure with attributes of the \hyperlink{classnw_1_1_ch_flux___rct___evt}{Ch\+Flux\+\_\+\+Rct\+\_\+\+Evt} class. \end{DoxyCompactList}\item 
+struct \hyperlink{structnw_1_1_standard___ipt_1_1xml___dif___evt}{xml\+\_\+\+Dif\+\_\+\+Evt}
+\begin{DoxyCompactList}\small\item\em Structure with attributes of the \hyperlink{classnw_1_1_diffusion___evt}{Diffusion\+\_\+\+Evt} class. \end{DoxyCompactList}\item 
+struct \hyperlink{structnw_1_1_standard___ipt_1_1xml__evt}{xml\+\_\+evt}
+\begin{DoxyCompactList}\small\item\em Structure with attributes of the \hyperlink{classnw_1_1___event}{\+\_\+\+Event} class. \end{DoxyCompactList}\item 
+struct \hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data}{xml\+\_\+gen\+\_\+data}
+\begin{DoxyCompactList}\small\item\em Structure with attributes representing general data necessary for a system. \end{DoxyCompactList}\item 
+struct \hyperlink{structnw_1_1_standard___ipt_1_1xml___rct___evt}{xml\+\_\+\+Rct\+\_\+\+Evt}
+\begin{DoxyCompactList}\small\item\em Structure with attributes of the \hyperlink{classnw_1_1_reaction___evt}{Reaction\+\_\+\+Evt} class. \end{DoxyCompactList}\item 
+struct \hyperlink{structnw_1_1_standard___ipt_1_1xml__spc}{xml\+\_\+spc}
+\begin{DoxyCompactList}\small\item\em Structure with attributes of the \hyperlink{classnw_1_1___species}{\+\_\+\+Species} class. \end{DoxyCompactList}\item 
+struct \hyperlink{structnw_1_1_standard___ipt_1_1xml___su_switch___rct___evt}{xml\+\_\+\+Su\+Switch\+\_\+\+Rct\+\_\+\+Evt}
+\begin{DoxyCompactList}\small\item\em Structure with attributes of the \hyperlink{classnw_1_1_sub_unit_switch___rct___evt}{Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt} class. \end{DoxyCompactList}\item 
+struct \hyperlink{structnw_1_1_standard___ipt_1_1xml__vxl}{xml\+\_\+vxl}
+\begin{DoxyCompactList}\small\item\em Structure with attributes of the \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1_standard___ipt_a94434a8c2de8304a6ab626cdc11ea442}{Standard\+\_\+\+Ipt} (string input\+\_\+path, string \hyperlink{classnw_1_1_standard___ipt_a22ca09b593a0438676fd560f168e76f9}{output\+\_\+dir\+\_\+path})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classnw_1_1_standard___ipt_a7d66e39904aa2462474703672b790caf}{$\sim$\+Standard\+\_\+\+Ipt} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classnw_1_1___system}{\+\_\+\+System} $\ast$ \hyperlink{classnw_1_1_standard___ipt_ae5ae0e8b67291839d71df934bfc17238}{get\+\_\+\+System} ()
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___input_a5bb57fdb6dfcf4efa7b64e096594a8b3}{\+\_\+\+Input\+::get\+\_\+\+System()} method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classnw_1_1_standard___ipt_a0e29f3f6a4a01caa99d5ca151748be2c}{read\+\_\+\+Sim\+\_\+\+Data} ()
+\begin{DoxyCompactList}\small\item\em Extract general simulation data and store it in the xgd struct. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_standard___ipt_ad23a7e58b69db65c74a9168fde457b19}{read\+\_\+\+Events} (pugi\+::xml\+\_\+node const \&nod)
+\begin{DoxyCompactList}\small\item\em Read events from parse result. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_standard___ipt_a6024eab893f556075f463a685f2f28eb}{read\+\_\+\+Voxel} (pugi\+::xml\+\_\+node const \&nod)
+\begin{DoxyCompactList}\small\item\em Read voxels from parse result. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_standard___ipt_a488e5aad95f3d66c6bfbb5f3e5daed3c}{read\+\_\+\+Species} (pugi\+::xml\+\_\+node const \&nod)
+\begin{DoxyCompactList}\small\item\em Read species from parse result. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_standard___ipt_af38174edfc9d7be8bd9ee2c8bc6c4181}{alloc\+\_\+\+Events} ()
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{classnw_1_1___event}{\+\_\+\+Event} objects. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_standard___ipt_a0f07caf506c0610596e8b296955ac47a}{alloc\+\_\+\+Voxel} ()
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} objects. \end{DoxyCompactList}\item 
+void \hyperlink{classnw_1_1_standard___ipt_ac234f7433af26ad614e3f43088f13e48}{alloc\+\_\+\+Species} ()
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{classnw_1_1___species}{\+\_\+\+Species} objects. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} $\ast$ $>$ \hyperlink{classnw_1_1_standard___ipt_a834bc59d1c945553aad59de7b23e019f}{build\+\_\+vxl\+\_\+vec} (\hyperlink{structnw_1_1_standard___ipt_1_1xml__evt}{xml\+\_\+evt} $\ast$const \&evt)
+\begin{DoxyCompactList}\small\item\em Build \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} vector for \hyperlink{classnw_1_1___event}{\+\_\+\+Event} objects. \end{DoxyCompactList}\item 
+vector$<$ long $>$ \hyperlink{classnw_1_1_standard___ipt_a5623430707739fdabf4d99599e6444a2}{build\+\_\+sc\+\_\+vector} (\hyperlink{structnw_1_1_standard___ipt_1_1xml___rct___evt}{xml\+\_\+\+Rct\+\_\+\+Evt} $\ast$const \&cxe)
+\begin{DoxyCompactList}\small\item\em Build state change vector for \hyperlink{classnw_1_1_reaction___evt}{Reaction\+\_\+\+Evt} objects @ param cxe \hyperlink{structnw_1_1_standard___ipt_1_1xml___rct___evt}{xml\+\_\+\+Rct\+\_\+\+Evt} @ return \hyperlink{classnw_1_1_reaction___evt}{Reaction\+\_\+\+Evt} specific state change vector. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classnw_1_1___species}{\+\_\+\+Species} $\ast$ $>$ \hyperlink{classnw_1_1_standard___ipt_ae75407ca95fe5c6e0e2b48a892c0dcdb}{clone\+\_\+svc} ()
+\begin{DoxyCompactList}\small\item\em Clone \hyperlink{classnw_1_1___species}{\+\_\+\+Species} vector. \end{DoxyCompactList}\item 
+string \hyperlink{classnw_1_1_standard___ipt_a94a28b548fd1ae6dca50c8fb88d690bb}{build\+\_\+header} ()
+\begin{DoxyCompactList}\small\item\em Builds console output header. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classnw_1_1_standard___ipt_a22ca09b593a0438676fd560f168e76f9}{output\+\_\+dir\+\_\+path}
+\begin{DoxyCompactList}\small\item\em Output directory path. \end{DoxyCompactList}\item 
+\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data}{xml\+\_\+gen\+\_\+data} \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}
+\begin{DoxyCompactList}\small\item\em Structure holding general simulation data. \end{DoxyCompactList}\item 
+pugi\+::xml\+\_\+document \hyperlink{classnw_1_1_standard___ipt_a08140c2c24ab36240c45d241352fc57d}{doc}
+\begin{DoxyCompactList}\small\item\em D\+O\+M tree root (pugixml) \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classnw_1_1_standard___ipt_af30a47d8999101d9f83964b5be9f86a5}{p}
+\item 
+ofstream \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\+\_\+path}
+\begin{DoxyCompactList}\small\item\em Off-\/stream for sim\+\_\+info file that summarizes parsed xml data. \end{DoxyCompactList}\item 
+\hyperlink{classnw_1_1_uni___rnd}{Uni\+\_\+\+Rnd} $\ast$ \hyperlink{classnw_1_1_standard___ipt_a18f5e3cad0d5eef81443dfaf8949ba4b}{rg}
+\begin{DoxyCompactList}\small\item\em Uniform random number generator. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classnw_1_1___event}{\+\_\+\+Event} $\ast$ $>$ \hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classnw_1_1___event}{\+\_\+\+Event} vector \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} $\ast$ $>$ \hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} vector \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classnw_1_1___species}{\+\_\+\+Species} $\ast$ $>$ \hyperlink{classnw_1_1_standard___ipt_a26fbf039d1232349799194d289febb8d}{svc}
+\begin{DoxyCompactList}\small\item\em \+\_\+\+Specied vector \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Input class that parses a .xml files and generates a \hyperlink{classnw_1_1_gillespie___sys}{Gillespie\+\_\+\+Sys}. 
+
+The structure of the input .xml file represents the objects that need to be created to set up a model. The open source xml parser {\itshape pugixml} (\href{http://pugixml.org/}{\tt http\+://pugixml.\+org/}) version 0.\+9 is used. The input procedure is subdivided into three steps\+:
+\begin{DoxyEnumerate}
+\item .xml data is parsed with {\itshape pugixml}.
+\item Parse result is analyzed and model data temporarily stored in structures.
+\item Objects are created using attributes of respective structures as parameters. 
+\end{DoxyEnumerate}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnw_1_1_standard___ipt_a94434a8c2de8304a6ab626cdc11ea442}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!Standard\+\_\+\+Ipt@{Standard\+\_\+\+Ipt}}
+\index{Standard\+\_\+\+Ipt@{Standard\+\_\+\+Ipt}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{Standard\+\_\+\+Ipt}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+Standard\+\_\+\+Ipt\+::\+Standard\+\_\+\+Ipt (
+\begin{DoxyParamCaption}
+\item[{string}]{input\+\_\+path, }
+\item[{string}]{output\+\_\+dir\+\_\+path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1_standard___ipt_a94434a8c2de8304a6ab626cdc11ea442}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+path} & Path to input file (.xml) \\
+\hline
+{\em output\+\_\+dir\+\_\+path} & Path to output directory \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+31                                                            \{
+32         this->\hyperlink{classnw_1_1_standard___ipt_af30a47d8999101d9f83964b5be9f86a5}{p} = (\textcolor{keywordtype}{char}*)input\_path.c\_str();
+33         xml\_parse\_result result = \hyperlink{classnw_1_1_standard___ipt_a08140c2c24ab36240c45d241352fc57d}{doc}.load\_file(\hyperlink{classnw_1_1_standard___ipt_af30a47d8999101d9f83964b5be9f86a5}{p}); \textcolor{comment}{// load xml file}
+34         this->\hyperlink{classnw_1_1_standard___ipt_a22ca09b593a0438676fd560f168e76f9}{output\_dir\_path} = \hyperlink{classnw_1_1_standard___ipt_a22ca09b593a0438676fd560f168e76f9}{output\_dir\_path};
+35         \hyperlink{classnw_1_1_standard___ipt_a18f5e3cad0d5eef81443dfaf8949ba4b}{rg} = \textcolor{keyword}{new} Uni\_Rnd();
+36     \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___ipt_a7d66e39904aa2462474703672b790caf}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!````~Standard\+\_\+\+Ipt@{$\sim$\+Standard\+\_\+\+Ipt}}
+\index{````~Standard\+\_\+\+Ipt@{$\sim$\+Standard\+\_\+\+Ipt}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{$\sim$\+Standard\+\_\+\+Ipt}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+Standard\+\_\+\+Ipt\+::$\sim$\+Standard\+\_\+\+Ipt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classnw_1_1_standard___ipt_a7d66e39904aa2462474703672b790caf}
+
+
+Destructor. 
+
+
+\begin{DoxyCode}
+10                            \{
+11     \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_standard___ipt_a18f5e3cad0d5eef81443dfaf8949ba4b}{rg})\{\textcolor{keyword}{delete} \hyperlink{classnw_1_1_standard___ipt_a18f5e3cad0d5eef81443dfaf8949ba4b}{rg};\hyperlink{classnw_1_1_standard___ipt_a18f5e3cad0d5eef81443dfaf8949ba4b}{rg}=NULL;\}
+12     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0;i<\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a70786e61ea513972d7c50982e101726c}{xml\_spc\_list}.size();++i)\{
+13         \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a70786e61ea513972d7c50982e101726c}{xml\_spc\_list}[i])\{\textcolor{keyword}{delete} \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a70786e61ea513972d7c50982e101726c}{xml\_spc\_list}[i];
+      \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a70786e61ea513972d7c50982e101726c}{xml\_spc\_list}[i]=NULL;\}\}
+14     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0;i<\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ab46c43b495fd3d278ffeabe88261d36e}{xml\_ch\_spc\_list}.size();++i)\{
+15         \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ab46c43b495fd3d278ffeabe88261d36e}{xml\_ch\_spc\_list}[i])\{\textcolor{keyword}{delete} \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.
+      \hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ab46c43b495fd3d278ffeabe88261d36e}{xml\_ch\_spc\_list}[i];\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ab46c43b495fd3d278ffeabe88261d36e}{xml\_ch\_spc\_list}[i]=NULL;\}\}
+16     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0;i<\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}.size();++i)\{\textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.
+      \hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}[i])\{
+17         \textcolor{keyword}{delete} \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}[i];\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}[i]=NULL;\}\}
+18     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0;i<\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_abc4e7ae5a154343c1d3d25917bd58a5f}{xml\_rct\_evt\_list}.size();++i)\{
+19         \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_abc4e7ae5a154343c1d3d25917bd58a5f}{xml\_rct\_evt\_list}[i])\{\textcolor{keyword}{delete} \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.
+      \hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_abc4e7ae5a154343c1d3d25917bd58a5f}{xml\_rct\_evt\_list}[i];\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_abc4e7ae5a154343c1d3d25917bd58a5f}{xml\_rct\_evt\_list}[i]=NULL;\}\}
+20     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0;i<\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a4da34a5918c4e045ed5021da6fdbc6bf}{xml\_suSwitch\_rct\_evt\_list}.size();++i)\{
+21         \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a4da34a5918c4e045ed5021da6fdbc6bf}{xml\_suSwitch\_rct\_evt\_list}[i])\{\textcolor{keyword}{delete} 
+      \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a4da34a5918c4e045ed5021da6fdbc6bf}{xml\_suSwitch\_rct\_evt\_list}[i];
+22         \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a4da34a5918c4e045ed5021da6fdbc6bf}{xml\_suSwitch\_rct\_evt\_list}[i]=NULL;\}\}
+23     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0;i<\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ae0479559e90fe38932ac604852a1541f}{xml\_chFlux\_rct\_evt\_list}.size();++i)\{
+24         \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ae0479559e90fe38932ac604852a1541f}{xml\_chFlux\_rct\_evt\_list}[i])\{\textcolor{keyword}{delete} \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.
+      \hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ae0479559e90fe38932ac604852a1541f}{xml\_chFlux\_rct\_evt\_list}[i];
+25         \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ae0479559e90fe38932ac604852a1541f}{xml\_chFlux\_rct\_evt\_list}[i]=NULL;\}\}
+26     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0;i<\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a115f67778a3d29d716303c194354d2f7}{xml\_dif\_evt\_list}.size();++i)\{\textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.
+      \hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a115f67778a3d29d716303c194354d2f7}{xml\_dif\_evt\_list}[i])\{
+27         \textcolor{keyword}{delete} \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a115f67778a3d29d716303c194354d2f7}{xml\_dif\_evt\_list}[i];\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.
+      \hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a115f67778a3d29d716303c194354d2f7}{xml\_dif\_evt\_list}[i]=NULL;\}\}
+28     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0;i<\hyperlink{classnw_1_1_standard___ipt_a26fbf039d1232349799194d289febb8d}{svc}.size();++i)\{\textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_standard___ipt_a26fbf039d1232349799194d289febb8d}{svc}[i])\{\textcolor{keyword}{delete} \hyperlink{classnw_1_1_standard___ipt_a26fbf039d1232349799194d289febb8d}{svc}[i];\hyperlink{classnw_1_1_standard___ipt_a26fbf039d1232349799194d289febb8d}{svc}[i]=NULL;\}\}
+29     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0;i<\hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}.size();++i)\{\textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}[i])\{\textcolor{keyword}{delete} \hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}[i];\hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}[i]=NULL;\}\}
+30     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0;i<\hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}.size();++i)\{\textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}[i])\{\textcolor{keyword}{delete} \hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}[i];\hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}[i]=NULL;\}\}
+31     \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1___input_af4d5765ede8af8d7f981ef179683f7e5}{s})\{\textcolor{keyword}{delete} \hyperlink{classnw_1_1___input_af4d5765ede8af8d7f981ef179683f7e5}{s};\hyperlink{classnw_1_1___input_af4d5765ede8af8d7f981ef179683f7e5}{s}=NULL;\}
+32 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnw_1_1_standard___ipt_af38174edfc9d7be8bd9ee2c8bc6c4181}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!alloc\+\_\+\+Events@{alloc\+\_\+\+Events}}
+\index{alloc\+\_\+\+Events@{alloc\+\_\+\+Events}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{alloc\+\_\+\+Events}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Standard\+\_\+\+Ipt\+::alloc\+\_\+\+Events (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_af38174edfc9d7be8bd9ee2c8bc6c4181}
+
+
+Create \hyperlink{classnw_1_1___event}{\+\_\+\+Event} objects. 
+
+
+\begin{DoxyCode}
+360                                \{
+361     cout << \textcolor{stringliteral}{"alloc Events... "};
+362 
+363 \textcolor{comment}{//  create Reaction Event Voxel Vector}
+364     vector<\_Voxel*> re\_vvc = \hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc};    \textcolor{comment}{// reaction event voxel vector}
+365     re\_vvc.pop\_back();              \textcolor{comment}{// doesn't contain the border voxel!}
+366 
+367 \textcolor{comment}{//  add all Reaction Events to the Event vector}
+368     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long)\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_abc4e7ae5a154343c1d3d25917bd58a5f}{xml\_rct\_evt\_list}.size(); i++)\{
+369         xml\_Rct\_Evt* cxe = \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_abc4e7ae5a154343c1d3d25917bd58a5f}{xml\_rct\_evt\_list}[i];
+370         \_Event* tre =   \textcolor{keyword}{new} Reaction\_Evt(cxe->xml\_id, cxe->xml\_name, cxe->xml\_k,
+371                         \hyperlink{classnw_1_1_standard___ipt_a5623430707739fdabf4d99599e6444a2}{build\_sc\_vector}(cxe), \hyperlink{classnw_1_1_standard___ipt_a834bc59d1c945553aad59de7b23e019f}{build\_vxl\_vec}(cxe), 
+      \hyperlink{classnw_1_1_standard___ipt_a18f5e3cad0d5eef81443dfaf8949ba4b}{rg});
+372         \hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}.push\_back(tre);
+373     \}
+374 
+375 \textcolor{comment}{//  add all Subunit Switch Reaction Events to the Event vector}
+376     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long)\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a4da34a5918c4e045ed5021da6fdbc6bf}{xml\_suSwitch\_rct\_evt\_list}.size(); i++)\{
+377         xml\_SuSwitch\_Rct\_Evt* cxe = \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a4da34a5918c4e045ed5021da6fdbc6bf}{xml\_suSwitch\_rct\_evt\_list}[i];
+378         \_Event* tsusre =    \textcolor{keyword}{new} SubUnitSwitch\_Rct\_Evt(cxe->xml\_id, cxe->xml\_name, cxe->xml\_k,
+379                             \hyperlink{classnw_1_1_standard___ipt_a5623430707739fdabf4d99599e6444a2}{build\_sc\_vector}(cxe), cxe->xml\_actSu\_id, cxe->xml\_channel\_id,
+380                             \hyperlink{classnw_1_1_standard___ipt_a834bc59d1c945553aad59de7b23e019f}{build\_vxl\_vec}(cxe), \hyperlink{classnw_1_1_standard___ipt_a18f5e3cad0d5eef81443dfaf8949ba4b}{rg});
+381         \hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}.push\_back(tsusre);
+382     \}
+383 
+384 \textcolor{comment}{//  add all Channel Flux Reaction Events to the Event vector}
+385     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long)\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ae0479559e90fe38932ac604852a1541f}{xml\_chFlux\_rct\_evt\_list}.size(); i++)\{
+386         xml\_ChFlux\_Rct\_Evt* cxe = \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ae0479559e90fe38932ac604852a1541f}{xml\_chFlux\_rct\_evt\_list}[i];
+387         \_Event* tcre =  \textcolor{keyword}{new} ChFlux\_Rct\_Evt(cxe->xml\_id, cxe->xml\_name, cxe->xml\_k,
+388                         \hyperlink{classnw_1_1_standard___ipt_a5623430707739fdabf4d99599e6444a2}{build\_sc\_vector}(cxe), cxe->xml\_channel\_id, 
+      \hyperlink{classnw_1_1_standard___ipt_a834bc59d1c945553aad59de7b23e019f}{build\_vxl\_vec}(cxe), \hyperlink{classnw_1_1_standard___ipt_a18f5e3cad0d5eef81443dfaf8949ba4b}{rg});
+389         \hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}.push\_back(tcre);
+390     \}
+391 
+392 \textcolor{comment}{//  add all Diffusion Events to the Event vector}
+393     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long)\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a115f67778a3d29d716303c194354d2f7}{xml\_dif\_evt\_list}.size(); i++)\{
+394         xml\_Dif\_Evt* cxe = \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a115f67778a3d29d716303c194354d2f7}{xml\_dif\_evt\_list}[i];
+395         \_Event* tde =   \textcolor{keyword}{new} Diffusion\_Evt(cxe->xml\_id, cxe->xml\_name, cxe->xml\_k,
+396                         \hyperlink{classnw_1_1_standard___ipt_a834bc59d1c945553aad59de7b23e019f}{build\_vxl\_vec}(cxe), cxe->xml\_diff\_spc,\hyperlink{classnw_1_1_standard___ipt_a18f5e3cad0d5eef81443dfaf8949ba4b}{rg});
+397         \hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}.push\_back(tde);
+398     \}
+399 
+400 \textcolor{comment}{//  output}
+401     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path} << \textcolor{stringliteral}{"*** State change vectors ***"} << endl;
+402     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long)\hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}.size(); i++)\{
+403         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}.at(i)->get\_id() << \textcolor{stringliteral}{" :"} << \hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}.at(i)->get\_name() << \textcolor{stringliteral}{" sc\_vec: \(\backslash\)t"};
+404         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < (int)\hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}.at(i)->get\_sc\_vec().size(); j++)
+405             \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}.at(i)->get\_sc\_vec().at(j) << \textcolor{stringliteral}{","} ;
+406         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< endl;
+407     \}
+408 
+409     cout << \textcolor{stringliteral}{"DONE"} << endl;
+410 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___ipt_ac234f7433af26ad614e3f43088f13e48}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!alloc\+\_\+\+Species@{alloc\+\_\+\+Species}}
+\index{alloc\+\_\+\+Species@{alloc\+\_\+\+Species}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{alloc\+\_\+\+Species}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Standard\+\_\+\+Ipt\+::alloc\+\_\+\+Species (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_ac234f7433af26ad614e3f43088f13e48}
+
+
+Create \hyperlink{classnw_1_1___species}{\+\_\+\+Species} objects. 
+
+
+\begin{DoxyCode}
+292                                 \{
+293     cout << \textcolor{stringliteral}{"alloc Species... "};
+294 
+295     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long) \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a70786e61ea513972d7c50982e101726c}{xml\_spc\_list}.size(); i++)\{
+296         \_Species* ts = \textcolor{keyword}{new} Standard\_Spc(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a70786e61ea513972d7c50982e101726c}{xml\_spc\_list}[i]->xml\_id,
+297                         \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a70786e61ea513972d7c50982e101726c}{xml\_spc\_list}[i]->xml\_name, \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.
+      \hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a70786e61ea513972d7c50982e101726c}{xml\_spc\_list}[i]->xml\_init\_conc);
+298         \hyperlink{classnw_1_1_standard___ipt_a26fbf039d1232349799194d289febb8d}{svc}.push\_back(ts);
+299     \}
+300     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long) \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ab46c43b495fd3d278ffeabe88261d36e}{xml\_ch\_spc\_list}.size(); i++)\{
+301         \_Species* tcs = \textcolor{keyword}{new} Channel\_Spc(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ab46c43b495fd3d278ffeabe88261d36e}{xml\_ch\_spc\_list}[i]->xml\_id,
+302                         \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ab46c43b495fd3d278ffeabe88261d36e}{xml\_ch\_spc\_list}[i]->xml\_name, \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.
+      \hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ab46c43b495fd3d278ffeabe88261d36e}{xml\_ch\_spc\_list}[i]->xml\_init\_conc,
+303                         \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ab46c43b495fd3d278ffeabe88261d36e}{xml\_ch\_spc\_list}[i]->xml\_n\_subunits,   
+      \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ab46c43b495fd3d278ffeabe88261d36e}{xml\_ch\_spc\_list}[i]->xml\_n\_suToOpen);
+304         \hyperlink{classnw_1_1_standard___ipt_a26fbf039d1232349799194d289febb8d}{svc}.push\_back(tcs);
+305     \}
+306 
+307     cout << \textcolor{stringliteral}{"DONE"} << endl;
+308 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___ipt_a0f07caf506c0610596e8b296955ac47a}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!alloc\+\_\+\+Voxel@{alloc\+\_\+\+Voxel}}
+\index{alloc\+\_\+\+Voxel@{alloc\+\_\+\+Voxel}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{alloc\+\_\+\+Voxel}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Standard\+\_\+\+Ipt\+::alloc\+\_\+\+Voxel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_a0f07caf506c0610596e8b296955ac47a}
+
+
+Create \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} objects. 
+
+
+\begin{DoxyCode}
+310                               \{
+311     cout << \textcolor{stringliteral}{"alloc Voxel... "};
+312 
+313 \textcolor{comment}{//  border condition is equilibrium}
+314     \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_adc59bb5516c7b0c34463e5c1b446bf6a}{xml\_border\_condition} == \textcolor{stringliteral}{"equilibrium"})\{
+315 
+316 \textcolor{comment}{//      run through voxl list and create Standard\_Voxel}
+317         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long)\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}.size(); i++)\{
+318             \_Voxel* tvxl =  \textcolor{keyword}{new} Standard\_Vxl(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}[i]->xml\_id,
+319                             \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_aa778758339d3c6beb926e4df3341e5a2}{xml\_box\_lenght}, \hyperlink{classnw_1_1_standard___ipt_ae75407ca95fe5c6e0e2b48a892c0dcdb}{clone\_svc}());
+320             \hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}.push\_back(tvxl);
+321         \}
+322 
+323 \textcolor{comment}{//      add border Voxel vvc.push\_back(tbvxl);}
+324         \_Voxel* bv = \textcolor{keyword}{new} Border\_Vxl(\hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}.size(), \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_aa778758339d3c6beb926e4df3341e5a2}{xml\_box\_lenght}, 
+      \hyperlink{classnw_1_1_standard___ipt_ae75407ca95fe5c6e0e2b48a892c0dcdb}{clone\_svc}());
+325         \hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}.push\_back(bv);
+326 
+327 \textcolor{comment}{//      initialize the diffusion neighbors including the border voxel}
+328         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long)\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}.size(); i++)\{
+329             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} j = 0; j < (long)\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}[i]->xml\_vxl\_neighbours.size(); j++)
+330                 \hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}[i]->add\_neighbour(\hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}.at(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}[i]->xml\_vxl\_neighbours[j
+      ]));
+331             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} j = \hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}[i]->get\_diff\_vec()->size(); j < 6; j++)\{
+332 \textcolor{comment}{//              fill every free spot of the diffusion neighbour vector with border voxel}
+333 \textcolor{comment}{//              (last element of the voxel vector)}
+334                 \hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}[i]->add\_neighbour(\hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}.at(\hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}.size()-1));
+335 \textcolor{comment}{//              add current voxel to the diffusion neighbour vector of the border voxel}
+336                 \hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}[\hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}.size()-1]->add\_neighbour(\hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}[i]);
+337             \}
+338         \}
+339 
+340 \textcolor{comment}{//  border condition is not equilibrium}
+341     \} \textcolor{keywordflow}{else}\{
+342 \textcolor{comment}{//      run through voxel list and create Standard\_Voxel}
+343         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long)\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}.size(); i++)\{
+344             \_Voxel* tvxl =  \textcolor{keyword}{new} Standard\_Vxl(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}[i]->xml\_id,
+345                             \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_aa778758339d3c6beb926e4df3341e5a2}{xml\_box\_lenght}, \hyperlink{classnw_1_1_standard___ipt_ae75407ca95fe5c6e0e2b48a892c0dcdb}{clone\_svc}());
+346             \hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}.push\_back(tvxl);
+347         \}
+348 \textcolor{comment}{//      initialize the diffusion neighbours including the border voxel}
+349         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long)\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}.size(); i++)\{
+350             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} j = 0; j < (long)\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}[i]->xml\_vxl\_neighbours.size(); j++)\{
+351                 \hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}[i]->add\_neighbour(\hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}.at(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}[i]->xml\_vxl\_neighbours[j
+      ]));
+352             \}
+353         \}
+354         cout << \textcolor{stringliteral}{" *** NO BORDER VOXEL DEFINED *** "};
+355     \}
+356 
+357     cout << \textcolor{stringliteral}{"DONE"} << endl;
+358 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___ipt_a94a28b548fd1ae6dca50c8fb88d690bb}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!build\+\_\+header@{build\+\_\+header}}
+\index{build\+\_\+header@{build\+\_\+header}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{build\+\_\+header}]{\setlength{\rightskip}{0pt plus 5cm}string nw\+::\+Standard\+\_\+\+Ipt\+::build\+\_\+header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_a94a28b548fd1ae6dca50c8fb88d690bb}
+
+
+Builds console output header. 
+
+
+\begin{DoxyCode}
+447                                  \{
+448     time\_t rawtime;
+449     time ( &rawtime );
+450 
+451     \textcolor{keywordtype}{string} tmp =    \textcolor{stringliteral}{"STOCHASTIC SIMULATION SOFTWARE \(\backslash\)n ------------------"}
+452                     \textcolor{stringliteral}{"--------------------------------\(\backslash\)n developed by Nicolas Wieder and "}
+453                     \textcolor{stringliteral}{"Frederic von Wegner \(\backslash\)n Medical Biophysics Group, Institute of "}
+454                     \textcolor{stringliteral}{"Physiology and Pathophysiology,\(\backslash\)n University of Heidelberg, "}
+455                     \textcolor{stringliteral}{"69120 Heidelberg, Germany\(\backslash\)n----------------------------------"}
+456                     \textcolor{stringliteral}{"----------------\(\backslash\)n\(\backslash\)n"};
+457     tmp += ctime (&rawtime);
+458     \textcolor{keywordflow}{return} tmp;
+459 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___ipt_a5623430707739fdabf4d99599e6444a2}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!build\+\_\+sc\+\_\+vector@{build\+\_\+sc\+\_\+vector}}
+\index{build\+\_\+sc\+\_\+vector@{build\+\_\+sc\+\_\+vector}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{build\+\_\+sc\+\_\+vector}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ long $>$ nw\+::\+Standard\+\_\+\+Ipt\+::build\+\_\+sc\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{{\bf xml\+\_\+\+Rct\+\_\+\+Evt} $\ast$const \&}]{cxe}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_a5623430707739fdabf4d99599e6444a2}
+
+
+Build state change vector for \hyperlink{classnw_1_1_reaction___evt}{Reaction\+\_\+\+Evt} objects @ param cxe \hyperlink{structnw_1_1_standard___ipt_1_1xml___rct___evt}{xml\+\_\+\+Rct\+\_\+\+Evt} @ return \hyperlink{classnw_1_1_reaction___evt}{Reaction\+\_\+\+Evt} specific state change vector. 
+
+
+\begin{DoxyCode}
+412                                                                  \{
+413     vector<long>* scv  = \textcolor{keyword}{new} vector<long>;
+414     scv->resize(\hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}[cxe->xml\_vxl[0]]->get\_state\_vec()->size());
+415     \textcolor{keywordtype}{long} i;
+416 
+417     \textcolor{keywordflow}{for} (i = 0; i < (long)cxe->xml\_educts.size(); i++)
+418         scv->at(cxe->xml\_educts.at(i)) = -1;
+419     \textcolor{keywordflow}{for} (i = 0; i < (long)cxe->xml\_products.size(); i++)
+420         scv->at(cxe->xml\_products.at(i)) = 1;
+421 
+422     \textcolor{keywordflow}{return} *scv;
+423 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___ipt_a834bc59d1c945553aad59de7b23e019f}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!build\+\_\+vxl\+\_\+vec@{build\+\_\+vxl\+\_\+vec}}
+\index{build\+\_\+vxl\+\_\+vec@{build\+\_\+vxl\+\_\+vec}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{build\+\_\+vxl\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf \+\_\+\+Voxel} $\ast$ $>$ nw\+::\+Standard\+\_\+\+Ipt\+::build\+\_\+vxl\+\_\+vec (
+\begin{DoxyParamCaption}
+\item[{{\bf xml\+\_\+evt} $\ast$const \&}]{evt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_a834bc59d1c945553aad59de7b23e019f}
+
+
+Build \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} vector for \hyperlink{classnw_1_1___event}{\+\_\+\+Event} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em evt} & \hyperlink{structnw_1_1_standard___ipt_1_1xml__evt}{xml\+\_\+evt} structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classnw_1_1___event}{\+\_\+\+Event} specific voxel vector
+\end{DoxyReturn}
+The event definition inside the .xml file includes a list of \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} ids that represent the subset of \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} where the respective \hyperlink{classnw_1_1___event}{\+\_\+\+Event} can occur.~\newline
+ If the id list only contains one element with a value of -\/1, the event is can occur in all existing \hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel}. 
+\begin{DoxyCode}
+425                                                               \{
+426     vector<\_Voxel*> act\_vvc;
+427 
+428     \textcolor{keywordflow}{if}(evt->xml\_vxl[0] == -1)\{
+429         \textcolor{keywordflow}{return} \hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc};
+430     \}
+431 
+432     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < evt->xml\_vxl.size(); ++i)\{
+433         act\_vvc.push\_back(\hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc}[evt->xml\_vxl[i]]);
+434     \}
+435     \textcolor{keywordflow}{return} act\_vvc;
+436 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___ipt_ae75407ca95fe5c6e0e2b48a892c0dcdb}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!clone\+\_\+svc@{clone\+\_\+svc}}
+\index{clone\+\_\+svc@{clone\+\_\+svc}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{clone\+\_\+svc}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf \+\_\+\+Species} $\ast$ $>$ nw\+::\+Standard\+\_\+\+Ipt\+::clone\+\_\+svc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_ae75407ca95fe5c6e0e2b48a892c0dcdb}
+
+
+Clone \hyperlink{classnw_1_1___species}{\+\_\+\+Species} vector. 
+
+\begin{DoxyReturn}{Returns}
+new instance of the \hyperlink{classnw_1_1___species}{\+\_\+\+Species} vector 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+438                                          \{
+439     vector<\_Species*> svcClone;
+440     svcClone.resize(\hyperlink{classnw_1_1_standard___ipt_a26fbf039d1232349799194d289febb8d}{svc}.size());
+441 
+442     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 0; i < (long) \hyperlink{classnw_1_1_standard___ipt_a26fbf039d1232349799194d289febb8d}{svc}.size(); i++)
+443         svcClone[i] = \hyperlink{classnw_1_1_standard___ipt_a26fbf039d1232349799194d289febb8d}{svc}[i]->copy();
+444     \textcolor{keywordflow}{return} svcClone;
+445 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___ipt_ae5ae0e8b67291839d71df934bfc17238}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!get\+\_\+\+System@{get\+\_\+\+System}}
+\index{get\+\_\+\+System@{get\+\_\+\+System}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{get\+\_\+\+System}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+System} $\ast$ nw\+::\+Standard\+\_\+\+Ipt\+::get\+\_\+\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classnw_1_1_standard___ipt_ae5ae0e8b67291839d71df934bfc17238}
+
+
+Implementation of the \hyperlink{classnw_1_1___input_a5bb57fdb6dfcf4efa7b64e096594a8b3}{\+\_\+\+Input\+::get\+\_\+\+System()} method. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classnw_1_1_gillespie___sys}{Gillespie\+\_\+\+Sys}
+\end{DoxyReturn}
+Create \hyperlink{classnw_1_1_gillespie___sys}{Gillespie\+\_\+\+Sys} from input .xml file 
+
+Implements \hyperlink{classnw_1_1___input_a5bb57fdb6dfcf4efa7b64e096594a8b3}{nw\+::\+\_\+\+Input}.
+
+
+\begin{DoxyCode}
+34                                  \{
+35     \hyperlink{classnw_1_1_standard___ipt_a0e29f3f6a4a01caa99d5ca151748be2c}{read\_Sim\_Data}();
+36 \textcolor{comment}{//  create Gillespie\_Sys}
+37     \hyperlink{classnw_1_1___input_af4d5765ede8af8d7f981ef179683f7e5}{s} = \textcolor{keyword}{new} Gillespie\_Sys( \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a942847ef13274b631a767f65d0a5ff3c}{xml\_output\_mode}, \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.
+      \hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a757ebd2e9fd83412731faf6bb2059dd5}{xml\_max\_sim\_steps}, \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a2b0da231be5d3a1e159730a63008950b}{xml\_max\_sim\_time},
+38                             \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ab5ae087bdf7edb268aca5b736c7cde27}{xml\_sample\_rate},&\hyperlink{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{evc}, &\hyperlink{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{vvc},
+      \hyperlink{classnw_1_1_standard___ipt_a22ca09b593a0438676fd560f168e76f9}{output\_dir\_path},\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a9bbeaad11219c26143f2c45915caeabc}{xml\_output\_Spc},
+39                             \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a6a41a161744c03226daa444501a2df6c}{xml\_output\_Vxl});
+40     \textcolor{keywordflow}{return} \hyperlink{classnw_1_1___input_af4d5765ede8af8d7f981ef179683f7e5}{s};
+41 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___ipt_ad23a7e58b69db65c74a9168fde457b19}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!read\+\_\+\+Events@{read\+\_\+\+Events}}
+\index{read\+\_\+\+Events@{read\+\_\+\+Events}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{read\+\_\+\+Events}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Standard\+\_\+\+Ipt\+::read\+\_\+\+Events (
+\begin{DoxyParamCaption}
+\item[{pugi\+::xml\+\_\+node const \&}]{nod}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_ad23a7e58b69db65c74a9168fde457b19}
+
+
+Read events from parse result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nod} & X\+M\+L node {\itshape event\+\_\+\+List} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+157                                                  \{
+158     cout << \textcolor{stringliteral}{"read\_Events... "};
+159     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path} << \textcolor{stringliteral}{"############ EVENTS ############"} << endl;
+160     xml\_node\_iterator evt\_it, li\_it; \textcolor{comment}{// event iterator, special event iterator, list iterator}
+161 
+162 \textcolor{comment}{//  runs through every item of the Reaction Event List and creates the corresponding struct}
+163     \textcolor{keywordflow}{for}(evt\_it = nod.child(\textcolor{stringliteral}{"reactionEvtList"}).begin();
+164             evt\_it != nod.child(\textcolor{stringliteral}{"reactionEvtList"}).end(); ++evt\_it)\{
+165         Standard\_Ipt::xml\_Rct\_Evt* xevt = \textcolor{keyword}{new} Standard\_Ipt::xml\_Rct\_Evt;
+166         xevt->xml\_id = atol(evt\_it->attribute(\textcolor{stringliteral}{"id"}).value());
+167         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{"id: "} << xevt->xml\_id;
+168         xevt->xml\_name = (string)evt\_it->child(\textcolor{stringliteral}{"name"}).child\_value();
+169         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", name: "} << xevt->xml\_name;
+170         xevt->xml\_k = atof(evt\_it->child(\textcolor{stringliteral}{"k"}).child\_value());
+171         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", k: "} <<xevt->xml\_k;
+172         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", Voxel: "};
+173         \textcolor{keywordflow}{for} (li\_it = evt\_it->child(\textcolor{stringliteral}{"voxelVector"}).begin();
+174                 li\_it != evt\_it->child(\textcolor{stringliteral}{"voxelVector"}).end(); ++li\_it)\{
+175             xevt->xml\_vxl.push\_back(atol(li\_it->child\_value()));
+176             \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< li\_it->child\_value();\}
+177         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", Educts: "};
+178         \textcolor{keywordflow}{for} (li\_it = evt\_it->child(\textcolor{stringliteral}{"educts"}).begin();
+179                 li\_it != evt\_it->child(\textcolor{stringliteral}{"educts"}).end(); ++li\_it)\{
+180             xevt->xml\_educts.push\_back(atol(li\_it->child\_value()));
+181             \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< li\_it->child\_value();\}
+182         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", Products: "};
+183         \textcolor{keywordflow}{for} (li\_it = evt\_it->child(\textcolor{stringliteral}{"products"}).begin();
+184                 li\_it != evt\_it->child(\textcolor{stringliteral}{"products"}).end(); ++li\_it)\{
+185             xevt->xml\_products.push\_back(atol(li\_it->child\_value()));
+186             \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< li\_it->child\_value();\}
+187         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< endl;
+188         \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_abc4e7ae5a154343c1d3d25917bd58a5f}{xml\_rct\_evt\_list}.push\_back(xevt);
+189     \}
+190 
+191 \textcolor{comment}{//  runs through every item of the Reaction Sub Unit Switch Reaction Event List and}
+192 \textcolor{comment}{//  creates the corresponding struct}
+193     \textcolor{keywordflow}{for}(evt\_it = nod.child(\textcolor{stringliteral}{"subUnitSwitchRctEvtList"}).begin();
+194             evt\_it != nod.child(\textcolor{stringliteral}{"subUnitSwitchRctEvtList"}).end(); ++evt\_it)\{
+195         Standard\_Ipt::xml\_SuSwitch\_Rct\_Evt* xevt = \textcolor{keyword}{new} Standard\_Ipt::xml\_SuSwitch\_Rct\_Evt;
+196         xevt->xml\_id = atol(evt\_it->attribute(\textcolor{stringliteral}{"id"}).value());
+197         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{"id: "} << xevt->xml\_id;
+198         xevt->xml\_name = (string)evt\_it->child(\textcolor{stringliteral}{"name"}).child\_value();
+199         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", name: "} << xevt->xml\_name;
+200         xevt->xml\_k = atof(evt\_it->child(\textcolor{stringliteral}{"k"}).child\_value());
+201         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", k: "} <<xevt->xml\_k;
+202         xevt->xml\_channel\_id = atol(evt\_it->child(\textcolor{stringliteral}{"channel"}).child\_value());
+203         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", channel; "} << xevt->xml\_channel\_id;
+204         xevt->xml\_actSu\_id = atol(evt\_it->child(\textcolor{stringliteral}{"actSubUnitID"}).child\_value());
+205         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", act su ID: "} << xevt->xml\_actSu\_id;
+206 
+207         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", Voxel: "};
+208         \textcolor{keywordflow}{for} (li\_it = evt\_it->child(\textcolor{stringliteral}{"voxelVector"}).begin();
+209                 li\_it != evt\_it->child(\textcolor{stringliteral}{"voxelVector"}).end(); ++li\_it)\{
+210             xevt->xml\_vxl.push\_back(atol(li\_it->child\_value()));
+211             \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< li\_it->child\_value();
+212         \}
+213         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", Educts: "};
+214         \textcolor{keywordflow}{for} (li\_it = evt\_it->child(\textcolor{stringliteral}{"educts"}).begin();
+215                 li\_it != evt\_it->child(\textcolor{stringliteral}{"educts"}).end(); ++li\_it)\{
+216             xevt->xml\_educts.push\_back(atol(li\_it->child\_value()));
+217             \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< li\_it->child\_value();
+218         \}
+219         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", Products: "};
+220         \textcolor{keywordflow}{for} (li\_it = evt\_it->child(\textcolor{stringliteral}{"products"}).begin();
+221                 li\_it != evt\_it->child(\textcolor{stringliteral}{"products"}).end(); ++li\_it)\{
+222             xevt->xml\_products.push\_back(atol(li\_it->child\_value()));
+223             \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< li\_it->child\_value();
+224         \}
+225         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< endl;
+226         \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a4da34a5918c4e045ed5021da6fdbc6bf}{xml\_suSwitch\_rct\_evt\_list}.push\_back(xevt);
+227     \}
+228 
+229 \textcolor{comment}{//  runs through every item of the Channel Flux Reaction Event List}
+230 \textcolor{comment}{//  and creates the corresponding struct}
+231     \textcolor{keywordflow}{for}(evt\_it = nod.child(\textcolor{stringliteral}{"channelFluxEvtList"}).begin();
+232         evt\_it != nod.child(\textcolor{stringliteral}{"channelFluxEvtList"}).end(); ++evt\_it)\{
+233         Standard\_Ipt::xml\_ChFlux\_Rct\_Evt* xevt = \textcolor{keyword}{new} Standard\_Ipt::xml\_ChFlux\_Rct\_Evt;
+234         xevt->xml\_id = atol(evt\_it->attribute(\textcolor{stringliteral}{"id"}).value());
+235         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{"id: "} << xevt->xml\_id;
+236         xevt->xml\_name = (string)evt\_it->child(\textcolor{stringliteral}{"name"}).child\_value();
+237         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", name: "} << xevt->xml\_name;
+238         xevt->xml\_k = atof(evt\_it->child(\textcolor{stringliteral}{"k"}).child\_value());
+239         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", k: "} <<xevt->xml\_k;
+240         xevt->xml\_channel\_id = atol(evt\_it->child(\textcolor{stringliteral}{"channel"}).child\_value());
+241         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", channel; "} << xevt->xml\_channel\_id;
+242 
+243         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", Voxel: "};
+244         \textcolor{keywordflow}{for} (li\_it = evt\_it->child(\textcolor{stringliteral}{"voxelVector"}).begin();
+245                 li\_it != evt\_it->child(\textcolor{stringliteral}{"voxelVector"}).end(); ++li\_it)\{
+246             xevt->xml\_vxl.push\_back(atol(li\_it->child\_value()));
+247             \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< li\_it->child\_value();
+248         \}
+249 
+250         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", Products: "};
+251         \textcolor{keywordflow}{for} (li\_it = evt\_it->child(\textcolor{stringliteral}{"products"}).begin();
+252                 li\_it != evt\_it->child(\textcolor{stringliteral}{"products"}).end(); ++li\_it)\{
+253             xevt->xml\_products.push\_back(atol(li\_it->child\_value()));
+254             \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< li\_it->child\_value();
+255         \}
+256         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< endl;
+257         \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ae0479559e90fe38932ac604852a1541f}{xml\_chFlux\_rct\_evt\_list}.push\_back(xevt);
+258     \}
+259 
+260 \textcolor{comment}{//  runs through every item of the Diffusion Event List and creates the corresponding struct}
+261     \textcolor{keywordflow}{for}(evt\_it = nod.child(\textcolor{stringliteral}{"diffusionEvtList"}).begin();
+262             evt\_it != nod.child(\textcolor{stringliteral}{"diffusionEvtList"}).end(); ++evt\_it)\{
+263         Standard\_Ipt::xml\_Dif\_Evt* xevt = \textcolor{keyword}{new} Standard\_Ipt::xml\_Dif\_Evt;
+264         xevt->xml\_id = atol(evt\_it->attribute(\textcolor{stringliteral}{"id"}).value());
+265         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{"id: "} << xevt->xml\_id;
+266         xevt->xml\_name = (string)evt\_it->child(\textcolor{stringliteral}{"name"}).child\_value();
+267         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", name: "} << xevt->xml\_name;
+268         xevt->xml\_k = atof(evt\_it->child(\textcolor{stringliteral}{"k"}).child\_value());
+269         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", k: "} <<xevt->xml\_k;
+270         xevt->xml\_diff\_spc = atol(evt\_it->child(\textcolor{stringliteral}{"diffusionSpcID"}).child\_value());
+271         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", diffSpcID: "} << xevt->xml\_diff\_spc;
+272 
+273         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", Voxel: "};
+274         \textcolor{keywordflow}{for} (li\_it = evt\_it->child(\textcolor{stringliteral}{"voxelVector"}).begin();
+275                 li\_it != evt\_it->child(\textcolor{stringliteral}{"voxelVector"}).end(); ++li\_it)\{
+276             xevt->xml\_vxl.push\_back(atol(li\_it->child\_value()));
+277             \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< li\_it->child\_value();
+278         \}
+279 \textcolor{comment}{//      add the border voxel to the voxel vector of all diffusion events.}
+280         \textcolor{keywordflow}{if} (\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_adc59bb5516c7b0c34463e5c1b446bf6a}{xml\_border\_condition} == \textcolor{stringliteral}{"equilibrium"})\{
+281 \textcolor{comment}{//      since the border voxel doesn't exist yet, xgd.xml\_vxl\_list.size() is the correct index.}
+282             xevt->xml\_vxl.push\_back(\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}.size());
+283             \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path} << (\hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}.size());
+284         \}
+285         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< endl;
+286 
+287         \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a115f67778a3d29d716303c194354d2f7}{xml\_dif\_evt\_list}.push\_back(xevt);
+288     \}
+289     cout << \textcolor{stringliteral}{"DONE"} << endl;
+290 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___ipt_a0e29f3f6a4a01caa99d5ca151748be2c}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!read\+\_\+\+Sim\+\_\+\+Data@{read\+\_\+\+Sim\+\_\+\+Data}}
+\index{read\+\_\+\+Sim\+\_\+\+Data@{read\+\_\+\+Sim\+\_\+\+Data}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{read\+\_\+\+Sim\+\_\+\+Data}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Standard\+\_\+\+Ipt\+::read\+\_\+\+Sim\+\_\+\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_a0e29f3f6a4a01caa99d5ca151748be2c}
+
+
+Extract general simulation data and store it in the xgd struct. 
+
+
+\begin{DoxyCode}
+43                                 \{
+44 
+45     xml\_node top = \hyperlink{classnw_1_1_standard___ipt_a08140c2c24ab36240c45d241352fc57d}{doc}.child(\textcolor{stringliteral}{"Sim"});
+46     xml\_node\_iterator it = \hyperlink{classnw_1_1_standard___ipt_a08140c2c24ab36240c45d241352fc57d}{doc}.begin();
+47     xml\_node\_iterator li\_it; \textcolor{comment}{// iterator for the outputSpeciesList}
+48 
+49 \textcolor{comment}{//  open output file stream}
+50     \textcolor{keywordtype}{string} tmp = \hyperlink{classnw_1_1_standard___ipt_a22ca09b593a0438676fd560f168e76f9}{output\_dir\_path} + \textcolor{stringliteral}{"sim\_info"} + \textcolor{stringliteral}{".e"};
+51     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}.open(tmp.c\_str());
+52     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path} << \hyperlink{classnw_1_1_standard___ipt_a94a28b548fd1ae6dca50c8fb88d690bb}{build\_header}() << endl;
+53     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path} << \textcolor{stringliteral}{"############ GENERAL DATA ############"} << endl;
+54 
+55 \textcolor{comment}{//  read the general data and save to xgd}
+56     \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a942847ef13274b631a767f65d0a5ff3c}{xml\_output\_mode} = atol(it->child\_value(\textcolor{stringliteral}{"outputMode"}));
+57     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path} << \textcolor{stringliteral}{"output mode: "} << \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a942847ef13274b631a767f65d0a5ff3c}{xml\_output\_mode} << endl;
+58     \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a757ebd2e9fd83412731faf6bb2059dd5}{xml\_max\_sim\_steps} = atof(it->child\_value(\textcolor{stringliteral}{"maxSimulationSteps"}));
+59     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path} << \textcolor{stringliteral}{"max simulation steps: "} << \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a757ebd2e9fd83412731faf6bb2059dd5}{xml\_max\_sim\_steps} << endl;
+60     \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a2b0da231be5d3a1e159730a63008950b}{xml\_max\_sim\_time} = atof(it->child\_value(\textcolor{stringliteral}{"maxSimTime"}));
+61     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{"max simulation time: "} << \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a2b0da231be5d3a1e159730a63008950b}{xml\_max\_sim\_time} << endl;
+62     \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ab5ae087bdf7edb268aca5b736c7cde27}{xml\_sample\_rate} = atof(it->child\_value(\textcolor{stringliteral}{"sampleRate"}));
+63     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{"sample rate: "} << \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ab5ae087bdf7edb268aca5b736c7cde27}{xml\_sample\_rate} << endl;
+64     \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_aa778758339d3c6beb926e4df3341e5a2}{xml\_box\_lenght} = atof(it->child\_value(\textcolor{stringliteral}{"voxelBoxLenght"}));
+65     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{"voxel box lenght: "} << \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_aa778758339d3c6beb926e4df3341e5a2}{xml\_box\_lenght} << endl;
+66     \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_adc59bb5516c7b0c34463e5c1b446bf6a}{xml\_border\_condition} = (string)it->child\_value(\textcolor{stringliteral}{"borderCondition"});
+67     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{"border condition: "} << \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_adc59bb5516c7b0c34463e5c1b446bf6a}{xml\_border\_condition} << endl;
+68 
+69 \textcolor{comment}{//  print output \_Species and \_Voxel ids to sim\_info.e}
+70     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{"output species: "};
+71     \textcolor{keywordflow}{for} (li\_it = it->child(\textcolor{stringliteral}{"outputSpcList"}).begin(); li\_it != it->child(\textcolor{stringliteral}{"outputSpcList"}).end(); ++li\_it)\{
+72         \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a9bbeaad11219c26143f2c45915caeabc}{xml\_output\_Spc}.push\_back(atol(li\_it->child\_value())); 
+      \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path} << li\_it->child\_value() << \textcolor{stringliteral}{","};
+73     \}
+74     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path} << endl << \textcolor{stringliteral}{"output voxel: "} ;
+75     \textcolor{keywordflow}{for} (li\_it = it->child(\textcolor{stringliteral}{"outputVxlList"}).begin(); li\_it != it->child(\textcolor{stringliteral}{"outputVxlList"}).end(); ++li\_it)\{
+76         \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a6a41a161744c03226daa444501a2df6c}{xml\_output\_Vxl}.push\_back(atol(li\_it->child\_value())); 
+      \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< li\_it->child\_value() << \textcolor{stringliteral}{","};
+77     \}
+78     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path} << endl;
+79 
+80     \hyperlink{classnw_1_1_standard___ipt_a488e5aad95f3d66c6bfbb5f3e5daed3c}{read\_Species}(it->child(\textcolor{stringliteral}{"speciesList"}));
+81     \hyperlink{classnw_1_1_standard___ipt_a6024eab893f556075f463a685f2f28eb}{read\_Voxel}(it->child(\textcolor{stringliteral}{"voxelList"}));
+82     \hyperlink{classnw_1_1_standard___ipt_ad23a7e58b69db65c74a9168fde457b19}{read\_Events}(it->child(\textcolor{stringliteral}{"eventList"}));
+83 
+84     \hyperlink{classnw_1_1_standard___ipt_ac234f7433af26ad614e3f43088f13e48}{alloc\_Species}();
+85     \hyperlink{classnw_1_1_standard___ipt_a0f07caf506c0610596e8b296955ac47a}{alloc\_Voxel}();
+86     \hyperlink{classnw_1_1_standard___ipt_af38174edfc9d7be8bd9ee2c8bc6c4181}{alloc\_Events}();
+87 
+88 \textcolor{comment}{//  close the file stream}
+89     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path} << endl << endl << endl;
+90     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}.close();
+91 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___ipt_a488e5aad95f3d66c6bfbb5f3e5daed3c}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!read\+\_\+\+Species@{read\+\_\+\+Species}}
+\index{read\+\_\+\+Species@{read\+\_\+\+Species}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{read\+\_\+\+Species}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Standard\+\_\+\+Ipt\+::read\+\_\+\+Species (
+\begin{DoxyParamCaption}
+\item[{pugi\+::xml\+\_\+node const \&}]{nod}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_a488e5aad95f3d66c6bfbb5f3e5daed3c}
+
+
+Read species from parse result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nod} & X\+M\+L node {\itshape species\+\_\+list} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+93                                                   \{
+94     cout << \textcolor{stringliteral}{"read\_Species..."},
+95     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path} << \textcolor{stringliteral}{"############ SPECIES ############"} << endl;
+96 
+97     xml\_node\_iterator spc\_it;  \textcolor{comment}{//voxel iterator, voxel element iterator, list iterator}
+98 
+99 \textcolor{comment}{//  read all Standard Species}
+100     \textcolor{keywordflow}{for} (spc\_it = nod.child(\textcolor{stringliteral}{"standardSpcList"}).begin(); spc\_it != nod.child(\textcolor{stringliteral}{"standardSpcList"}).end(); ++
+      spc\_it)\{
+101 \textcolor{comment}{//      create new standard species struct}
+102         Standard\_Ipt::xml\_spc* xspc = \textcolor{keyword}{new} Standard\_Ipt::xml\_spc;
+103         xspc->xml\_id = atol(spc\_it->attribute(\textcolor{stringliteral}{"id"}).value());
+104         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{"id: "} << xspc->xml\_id;
+105         xspc->xml\_name = (string)spc\_it->child\_value(\textcolor{stringliteral}{"name"});
+106         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", name: "} << xspc->xml\_name;
+107         xspc->xml\_init\_conc = atof(spc\_it->child\_value(\textcolor{stringliteral}{"initialConcentration"}));
+108         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", initConc:"} << xspc->xml\_init\_conc;
+109         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< endl;
+110         \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_a70786e61ea513972d7c50982e101726c}{xml\_spc\_list}.push\_back(xspc);
+111     \}
+112 
+113 \textcolor{comment}{//  read all Channel Species}
+114     \textcolor{keywordflow}{for} (spc\_it = nod.child(\textcolor{stringliteral}{"channelSpcList"}).begin(); spc\_it != nod.child(\textcolor{stringliteral}{"channelSpcList"}).end(); ++
+      spc\_it)\{
+115 \textcolor{comment}{//      create new channel species struct}
+116         Standard\_Ipt::xml\_Ch\_Spc* xspc = \textcolor{keyword}{new} Standard\_Ipt::xml\_Ch\_Spc;
+117         xspc->xml\_id = atol(spc\_it->attribute(\textcolor{stringliteral}{"id"}).value());
+118         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{"id: "} << xspc->xml\_id;
+119         xspc->xml\_name = (string)spc\_it->child\_value(\textcolor{stringliteral}{"name"});
+120         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", name: "} << xspc->xml\_name;
+121         xspc->xml\_init\_conc = atof(spc\_it->child\_value(\textcolor{stringliteral}{"initialConcentration"}));
+122         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", initConc:"} << xspc->xml\_init\_conc;
+123         xspc->xml\_n\_subunits = atol(spc\_it->child\_value(\textcolor{stringliteral}{"nSubUnits"}));
+124         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", n\_subunits:"} << xspc->xml\_n\_subunits;
+125         xspc->xml\_n\_suToOpen = atol(spc\_it->child\_value(\textcolor{stringliteral}{"nSubUnitsToOpen"}));
+126         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", n\_suToOpen:"} << xspc->xml\_n\_suToOpen;
+127         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< endl;
+128         \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_ab46c43b495fd3d278ffeabe88261d36e}{xml\_ch\_spc\_list}.push\_back(xspc);
+129     \}
+130 
+131     cout << \textcolor{stringliteral}{"DONE"} << endl;
+132 \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_standard___ipt_a6024eab893f556075f463a685f2f28eb}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!read\+\_\+\+Voxel@{read\+\_\+\+Voxel}}
+\index{read\+\_\+\+Voxel@{read\+\_\+\+Voxel}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{read\+\_\+\+Voxel}]{\setlength{\rightskip}{0pt plus 5cm}void nw\+::\+Standard\+\_\+\+Ipt\+::read\+\_\+\+Voxel (
+\begin{DoxyParamCaption}
+\item[{pugi\+::xml\+\_\+node const \&}]{nod}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_a6024eab893f556075f463a685f2f28eb}
+
+
+Read voxels from parse result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nod} & X\+M\+L node {\itshape voxel\+\_\+\+List} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+134                                                 \{
+135     cout << \textcolor{stringliteral}{"read\_Voxel..."};
+136     \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path} << \textcolor{stringliteral}{"############ VOXEL ############"} << endl;
+137     xml\_node\_iterator vxl\_it, li\_it; \textcolor{comment}{//voxel iterator}
+138 
+139 \textcolor{comment}{//  read all Standard Voxel}
+140     \textcolor{keywordflow}{for}(vxl\_it = nod.child(\textcolor{stringliteral}{"standardVxlList"}).begin(); vxl\_it != nod.child(\textcolor{stringliteral}{"standardVxlList"}).end(); ++
+      vxl\_it)\{
+141         Standard\_Ipt::xml\_vxl* xvxl = \textcolor{keyword}{new} Standard\_Ipt::xml\_vxl;
+142         xvxl->xml\_id = atol(vxl\_it->attribute(\textcolor{stringliteral}{"id"}).value()); \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{"id: "} << xvxl->xml\_id;
+143         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", Initial State: "};
+144         \textcolor{keywordflow}{for} (li\_it = vxl\_it->child(\textcolor{stringliteral}{"initialState"}).begin(); li\_it != vxl\_it->child(\textcolor{stringliteral}{"initialState"}).end(); +
+      +li\_it)\{
+145             xvxl->xml\_init\_state.push\_back(atol(li\_it->child\_value())); 
+      \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< li\_it->child\_value();
+146         \}
+147         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< \textcolor{stringliteral}{", Neighbours: "};
+148         \textcolor{keywordflow}{for} (li\_it = vxl\_it->child(\textcolor{stringliteral}{"neighbours"}).begin(); li\_it != vxl\_it->child(\textcolor{stringliteral}{"neighbours"}).end(); ++
+      li\_it)\{
+149             xvxl->xml\_vxl\_neighbours.push\_back(atol(li\_it->child\_value())); 
+      \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< li\_it->child\_value();
+150         \}
+151         \hyperlink{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{info\_path}<< endl;
+152         \hyperlink{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{xgd}.\hyperlink{structnw_1_1_standard___ipt_1_1xml__gen__data_af091596661fc87ef8c7f28317555c6af}{xml\_vxl\_list}.push\_back(xvxl);
+153     \}
+154     cout << \textcolor{stringliteral}{"DONE"} << endl;
+155 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classnw_1_1_standard___ipt_a08140c2c24ab36240c45d241352fc57d}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!doc@{doc}}
+\index{doc@{doc}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{doc}]{\setlength{\rightskip}{0pt plus 5cm}pugi\+::xml\+\_\+document nw\+::\+Standard\+\_\+\+Ipt\+::doc\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_a08140c2c24ab36240c45d241352fc57d}
+
+
+D\+O\+M tree root (pugixml) 
+
+\hypertarget{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!evc@{evc}}
+\index{evc@{evc}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{evc}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \+\_\+\+Event}$\ast$$>$ nw\+::\+Standard\+\_\+\+Ipt\+::evc\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_aed79f0ae61a44f1d3aceb6839a8a7733}
+
+
+\hyperlink{classnw_1_1___event}{\+\_\+\+Event} vector 
+
+\hypertarget{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!info\+\_\+path@{info\+\_\+path}}
+\index{info\+\_\+path@{info\+\_\+path}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{info\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}ofstream nw\+::\+Standard\+\_\+\+Ipt\+::info\+\_\+path\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_a7b8147e8b90f4adabb30e1b3fd8c40b8}
+
+
+Off-\/stream for sim\+\_\+info file that summarizes parsed xml data. 
+
+\hypertarget{classnw_1_1_standard___ipt_a22ca09b593a0438676fd560f168e76f9}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!output\+\_\+dir\+\_\+path@{output\+\_\+dir\+\_\+path}}
+\index{output\+\_\+dir\+\_\+path@{output\+\_\+dir\+\_\+path}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{output\+\_\+dir\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}string nw\+::\+Standard\+\_\+\+Ipt\+::output\+\_\+dir\+\_\+path\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_a22ca09b593a0438676fd560f168e76f9}
+
+
+Output directory path. 
+
+\hypertarget{classnw_1_1_standard___ipt_af30a47d8999101d9f83964b5be9f86a5}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!p@{p}}
+\index{p@{p}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ nw\+::\+Standard\+\_\+\+Ipt\+::p\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_af30a47d8999101d9f83964b5be9f86a5}
+\hypertarget{classnw_1_1_standard___ipt_a18f5e3cad0d5eef81443dfaf8949ba4b}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!rg@{rg}}
+\index{rg@{rg}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{rg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uni\+\_\+\+Rnd}$\ast$ nw\+::\+Standard\+\_\+\+Ipt\+::rg\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_a18f5e3cad0d5eef81443dfaf8949ba4b}
+
+
+Uniform random number generator. 
+
+\hypertarget{classnw_1_1_standard___ipt_a26fbf039d1232349799194d289febb8d}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!svc@{svc}}
+\index{svc@{svc}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{svc}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \+\_\+\+Species}$\ast$$>$ nw\+::\+Standard\+\_\+\+Ipt\+::svc\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_a26fbf039d1232349799194d289febb8d}
+
+
+\+\_\+\+Specied vector 
+
+\hypertarget{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!vvc@{vvc}}
+\index{vvc@{vvc}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{vvc}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \+\_\+\+Voxel}$\ast$$>$ nw\+::\+Standard\+\_\+\+Ipt\+::vvc\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_a7f93dd90e12eb3a5b023e64feca48572}
+
+
+\hyperlink{classnw_1_1___voxel}{\+\_\+\+Voxel} vector 
+
+\hypertarget{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}{\index{nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}!xgd@{xgd}}
+\index{xgd@{xgd}!nw\+::\+Standard\+\_\+\+Ipt@{nw\+::\+Standard\+\_\+\+Ipt}}
+\subsubsection[{xgd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf xml\+\_\+gen\+\_\+data} nw\+::\+Standard\+\_\+\+Ipt\+::xgd\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_standard___ipt_aad5708d9729b7a5f660dade1927b4d4e}
+
+
+Structure holding general simulation data. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Input/\hyperlink{_standard___ipt_8h}{Standard\+\_\+\+Ipt.\+h}\item 
+Input/\hyperlink{_standard___ipt_8cpp}{Standard\+\_\+\+Ipt.\+cpp}\end{DoxyCompactItemize}

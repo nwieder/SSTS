@@ -1,0 +1,207 @@
+\hypertarget{classnw_1_1_sub_unit_switch___rct___evt}{\section{nw\+:\+:Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt Class Reference}
+\label{classnw_1_1_sub_unit_switch___rct___evt}\index{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}}
+}
+
+
+Subunit switch reaction event.  
+
+
+
+
+{\ttfamily \#include $<$Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt.\+h$>$}
+
+Inheritance diagram for nw\+:\+:Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d1/d63/classnw_1_1_sub_unit_switch___rct___evt}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a77796138fe4514288417f95dcc053f79}{Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt} (long \hyperlink{classnw_1_1___event_a8f7ce287f596266dd763ec7db2f74090}{id}, string \hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name}, double \hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k}, vector$<$ long $>$ \hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\+\_\+vec}, long \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a3f14cca01fc1645696666330a7354865}{act\+\_\+su\+\_\+id}, long \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a7d1c65995bc49d7e6e625aa090325af1}{ch\+\_\+spc\+\_\+id}, \hyperlink{namespacenw_ad7146b8b5a9de9be416847f41135722c}{Voxel\+Vector} vvc, \hyperlink{classnw_1_1_uni___rnd}{Uni\+\_\+\+Rnd} $\ast$\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a054845f5f9892951bfe04ffd57563243}{$\sim$\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt} ()
+\item 
+void \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_ab89891fae9287edc9d9a215788706093}{execute} ()
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnw_1_1___event_aa022418fb765582a053ac75cbc3436d6}{\+\_\+\+Event\+::execute()} method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a616d644628a7b4ada1c64733c601354f}{update\+\_\+\+Channel\+\_\+\+Spc} ()
+\begin{DoxyCompactList}\small\item\em Updates the referenced channel Species every time this event is executed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnw_1_1_channel___spc}{Channel\+\_\+\+Spc} $\ast$ \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a260fabe9e3e1d8b79c3c80bb987716a5}{chs}
+\begin{DoxyCompactList}\small\item\em Pointer to the downcasted \hyperlink{classnw_1_1_channel___spc}{Channel\+\_\+\+Spc}. \end{DoxyCompactList}\item 
+long \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a3f14cca01fc1645696666330a7354865}{act\+\_\+su\+\_\+id}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classnw_1_1___species}{\+\_\+\+Species} id of the activated subunit \end{DoxyCompactList}\item 
+long \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a7d1c65995bc49d7e6e625aa090325af1}{ch\+\_\+spc\+\_\+id}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classnw_1_1___species}{\+\_\+\+Species} id of the \hyperlink{classnw_1_1_channel___spc}{Channel\+\_\+\+Spc} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Subunit switch reaction event. 
+
+Coordinates reaction events that change the state of a subunit. Whenever a subunit becomes activated the Channl\+\_\+\+Spc has to be notified, since the number of open channels depends on the number of active subunits. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnw_1_1_sub_unit_switch___rct___evt_a77796138fe4514288417f95dcc053f79}{\index{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}!Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}}
+\index{Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}!nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}}
+\subsubsection[{Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}]{\setlength{\rightskip}{0pt plus 5cm}nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{string}]{name, }
+\item[{double}]{k, }
+\item[{vector$<$ long $>$}]{sc\+\_\+vec, }
+\item[{long}]{act\+\_\+su\+\_\+id, }
+\item[{long}]{ch\+\_\+spc\+\_\+id, }
+\item[{{\bf Voxel\+Vector}}]{vvc, }
+\item[{{\bf Uni\+\_\+\+Rnd} $\ast$}]{rg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classnw_1_1_sub_unit_switch___rct___evt_a77796138fe4514288417f95dcc053f79}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \hyperlink{classnw_1_1___event}{\+\_\+\+Event} I\+D \\
+\hline
+{\em name} & \hyperlink{classnw_1_1___event}{\+\_\+\+Event} name \\
+\hline
+{\em k} & \hyperlink{classnw_1_1___event}{\+\_\+\+Event} rate constant \\
+\hline
+{\em vvc} & \hyperlink{classnw_1_1___event}{\+\_\+\+Event} voxel vector \\
+\hline
+{\em sc\+\_\+vec} & \hyperlink{classnw_1_1_reaction___evt}{Reaction\+\_\+\+Evt} state change vector \\
+\hline
+{\em rg} & \hyperlink{classnw_1_1___event}{\+\_\+\+Event} pointer to a Random\+\_\+\+Generator. \\
+\hline
+{\em act\+\_\+su\+\_\+id} & Active subunit id \\
+\hline
+{\em ch\+\_\+spc\+\_\+id} & Channel species id \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+35                                                                          :
+36                                 \hyperlink{classnw_1_1_reaction___evt_a582f3c60366d15e89fdd613abe4bd86d}{Reaction\_Evt}(\textcolor{keywordtype}{id}, \hyperlink{classnw_1_1___event_ab4f50a54039cd4957bdca55049178562}{name}, \hyperlink{classnw_1_1___event_afca0ae816e9834add07db8e9a6618faa}{k} ,
+      \hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\_vec},vvc,\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg})\{
+37         this->\hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a3f14cca01fc1645696666330a7354865}{act\_su\_id} = \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a3f14cca01fc1645696666330a7354865}{act\_su\_id};
+38         this->\hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a7d1c65995bc49d7e6e625aa090325af1}{ch\_spc\_id} = \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a7d1c65995bc49d7e6e625aa090325af1}{ch\_spc\_id};
+39     \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_sub_unit_switch___rct___evt_a054845f5f9892951bfe04ffd57563243}{\index{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}!````~Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{$\sim$\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}}
+\index{````~Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{$\sim$\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}!nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}}
+\subsubsection[{$\sim$\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}]{\setlength{\rightskip}{0pt plus 5cm}virtual nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt\+::$\sim$\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classnw_1_1_sub_unit_switch___rct___evt_a054845f5f9892951bfe04ffd57563243}
+Destructor 
+\begin{DoxyCode}
+41 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnw_1_1_sub_unit_switch___rct___evt_ab89891fae9287edc9d9a215788706093}{\index{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}!execute@{execute}}
+\index{execute@{execute}!nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt\+::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classnw_1_1_sub_unit_switch___rct___evt_ab89891fae9287edc9d9a215788706093}
+
+
+Implementation of the \hyperlink{classnw_1_1___event_aa022418fb765582a053ac75cbc3436d6}{\+\_\+\+Event\+::execute()} method. 
+
+Whenever a subunit switch reaction event occurs, a channel subunit switches between an activated state and an inactivated state. This affects the state of a channel and thus needs to be communicated. This happens via a typecast of the \hyperlink{classnw_1_1___species}{\+\_\+\+Species} pointer to its more specific derivative \hyperlink{classnw_1_1_channel___spc}{Channel\+\_\+\+Spc} (identified via the ch\+\_\+spc\+\_\+id attribute). The result of the typecast allows for the call of public functions that are only accessible via the \hyperlink{classnw_1_1_channel___spc}{Channel\+\_\+\+Spc} interface. Consequently the function \hyperlink{classnw_1_1_channel___spc_ab5176b0d9aed2ac68a142488d11b5e81}{Channel\+\_\+\+Spc\+::activate\+\_\+\+Subunit()} or \hyperlink{classnw_1_1_channel___spc_a190172435ab84f9210ae027d06aae81a}{Channel\+\_\+\+Spc\+::inactivate\+\_\+\+Subunit()} can be called. 
+
+Reimplemented from \hyperlink{classnw_1_1_reaction___evt_aec2fb342726ef17255ebf406a7c74392}{nw\+::\+Reaction\+\_\+\+Evt}.
+
+
+\begin{DoxyCode}
+8                                    \{
+9 
+10     \textcolor{keywordflow}{try}\{
+11 \textcolor{comment}{//      execute event by using the state change vector}
+12         \hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[\hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel}].v->update\_state(\hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\_vec});
+13 
+14 \textcolor{comment}{//      set dirty flag to indicate that dependent events have to be updated properly}
+15         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{long} i = 0; i < (long)\hyperlink{classnw_1_1___event_a3f87b2dff69d07977f0a5e10936f38f6}{dep\_list}.size(); i++)\{
+16             \hyperlink{classnw_1_1___event_a3f87b2dff69d07977f0a5e10936f38f6}{dep\_list}[i]->set\_flag(\textcolor{keyword}{true});
+17         \}
+18 
+19 \textcolor{comment}{//      update the activation states of the subunits of chs}
+20         \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a260fabe9e3e1d8b79c3c80bb987716a5}{chs} = \textcolor{keyword}{dynamic\_cast<}\hyperlink{classnw_1_1_channel___spc}{Channel\_Spc}*\textcolor{keyword}{>}(\hyperlink{classnw_1_1___event_a6351b58d94923ed58e0b2cf6c9445d2e}{tv\_vec}[\hyperlink{classnw_1_1___event_a7864559e204c087306e3becb5b81fb26}{nextVoxel}].v->get\_state\_vec()
+      ->at(\hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a7d1c65995bc49d7e6e625aa090325af1}{ch\_spc\_id}));  \textcolor{comment}{// cave: downcasting (\_Species->Channel\_Spc)...}
+21         \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a616d644628a7b4ada1c64733c601354f}{update\_Channel\_Spc}();
+22     \}
+23     \textcolor{keywordflow}{catch}(exception& e)\{
+24         cout << \textcolor{stringliteral}{"SubuintSwitch\_Rct\_evt::execute(): "} << e.what();
+25         \}
+26     \}
+\end{DoxyCode}
+\hypertarget{classnw_1_1_sub_unit_switch___rct___evt_a616d644628a7b4ada1c64733c601354f}{\index{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}!update\+\_\+\+Channel\+\_\+\+Spc@{update\+\_\+\+Channel\+\_\+\+Spc}}
+\index{update\+\_\+\+Channel\+\_\+\+Spc@{update\+\_\+\+Channel\+\_\+\+Spc}!nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}}
+\subsubsection[{update\+\_\+\+Channel\+\_\+\+Spc}]{\setlength{\rightskip}{0pt plus 5cm}void Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt\+::update\+\_\+\+Channel\+\_\+\+Spc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_sub_unit_switch___rct___evt_a616d644628a7b4ada1c64733c601354f}
+
+
+Updates the referenced channel Species every time this event is executed. 
+
+
+\begin{DoxyCode}
+28                                               \{
+29 
+30     \textcolor{keywordflow}{if} (\hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\_vec}.at(\hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a3f14cca01fc1645696666330a7354865}{act\_su\_id}) > 0)\{
+31         \textcolor{keywordtype}{long} r\_chid = (long)(\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg}->\hyperlink{classnw_1_1_uni___rnd_ad7883ef0ce4c591612bcb41678104773}{get\_Uni\_Rnd}() * \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a260fabe9e3e1d8b79c3c80bb987716a5}{chs}->
+      \hyperlink{classnw_1_1_channel___spc_aecd939824b8d2a275cbe360f60ae4a2d}{get\_n\_Activable\_Ch}());
+32         \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a260fabe9e3e1d8b79c3c80bb987716a5}{chs}->\hyperlink{classnw_1_1_channel___spc_ab5176b0d9aed2ac68a142488d11b5e81}{activate\_Subunit}(r\_chid);
+33     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classnw_1_1___event_a560c8b6f9954a43f5d5f80204473b64d}{sc\_vec}.at(\hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a3f14cca01fc1645696666330a7354865}{act\_su\_id}) < 0)\{
+34         \textcolor{keywordtype}{long} r\_chid = (long)(\hyperlink{classnw_1_1___event_af92482aeea55562560573ecccd5ab108}{rg}->\hyperlink{classnw_1_1_uni___rnd_ad7883ef0ce4c591612bcb41678104773}{get\_Uni\_Rnd}() * \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a260fabe9e3e1d8b79c3c80bb987716a5}{chs}->
+      \hyperlink{classnw_1_1_channel___spc_a99c02ea4a145d6531ed2328de073fb37}{get\_n\_Inactivable\_Ch}());
+35         \hyperlink{classnw_1_1_sub_unit_switch___rct___evt_a260fabe9e3e1d8b79c3c80bb987716a5}{chs}->\hyperlink{classnw_1_1_channel___spc_a190172435ab84f9210ae027d06aae81a}{inactivate\_Subunit}(r\_chid);
+36     \}\textcolor{keywordflow}{else}\{
+37         cout << \textcolor{stringliteral}{"ERROR: The SubUnitActSwitch\_Rct\_Evt state change vector doesn't suit the assigned
+       active\_subUnit\_Species\_ID. Please check your input!"} << endl;
+38     \}
+39 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classnw_1_1_sub_unit_switch___rct___evt_a3f14cca01fc1645696666330a7354865}{\index{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}!act\+\_\+su\+\_\+id@{act\+\_\+su\+\_\+id}}
+\index{act\+\_\+su\+\_\+id@{act\+\_\+su\+\_\+id}!nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}}
+\subsubsection[{act\+\_\+su\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt\+::act\+\_\+su\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_sub_unit_switch___rct___evt_a3f14cca01fc1645696666330a7354865}
+
+
+\hyperlink{classnw_1_1___species}{\+\_\+\+Species} id of the activated subunit 
+
+\hypertarget{classnw_1_1_sub_unit_switch___rct___evt_a7d1c65995bc49d7e6e625aa090325af1}{\index{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}!ch\+\_\+spc\+\_\+id@{ch\+\_\+spc\+\_\+id}}
+\index{ch\+\_\+spc\+\_\+id@{ch\+\_\+spc\+\_\+id}!nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}}
+\subsubsection[{ch\+\_\+spc\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}long nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt\+::ch\+\_\+spc\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_sub_unit_switch___rct___evt_a7d1c65995bc49d7e6e625aa090325af1}
+
+
+\hyperlink{classnw_1_1___species}{\+\_\+\+Species} id of the \hyperlink{classnw_1_1_channel___spc}{Channel\+\_\+\+Spc} 
+
+\hypertarget{classnw_1_1_sub_unit_switch___rct___evt_a260fabe9e3e1d8b79c3c80bb987716a5}{\index{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}!chs@{chs}}
+\index{chs@{chs}!nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt@{nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt}}
+\subsubsection[{chs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Channel\+\_\+\+Spc}$\ast$ nw\+::\+Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt\+::chs\hspace{0.3cm}{\ttfamily [private]}}}\label{classnw_1_1_sub_unit_switch___rct___evt_a260fabe9e3e1d8b79c3c80bb987716a5}
+
+
+Pointer to the downcasted \hyperlink{classnw_1_1_channel___spc}{Channel\+\_\+\+Spc}. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Events/\hyperlink{_sub_unit_switch___rct___evt_8h}{Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt.\+h}\item 
+Events/\hyperlink{_sub_unit_switch___rct___evt_8cpp}{Sub\+Unit\+Switch\+\_\+\+Rct\+\_\+\+Evt.\+cpp}\end{DoxyCompactItemize}
