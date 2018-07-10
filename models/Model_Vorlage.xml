@@ -1,0 +1,233 @@
+<Sim>
+	
+	<!-- GENERAL -->
+
+	<outputFilePath>simOut.e</outputFilePath> <!-- Complete or relative path to outputfile. If file doesn't exist a new one will be created -->
+	<maxSimulationSteps>1e9</maxSimulationSteps> <!-- max number of simulation steps -->
+	<maxSimTime>10000</maxSimTime> <!-- max simulation time -->
+	<sampleRate>1e-2</sampleRate> <!-- Sample rate in s referring the simulation time -->
+	<borderCondition>equilibrium</borderCondition> <!-- equilibrium, bounce back -->
+	<voxelBoxLenght>0.5e-6</voxelBoxLenght>	<!-- Box lenght of voxel in [m] -->
+	<outputSpcList> <!-- Output species ids -->
+	  <id></id> 
+	</outputSpcList>
+	<outputVxlList> <!-- Output voxel ids -->
+	  <id></id> 
+	</outputVxlList>
+
+
+	<!-- SPECIES -->
+	<speciesList>
+	  <!-- ids laufen durch von 0 bis m, wobei m die Anzahl aller unterschiedlichen Species ist. Erste channelSpc hat id=n+1 !! -->
+	  <standardSpcList>
+	    <!--
+	    <standardSpc id="0">
+	      <name>SpeciesName_0</name> 
+	      <initialConcentration>0.1</initialConcentration>
+	    </standardSpc>
+
+	    [...]
+
+	    <standardSpc id="n">
+	      <name>SpeciesName_n</name> 
+	      <initialConcentration>5</initialConcentration>
+	    </standardSpc> 
+	    -->														
+	  </standardSpcList>
+	  <channelSpcList> 
+	    <!--
+	    <channelSpc id="n+1">	
+	      <name>ChannelSpeciesName_n+1</name>
+	      <initialConcentration>0.016</initialConcentration>	
+	      <nSubUnits>4</nSubUnits>
+	      <nSubUnitsToOpen>3</nSubUnitsToOpen>	
+	    </channelSpc>
+
+	    [...]
+
+	    <channelSpc id="m">	
+	      <name>ChannelSpeciesName_m</name>
+	      <initialConcentration>0.016</initialConcentration>	
+	      <nSubUnits>4</nSubUnits>
+	      <nSubUnitsToOpen>3</nSubUnitsToOpen>	
+	    </channelSpc>
+	    -->
+	  </channelSpcList>				
+	</speciesList>
+	
+	<!-- VOXEL -->
+	<voxelList>
+	  <!-- ids wieder von 0 bis n mit n = Anzahl der Voxel. Es gibt nur einen Voxel typ (im Augenblick)-->
+	  <standardVxlList>
+	    <!--
+	    <standardVxl id="0">
+	      <name></name>
+	      <neighbours>
+		<id></id>
+		[...]
+	      </neighbours>
+	    </standardVxl>
+	  </standardVxlList>
+	  
+	  [...]
+
+	  <standardVxlList>
+	    <standardVxl id="n">
+	      <name></name>
+	      <neighbours>
+		<id></id>
+		[...]
+	      </neighbours>
+	    </standardVxl>
+	    -->
+	  </standardVxlList>
+	</voxelList>
+	
+	<!-- EVENTS -->
+	<eventList>
+	  <!-- immer drauf achten, die ids laufen für alle Species durch! Von 0 bis p. Sprich wenn das letzte reactionEvt id=n ist, dann hat das erste subUnitSwitch die id=n+1 usw. !!   -->
+	  <reactionEvtList>
+	    <!--
+	    <reactionEvt id="0">
+	      <name>ReactionEventName_0</name>
+	      <k>0.08</k> 
+	      <voxelVector>
+		<id>0</id>
+		[...]
+	      </voxelVector>
+	      <educts> 
+		<id>2</id>
+		[...]
+	      </educts>
+	      <products>
+		<id>3</id>
+		[...]	
+	      </products>
+	    </reactionEvt>
+	    
+	    [...]
+
+	    <reactionEvt id="n">
+	      <name>ReactionEventName_n</name>
+	      <k>0.08</k> 
+	      <voxelVector>
+		<id>0</id>
+		[...]
+	      </voxelVector>
+	      <educts> 
+		<id>2</id>
+		[...]
+	      </educts>
+	      <products>
+		<id>3</id>
+		[...]	
+	      </products>
+	    </reactionEvt>
+	    -->
+	  </reactionEvtList>
+		
+	  <subUnitSwitchRctEvtList>
+	    <!--
+	    <subUnitSwitch id="n+1">
+	      <name>subUnitSwitchName_n+1</name>
+	      <k>0.55</k>
+	      <voxelVector>
+		<id>0</id>
+		[...]
+	      </voxelVector>
+	      <educts>
+		<id>6</id>
+		[...]
+	      </educts>
+	      <products>
+		<id>10</id>
+		[...]
+	      </products>
+	      <channel>*channel_id*</channel>
+	      <actSubUnitID>*active subunit id*</actSubUnitID>			
+	    </subUnitSwitch>	
+	    
+	    [...]
+
+	    <subUnitSwitch id="m">
+	      <name>subUnitSwitchName_m</name>
+	      <k>0.55</k>
+	      <voxelVector>
+		<id>0</id>
+		[...]
+	      </voxelVector>
+	      <educts>
+		<id>6</id>
+		[...]
+	      </educts>
+	      <products>
+		<id>10</id>
+		[...]
+	      </products>
+	      <channel>*channel_id*</channel>
+	      <actSubUnitID>*active subunit id*</actSubUnitID>			
+	    </subUnitSwitch>
+	    -->
+	  </subUnitSwitchRctEvtList>	
+	  
+	  <channelFluxEvtList>
+	    <!--
+	    <channelEvt id="m+1">
+	      <name>channelEvtName_m+1</name>
+	      <k>312.08</k>
+	      <voxelVector>
+		<id>0</id>
+		[...]
+	      </voxelVector>
+	      <channel>24</channel>
+	      <products>
+		<id>0</id>
+		[...]	
+	      </products>
+	    </channelEvt>
+
+	    [...]	    
+
+	    <channelEvt id="k">
+	      <name>channelEvtName_k</name>
+	      <k>312.08</k>
+	      <voxelVector>
+		<id>0</id>
+		[...]
+	      </voxelVector>
+	      <channel>24</channel>
+	      <products>
+		<id>0</id>
+		[...]	
+	      </products>
+	    </channelEvt>
+	    -->
+	  </channelFluxEvtList>
+	  
+	  <diffusionEvtList>
+	    <!--
+	    <diffusionEvt id="k+1">
+	      <name>DiffusionEventName_k+1</name>
+	      <k>200</k> 
+	      <voxelVector>
+		<id>0</id>
+		[...]
+	      </voxelVector>
+	      <diffusionSpcID>0</diffusionSpcID>
+	    </diffusionEvt>
+
+	    [...]
+
+	    <diffusionEvt id="p">
+	      <name>DiffusionEventName_k+1</name>
+	      <k>200</k> 
+	      <voxelVector>
+		<id>0</id>
+		[...]
+	      </voxelVector>
+	      <diffusionSpcID>0</diffusionSpcID>
+	    </diffusionEvt>
+	    -->
+	  </diffusionEvtList>	
+	</eventList>
+</Sim>
